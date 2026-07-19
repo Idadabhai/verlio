@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { createRequire } from 'node:module';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
@@ -11,7 +12,11 @@ import { runPipeline } from '../pipeline/pipeline.js';
  * content block containing the serialized PipelineResult, not prose.
  */
 
-const server = new McpServer({ name: 'verlio', version: '0.1.0' });
+// Read from package.json rather than hardcoding — a hardcoded literal here already drifted from
+// the real published version once (shipped as "0.1.0" inside the v0.1.1 tarball).
+const { version } = createRequire(import.meta.url)('../../package.json') as { version: string };
+
+const server = new McpServer({ name: 'verlio', version });
 
 const repoShape = {
   repo: z.string().describe('GitHub repo as "owner/name", e.g. "octokit/octokit.js"'),
