@@ -4,5 +4,9 @@ dist/
 .env.local
 *.log
 .cache/
+# web/ is the free-tool Next.js app (M4) — a separate deployable, not the CLI/App/MCP product
+# this repo publishes. Deployed straight to Vercel via CLI; not part of this repo's history.
+web/
+.claude/
 # eval-results/ is deliberately NOT ignored — the M2 exit gate requires the real
 # measured numbers to be documented, so the raw eval output is the evidence.
