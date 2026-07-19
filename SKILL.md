@@ -12,10 +12,15 @@ ordinary pull request for a human to review.
 ## Install (one command)
 
 ```sh
-claude mcp add verlio -- npx -y verlio-mcp
+claude mcp add verlio -- npx -y -p verlio verlio-mcp
 ```
 
-(Cursor: add the same `npx -y verlio-mcp` command as a stdio MCP server in its MCP settings.)
+`-p verlio` is required, not optional — `verlio-mcp` is a second `bin` entry inside the
+`verlio` package, not a package of its own, so a bare `npx -y verlio-mcp` 404s against the
+registry. Verified against the real published package, not assumed.
+
+(Cursor: add the same `npx -y -p verlio verlio-mcp` command as a stdio MCP server in its MCP
+settings.)
 
 Requires `ANTHROPIC_API_KEY` and either `GITHUB_TOKEN` (personal access token, `repo` scope) or
 the `GITHUB_APP_ID`/`GITHUB_PRIVATE_KEY`/`GITHUB_APP_INSTALLATION_ID` trio, set as environment

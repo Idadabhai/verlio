@@ -1,6 +1,6 @@
 {
   "name": "verlio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Verlio — watches merged PRs, classifies doc-relevant diffs, drafts and opens doc-fix PRs. Never auto-merges.",
   "license": "MIT",
   "homepage": "https://verlio.dev",
@@ -11,11 +11,18 @@
   "bugs": {
     "url": "https://github.com/Idadabhai/verlio/issues"
   },
-  "keywords": ["documentation", "docs", "drift", "github-app", "ai", "mcp"],
+  "keywords": [
+    "documentation",
+    "docs",
+    "drift",
+    "github-app",
+    "ai",
+    "mcp"
+  ],
   "type": "module",
   "bin": {
-    "verlio": "./dist/cli/run-pipeline.js",
-    "verlio-mcp": "./dist/mcp/server.js"
+    "verlio": "dist/cli/run-pipeline.js",
+    "verlio-mcp": "dist/mcp/server.js"
   },
   "files": [
     "dist",
