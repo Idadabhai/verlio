@@ -1,0 +1,923 @@
+{
+  "tag": "HELDOUT-final",
+  "model": "claude-opus-4-8",
+  "corpus": "corpus/heldout-prs.json",
+  "n": 42,
+  "confusion": {
+    "tp": 11,
+    "fp": 3,
+    "tn": 26,
+    "fn": 2
+  },
+  "precision": {
+    "value": 0.7857142857142857,
+    "ci95": {
+      "low": 0.5241027622679172,
+      "high": 0.9242875166308363
+    },
+    "denominator": 14
+  },
+  "recall": {
+    "value": 0.8461538461538461,
+    "ci95": {
+      "low": 0.5776482949136899,
+      "high": 0.9567427368172621
+    },
+    "denominator": 13
+  },
+  "f1": 0.8148148148148148,
+  "accuracy": 0.8809523809523809,
+  "gate": {
+    "bar": 0.8,
+    "metric": "precision",
+    "passed": false,
+    "ci_lower_clears_bar": false
+  },
+  "usage": {
+    "cache_read_input_tokens": 109242,
+    "cache_creation_input_tokens": 0
+  },
+  "false_positives": [
+    {
+      "repo": "nodejs/undici",
+      "pr": 5540,
+      "url": "https://github.com/nodejs/undici/pull/5540",
+      "title": "fix(fetch): convert null init in Response.json",
+      "expected": false,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.7,
+      "model_rationale": "This fixes a documented standard API (Response.json) that was throwing a TypeError for a valid documented input (null init, per Web IDL dictionary conversion). A user hitting this bug and working around it would benefit from knowing null is now handled correctly, making it a real user-facing behavior fix.",
+      "label_rationale": "Removes an `if (init !== null)` guard so a null init goes through the standard ResponseInit webidl converter. A spec-conformance fix for an edge case no documentation describes; ordinary documented usage of Response.json is unaffected.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1082,
+        "sent": 1082
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22940,
+      "url": "https://github.com/vitejs/vite/pull/22940",
+      "title": "docs: clarify which hook is per-environment",
+      "expected": false,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.99,
+      "model_rationale": "The diff only edits documentation markdown files (api-environment-frameworks.md, api-environment-plugins.md, api-plugin md), adding hook scope annotations, headings, and type signatures. There is no source code code change and nothing for this tool to react to.",
+      "label_rationale": "Documentation-only diff across three docs/guide/*.md files, no source changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 10875,
+        "sent": 10875
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5548,
+      "url": "https://github.com/nodejs/undici/pull/5548",
+      "title": "docs: add custom interceptor example",
+      "expected": false,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.9,
+      "model_rationale": "The diff only touches markdown/pages (Dispatcher.md and Interceptors.md) with no source code changed. Per the \"what does NOT count\" rule, a diff that is only markdown/docs with zero source code is not something this tool should react to — a human already wrote the doc directly.",
+      "label_rationale": "Documentation-only diff (Dispatcher.md, Interceptors.md) with zero code changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2640,
+        "sent": 2640
+      },
+      "filtered_files": []
+    }
+  ],
+  "false_negatives": [
+    {
+      "repo": "vitejs/vite",
+      "pr": 22947,
+      "url": "https://github.com/vitejs/vite/pull/22947",
+      "title": "fix(build): map CSS chunks in chunk import maps (fix #22946)",
+      "expected": true,
+      "predicted": false,
+      "outcome": "FN",
+      "confidence": 0.72,
+      "model_rationale": "This is a bug fix to the internal behavior of the experimental `build.chunkImportMap` option: extracted CSS dependencies now get stable import-map specifiers so a CSS-only change no longer alters parent chunk filenames. No public API, option, or documented behavior surface changed — the option's documented purpose (stable import-map specifiers for dynamic deps) is unchanged and now simply extends correctly to CSS. The fix corrects an internal correctness issue within an already-documented experimental feature without changing any user-facing contract.",
+      "label_rationale": "build.chunkImportMap is a documented build option. CSS sidecar chunks were absent from the generated import map; this adds them under a stable .css name. Changes what the documented option actually emits.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 9364,
+        "sent": 9364
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "date-fns/date-fns",
+      "pr": 4179,
+      "url": "https://github.com/date-fns/date-fns/pull/4179",
+      "title": "fix(de-AT): support parsing \"Jänner\" with de-AT locale",
+      "expected": true,
+      "predicted": false,
+      "outcome": "FN",
+      "confidence": 0.82,
+      "model_rationale": "This is an internal locale-data fix to a regex pattern in the de locale's match module, enabling the de-AT locale to parse \"Jänner\" as intended. The public API surface (parse/format functions, locale exports) is unchanged, and date-fns does not document individual locale month-matching regexes. It's a bug fix bringing behavior in line with the documented locale support without altering any documented API.",
+      "label_rationale": "Adds 'jänner' to the wide month-match pattern for the German locale, so parse() now accepts the Austrian spelling it previously rejected. Changes which input strings a documented locale-aware parser accepts.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 619,
+        "sent": 619
+      },
+      "filtered_files": []
+    }
+  ],
+  "rows": [
+    {
+      "repo": "vitejs/vite",
+      "pr": 22945,
+      "url": "https://github.com/vitejs/vite/pull/22945",
+      "title": "fix(module-runner): don't crash stack-trace source mapping when globalThis.Buffer is absent",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.83,
+      "model_rationale": "This is an internal robustness fix for stack-trace source mapping: it captures the Buffer binding at module load and reuses an existing helper, with no change to any public API, config option, or documented behavior. The fixed functions (decodeBase64, retrieveSourceMap) are internal module-runner utilities, and the only observable effect is that stack preparation no longer crashes in an edge case where globalThis.Buffer is deleted at runtime — behavior no user-facing docs describe.",
+      "label_rationale": "Captures the Buffer binding at module load instead of dereferencing it lazily, so deleting globalThis.Buffer later doesn't crash source-map decoding. Internal robustness fix inside the module runner; no documented API, option, or output changes.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 6152,
+        "sent": 6152
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22939,
+      "url": "https://github.com/vitejs/vite/pull/22939",
+      "title": "fix(legacy): don't use newer syntax when minifying polyfill chunks",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.8,
+      "model_rationale": "This is an internal bug fix ensuring minified legacy polyfill chunks don't use newer syntax (e.g. optional catch binding) unsupported by the configured target. The public API (plugin options) is unchanged; the fix corrects minification behavior to respect existing targets. No documented option, signature, or default changed—the added parameters are internal to private functions.",
+      "label_rationale": "Pins the oxc minifier's compress target to es2015 for plugin-legacy's polyfill chunk. Restores the already-documented intent (legacy chunks target old browsers) rather than changing it — no user-facing option or documented behavior is different afterward.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 4510,
+        "sent": 4510
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22947,
+      "url": "https://github.com/vitejs/vite/pull/22947",
+      "title": "fix(build): map CSS chunks in chunk import maps (fix #22946)",
+      "expected": true,
+      "predicted": false,
+      "outcome": "FN",
+      "confidence": 0.72,
+      "model_rationale": "This is a bug fix to the internal behavior of the experimental `build.chunkImportMap` option: extracted CSS dependencies now get stable import-map specifiers so a CSS-only change no longer alters parent chunk filenames. No public API, option, or documented behavior surface changed — the option's documented purpose (stable import-map specifiers for dynamic deps) is unchanged and now simply extends correctly to CSS. The fix corrects an internal correctness issue within an already-documented experimental feature without changing any user-facing contract.",
+      "label_rationale": "build.chunkImportMap is a documented build option. CSS sidecar chunks were absent from the generated import map; this adds them under a stable .css name. Changes what the documented option actually emits.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 9364,
+        "sent": 9364
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22951,
+      "url": "https://github.com/vitejs/vite/pull/22951",
+      "title": "fix(optimizer): respect importer module format for dynamic import interop with CJS deps",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.72,
+      "model_rationale": "This fixes a real behavioral inconsistency between dev and build for dynamic imports of CJS deps: dev now uses the importer's explicit module format (via new isFilePathFormatExplicit) to decide default-import interop, aligning with bundler semantics. This changes observable runtime behavior of dynamic imports for users, warranting a changelog/interop-docs note; the drafter can decide the exact file.",
+      "label_rationale": "Dynamic import() of a CJS dep previously derived its interop shape from the legacy.inconsistentCjsInterop flag alone; now it derives from whether the importer's own module format is explicit (isFilePathFormatExplicit). Changes the emitted interop code — and therefore the observed default export — for real user code, against a documented legacy config option.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 7949,
+        "sent": 7494
+      },
+      "filtered_files": [
+        {
+          "path": "pnpm-lock.yaml",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22927,
+      "url": "https://github.com/vitejs/vite/pull/22927",
+      "title": "test(css): cover stale manifest after asset deduplication",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This diff only adds a regression test to an existing spec file; no source code or public API behavior is changed. Test-only changes do not warrant documentation updates.",
+      "label_rationale": "Test-only diff (single playground spec file); no source file touched, so there is no new behavior to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1213,
+        "sent": 1213
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22952,
+      "url": "https://github.com/vitejs/vite/pull/22952",
+      "title": "docs(static-deploy): fix links for Vercel deployment environments",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "The diff only edits markdown documentation (updating external Vercel URLs) with no source code changed, so there is nothing for this tool to react to—the doc change was already made directly.",
+      "label_rationale": "Documentation-only diff (docs/guide/static-deploy.md) with zero code changed — a human already wrote the doc edit directly; nothing for a code-diff classifier to react to.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1343,
+        "sent": 1343
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22924,
+      "url": "https://github.com/vitejs/vite/pull/22924",
+      "title": "chore(deps): update dependency feed to v6",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.95,
+      "model_rationale": "This diff only bumps the `feed` devDependency version in docs/package.json (plus a lockfile). No source code or public API surface of this repository changed, so there is nothing user-facing to document.",
+      "label_rationale": "Docs-site devDependency bump in docs/package.json and pnpm-lock.yaml only; the shipped vite package is untouched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1534,
+        "sent": 443
+      },
+      "filtered_files": [
+        {
+          "path": "pnpm-lock.yaml",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22914,
+      "url": "https://github.com/vitejs/vite/pull/22914",
+      "title": "chore: remove outdated pnpm configuration",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "The only change is to pnpm-workspace.yaml (a workspace/tooling config file), with no source-file changes remaining. Removing outdated pnpm configuration has no observable public API or behavior impact for users.",
+      "label_rationale": "Removes a stale key from pnpm-workspace.yaml — repo tooling config only, no library code or public behavior.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 362,
+        "sent": 0
+      },
+      "filtered_files": [
+        {
+          "path": "pnpm-workspace.yaml",
+          "kind": "workspace config"
+        }
+      ]
+    },
+    {
+      "repo": "fastify/fastify",
+      "pr": 6838,
+      "url": "https://github.com/fastify/fastify/pull/6838",
+      "title": "fix: normalize method in findRoute",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.72,
+      "model_rationale": "The public `findRoute()` API previously returned null for lowercase method names but now normalizes the method, so a documented API's observable behavior changed for valid input. This warrants at least a changelog/API-reference note letting the drafter decide.",
+      "label_rationale": "findRoute() is a documented public Fastify instance method. It now uppercases options.method before lookup, so findRoute({ method: 'get' }) resolves where it previously returned null. Changes the accepted input of a documented API.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1949,
+        "sent": 1949
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "fastify/fastify",
+      "pr": 6832,
+      "url": "https://github.com/fastify/fastify/pull/6832",
+      "title": "feat: rfc10008 http query method",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.98,
+      "model_rationale": "Adds a new public QUERY HTTP method with a new route shorthand (fastify.query), makes QUERY a default supported method, and introduces two new public error codes (FST_ERR_ROUTE_MISSING_CONTENT_TYPE, FST_ERR_ROUTE_MISSING_CONTENT) with new 400 behavior. These are user-facing API surface changes.",
+      "label_rationale": "Adds QUERY HTTP method support end to end (route shorthand, error codes in lib/errors.js, types/errors.d.ts). The PR itself edits docs/Reference/Server.md and docs/Reference/Errors.md, confirming a documented public surface change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 25064,
+        "sent": 25064
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "fastify/fastify",
+      "pr": 6830,
+      "url": "https://github.com/fastify/fastify/pull/6830",
+      "title": "fix: use ContentType to detect `json` and `charset` in reply.send",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.72,
+      "model_rationale": "This changes observable behavior of the documented `reply.send` content-type handling: charset detection is now case-insensitive (e.g. `CHARSET=utf-8` and mixed-case media types are now correctly recognized and preserved), and quoted parameter values are normalized (`version=2` becomes `version=\"2\"`). Previously-valid inputs now behave differently, which is a user-facing change worth describing even though the internal cache refactor is not.",
+      "label_rationale": "reply.send()'s content-type handling now parses the header properly: charset detection is case-insensitive per RFC 9110 and parameter serialization goes through ContentType.toString(). Changes the response header reply.send() produces for real user-supplied content types.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 10641,
+        "sent": 10641
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "fastify/fastify",
+      "pr": 6854,
+      "url": "https://github.com/fastify/fastify/pull/6854",
+      "title": "perf: reuse cached content types for response serialization",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.85,
+      "model_rationale": "This is an internal performance optimization swapping `new ContentType()` for a cached `ContentType.from()` in a private serializer-selection helper. The observable behavior of response serialization (parsing, mediaType matching, isValid handling) is unchanged; only how the ContentType instance is obtained changed. No public API, config option, or documented behavior is affected.",
+      "label_rationale": "Swaps `new ContentType(...)` for a cached `ContentType.from(...)` in lib/schemas.js serializer lookup. Pure allocation-reduction; the resolved serializer for any given status code and content type is identical.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3022,
+        "sent": 3022
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "fastify/fastify",
+      "pr": 6831,
+      "url": "https://github.com/fastify/fastify/pull/6831",
+      "title": "perf: reduce per-request overhead in the request lifecycle",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.83,
+      "model_rationale": "These are internal performance optimizations in the request hot path with no change to any public API, config option, or observable behavior—responses remain byte-identical and validation/logging outcomes are unchanged. The added test only verifies existing genReqId getter behavior, and the now() timing change preserves the same monotonic diff semantics.",
+      "label_rationale": "Uses res.end(payload) instead of res.write(payload) when no trailers are registered, to cork the socket into a single write. Internal write-path optimization; the bytes sent and every documented hook/API behave the same.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 5158,
+        "sent": 5158
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "fastify/fastify",
+      "pr": 6839,
+      "url": "https://github.com/fastify/fastify/pull/6839",
+      "title": "chore: Bump markdownlint-cli2 from 0.22.1 to 0.23.0",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This is a dev-tooling dependency bump (markdownlint-cli2, a linting tool) in package.json with no source code or public API changes. It affects only the project's internal markdown linting, not any documented user-facing behavior.",
+      "label_rationale": "package.json devDependency bump for a docs-linting tool; no library code.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 386,
+        "sent": 386
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "fastify/fastify",
+      "pr": 6821,
+      "url": "https://github.com/fastify/fastify/pull/6821",
+      "title": "docs: remove marko from @fastify/view engines (support dropped)",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "The diff only edits a markdown documentation file with no source code changed. A human already wrote the doc change directly, so there is nothing for this tool to react to.",
+      "label_rationale": "Documentation-only diff (docs/Guides/Plugins-Guide.md) recording a change that happened in a different repo; no code in this repo changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 698,
+        "sent": 698
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "fastify/fastify",
+      "pr": 6825,
+      "url": "https://github.com/fastify/fastify/pull/6825",
+      "title": "docs: fix incorrect hook count in Hooks.md",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "The diff only edits a markdown documentation file (correcting a word count from \"eight\" to \"ten\") with zero source code changed. There is nothing for this tool to react to—a human already made the doc change directly.",
+      "label_rationale": "Documentation-only diff (docs/Reference/Hooks.md), zero code changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 589,
+        "sent": 589
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "prisma/prisma",
+      "pr": 29697,
+      "url": "https://github.com/prisma/prisma/pull/29697",
+      "title": "fix(client): reject invalid raw dates",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.75,
+      "model_rationale": "This changes the observable behavior of the documented $queryRaw/$executeRaw raw parameter path: invalid Date objects now throw a validation error instead of being silently serialized as null. That is a real user-facing behavior change (new error condition) worth describing, even if a doc file may already cover validation.",
+      "label_rationale": "serializeRawParameters now throws an explicit 'Provided Date object is invalid' error for an Invalid Date passed to $queryRaw/$executeRaw, instead of silently serializing garbage; it also narrows the fast/slow fallback to TypeError only. New user-visible error on a documented client API.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1917,
+        "sent": 1917
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "prisma/prisma",
+      "pr": 29691,
+      "url": "https://github.com/prisma/prisma/pull/29691",
+      "title": "fix(cli): remove the migrate-reset tool from the MCP server",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.86,
+      "model_rationale": "The PR removes the publicly-exposed `migrate-reset` MCP tool from the `prisma mcp` server, changing the set of tools available to consumers/agents. Removal of a user-facing tool is a documentation-relevant change; the in-PR AGENTS.md edit further confirms it warrants describing.",
+      "label_rationale": "Deletes the `migrate-reset` tool registration from the Prisma MCP server. Removing a tool from an MCP server's advertised tool list is a removal of public surface — any docs listing the server's available tools is now wrong.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3076,
+        "sent": 3076
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "prisma/prisma",
+      "pr": 29723,
+      "url": "https://github.com/prisma/prisma/pull/29723",
+      "title": "fix(client): mask each quoted string in maskQuery independently",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.85,
+      "model_rationale": "This fixes an internal utility (maskQuery) used for sanitizing engine queries in panic/error reports. It's a bug fix to internal masking behavior with no public API, config option, or documented feature affected — users don't invoke this directly and there's no documented output contract.",
+      "label_rationale": "Fixes a greedy regex in maskQuery so each quoted string is masked separately rather than everything between the first and last quote. maskQuery is an internal log-redaction helper, not a documented API; only debug log output shape changes.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1534,
+        "sent": 1534
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "prisma/prisma",
+      "pr": 29725,
+      "url": "https://github.com/prisma/prisma/pull/29725",
+      "title": "ci: upgrade pnpm to 11 to restore pnpm audit",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.85,
+      "model_rationale": "This is a CI/tooling change: upgrading pnpm to 11, migrating pnpm config locations, and adjusting an internal build script. The engines.pnpm requirement is a developer/contributor concern, not public-facing API/usage documentation; AGENTS.md (an internal agent knowledge base) was already updated in-diff. No public API, CLI flag, config option, or runtime behavior for users changed.",
+      "label_rationale": "GitHub Actions workflow files, .npmrc, and AGENTS.md only — repo CI tooling, no shipped package code.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 13465,
+        "sent": 12559
+      },
+      "filtered_files": [
+        {
+          "path": "pnpm-workspace.yaml",
+          "kind": "workspace config"
+        }
+      ]
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5564,
+      "url": "https://github.com/nodejs/undici/pull/5564",
+      "title": "fix(decompress): skip HEAD responses",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.75,
+      "model_rationale": "The decompress interceptor now bypasses HEAD requests, preserving Content-Encoding/Content-Length headers and returning an empty body instead of rejecting with Z_BUF_ERROR. This is a real observable behavior change to a documented public interceptor that a user could hit with valid usage.",
+      "label_rationale": "The decompress interceptor (documented in docs/docs/api/Interceptors.md) now bypasses its handler entirely for HEAD requests, which have no body. A documented interceptor behaving incorrectly for a valid, common method is a documented-behavior fix.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2775,
+        "sent": 2775
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "prisma/prisma",
+      "pr": 29686,
+      "url": "https://github.com/prisma/prisma/pull/29686",
+      "title": "chore(deps): update @prisma/dev to 0.24.14",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.95,
+      "model_rationale": "This is a dependency version bump in package.json with only lockfile changes accompanying it; no source code or public API surface in this repo was modified.",
+      "label_rationale": "Dependency version bump in packages/cli/package.json and pnpm-lock.yaml only, no source changes in this repo.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 7554,
+        "sent": 418
+      },
+      "filtered_files": [
+        {
+          "path": "pnpm-lock.yaml",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5551,
+      "url": "https://github.com/nodejs/undici/pull/5551",
+      "title": "fix(redirect): remove body headers after POST-to-GET",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.72,
+      "model_rationale": "The RedirectHandler now strips Content-* headers when a 301/302 redirect converts POST to GET, changing observable behavior of a documented redirect feature. A user relying on the prior behavior (headers forwarded) would see a real difference, so it warrants a changelog/docs note.",
+      "label_rationale": "Content-* headers were previously stripped only on a 303 redirect; now they are also stripped on the 301/302 POST-to-GET rewrite. This is documented redirect/header-stripping behavior (the in-file comment describing the rule is updated in the same diff).",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2753,
+        "sent": 2753
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5540,
+      "url": "https://github.com/nodejs/undici/pull/5540",
+      "title": "fix(fetch): convert null init in Response.json",
+      "expected": false,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.7,
+      "model_rationale": "This fixes a documented standard API (Response.json) that was throwing a TypeError for a valid documented input (null init, per Web IDL dictionary conversion). A user hitting this bug and working around it would benefit from knowing null is now handled correctly, making it a real user-facing behavior fix.",
+      "label_rationale": "Removes an `if (init !== null)` guard so a null init goes through the standard ResponseInit webidl converter. A spec-conformance fix for an edge case no documentation describes; ordinary documented usage of Response.json is unaffected.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1082,
+        "sent": 1082
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5547,
+      "url": "https://github.com/nodejs/undici/pull/5547",
+      "title": "fix(h1): ignore type of service errors",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.86,
+      "model_rationale": "The default value of the documented `typeOfService` request option changed from `0` to undefined/none, altering its behavior for default requests, and the in-PR edit to the TypeScript type doc (removing \"Default: 0\") confirms the change is user-facing.",
+      "label_rationale": "Makes setting the socket ToS non-fatal, and correspondingly removes the now-false 'Default: `0`' claim from the documented typeOfService option in types/dispatcher.d.ts. Both the option's documented default and its failure behavior change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 7104,
+        "sent": 7104
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5559,
+      "url": "https://github.com/nodejs/undici/pull/5559",
+      "title": "fix(h2): destroy aborted stream synchronously instead of via setImmediate",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.83,
+      "model_rationale": "This is an internal timing fix in the HTTP/2 abort teardown path (destroy synchronously instead of via setImmediate) to prevent a memory leak under a stalled event loop. No public API, config option, request/response shape, or documented behavior changes; the observable behavior (aborted streams get destroyed) is unchanged except for timing internals, plus a test tightening.",
+      "label_rationale": "Changes when an aborted HTTP/2 stream handle is destroyed to fix a resource leak under abort churn. Internal lifecycle timing; the RST_STREAM frame and every documented dispatcher contract are unchanged.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2465,
+        "sent": 2465
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5556,
+      "url": "https://github.com/nodejs/undici/pull/5556",
+      "title": "build(deps-dev): bump fast-check from 4.8.0 to 4.9.0",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This is a dev-dependency bump of fast-check (a test library) with only lockfile changes and no source-file changes. It affects nothing user-facing in this repo.",
+      "label_rationale": "package-lock.json devDependency (property-testing library) bump only.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 719,
+        "sent": 0
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5550,
+      "url": "https://github.com/nodejs/undici/pull/5550",
+      "title": "test: deflake invalid websocket close status test",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "Test-only change deflaking an existing WebSocket test; no source files touched and no observable public behavior changed.",
+      "label_rationale": "Test-only diff; no source file touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1753,
+        "sent": 1753
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitejs/vite",
+      "pr": 22940,
+      "url": "https://github.com/vitejs/vite/pull/22940",
+      "title": "docs: clarify which hook is per-environment",
+      "expected": false,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.99,
+      "model_rationale": "The diff only edits documentation markdown files (api-environment-frameworks.md, api-environment-plugins.md, api-plugin md), adding hook scope annotations, headings, and type signatures. There is no source code code change and nothing for this tool to react to.",
+      "label_rationale": "Documentation-only diff across three docs/guide/*.md files, no source changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 10875,
+        "sent": 10875
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "yargs/yargs",
+      "pr": 2551,
+      "url": "https://github.com/yargs/yargs/pull/2551",
+      "title": "docs: clarify nargs option-like values",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.95,
+      "model_rationale": "The diff only edits docs/api.md — no source code is changed. A human already wrote the documentation update directly, so there is nothing for this tool to react to.",
+      "label_rationale": "Documentation-only diff (docs/api.md), zero code changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 959,
+        "sent": 959
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "yargs/yargs",
+      "pr": 2498,
+      "url": "https://github.com/yargs/yargs/pull/2498",
+      "title": "fix: prototype pollution vulnerability in apply-extends",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.75,
+      "model_rationale": "This is a security fix changing how the documented `applyExtends`/`extends` config-merging feature handles `__proto__` keys, mitigating prototype pollution. Such security-relevant behavior changes typically warrant a changelog/security note even if happy-path behavior is unchanged.",
+      "label_rationale": "Skips the __proto__ key when deep-merging config loaded via the documented `extends` feature, closing a prototype-pollution vector. A security fix changing how a documented feature handles a class of input. NOTE: structurally similar to zod#5898 in the dev corpus, which is quoted as a worked example in the classifier prompt — see corpus/README.md 'Known near-twin'.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1103,
+        "sent": 1103
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "yargs/yargs",
+      "pr": 2552,
+      "url": "https://github.com/yargs/yargs/pull/2552",
+      "title": "chore: update the easy dependencies",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.9,
+      "model_rationale": "This diff only bumps dependency versions in package.json with no source code changes; the PR explicitly notes tests pass with no code changes. There is no observable change to any public API or documented behavior.",
+      "label_rationale": "package.json dependency version bumps only, no source changes.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1299,
+        "sent": 1299
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "yargs/yargs",
+      "pr": 2507,
+      "url": "https://github.com/yargs/yargs/pull/2507",
+      "title": "Replace EOL node 23 in CI version matrix with node 24",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "CI-only change to the GitHub Actions workflow node version matrix, with no source code or public API change. This is tooling config and does not affect observable behavior for users.",
+      "label_rationale": "CI workflow matrix change only. (Note: the supported-Node range in the README would be doc-relevant, but this diff only touches .github/workflows/ci.yaml, not engines or the README.)",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 909,
+        "sent": 909
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "drizzle-team/drizzle-orm",
+      "pr": 6000,
+      "url": "https://github.com/drizzle-team/drizzle-orm/pull/6000",
+      "title": "Add PgColumn.toBuilder() for cloning built columns back into builders",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.95,
+      "model_rationale": "This PR adds a new public method `PgColumn.toBuilder()` and a new exported type `PgColumnToBuilderOverrides` to the pg-core public API, enabling a documented workflow (deriving tables via `pgTable()`/`pgSchema().table()`). A new public API surface warrants documentation.",
+      "label_rationale": "Adds a new public method PgColumn.toBuilder(overrides?) plus a PgColumnToBuilderOverrides type, with JSDoc describing its intended use for deriving tables. New public API surface.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 12963,
+        "sent": 12963
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "drizzle-team/drizzle-orm",
+      "pr": 6006,
+      "url": "https://github.com/drizzle-team/drizzle-orm/pull/6006",
+      "title": "Bump upload-artifact to v7 and pnpm/action-setup to v6 in the feature workflow",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This diff only bumps GitHub Actions version pins in a CI workflow file with unchanged inputs. No public API, behavior, or user-facing surface changes.",
+      "label_rationale": "Single GitHub Actions workflow file; CI action version pins only.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3058,
+        "sent": 3058
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "date-fns/date-fns",
+      "pr": 4206,
+      "url": "https://github.com/date-fns/date-fns/pull/4206",
+      "title": "docs: fix set example description",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.95,
+      "model_rationale": "This diff only edits a JSDoc comment example description to match the already-correct demonstrated output; no runtime behavior or public surface changes.",
+      "label_rationale": "Corrects a wrong expected-output value inside a JSDoc @example comment for set(). The implementation is untouched — the code was always right and the comment was wrong.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 531,
+        "sent": 531
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "date-fns/date-fns",
+      "pr": 4179,
+      "url": "https://github.com/date-fns/date-fns/pull/4179",
+      "title": "fix(de-AT): support parsing \"Jänner\" with de-AT locale",
+      "expected": true,
+      "predicted": false,
+      "outcome": "FN",
+      "confidence": 0.82,
+      "model_rationale": "This is an internal locale-data fix to a regex pattern in the de locale's match module, enabling the de-AT locale to parse \"Jänner\" as intended. The public API surface (parse/format functions, locale exports) is unchanged, and date-fns does not document individual locale month-matching regexes. It's a bug fix bringing behavior in line with the documented locale support without altering any documented API.",
+      "label_rationale": "Adds 'jänner' to the wide month-match pattern for the German locale, so parse() now accepts the Austrian spelling it previously rejected. Changes which input strings a documented locale-aware parser accepts.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 619,
+        "sent": 619
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "date-fns/date-fns",
+      "pr": 3832,
+      "url": "https://github.com/date-fns/date-fns/pull/3832",
+      "title": "chore: Fix typos in documentation",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "The diff only fixes spelling typos within JSDoc comments and code example comments; no function signatures, behavior, or public surfaces changed.",
+      "label_rationale": "Spelling fixes inside JSDoc comment prose across many src/ files; no implementation line changed in any of them.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 6993,
+        "sent": 6993
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "TanStack/query",
+      "pr": 11080,
+      "url": "https://github.com/TanStack/query/pull/11080",
+      "title": "test({react,preact}-query/usePrefetchQuery): inline the 'generateQueryFn' factory into each call site",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.99,
+      "model_rationale": "This is a test-only refactor that inlines a helper factory into each call site with no change to any public API or observable behavior. Only test files are touched.",
+      "label_rationale": "Test-refactor-only diff across two __tests__ files; no source or public behavior touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 7404,
+        "sent": 7404
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "TanStack/query",
+      "pr": 11057,
+      "url": "https://github.com/TanStack/query/pull/11057",
+      "title": "test(*): assert exact values instead of loose matchers",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This diff only tightens test assertions (loose matchers to exact values) across test files; no source code or public behavior changed. It is test-only and does not warrant any documentation update.",
+      "label_rationale": "Tightens assertions across five test files; no source file changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 4583,
+        "sent": 4583
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "TanStack/query",
+      "pr": 11066,
+      "url": "https://github.com/TanStack/query/pull/11066",
+      "title": "docs(CONTRIBUTING): update pnpm version from 'v10' to 'v11'",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "The diff only edits CONTRIBUTING.md text (pnpm v10 → v11), a markdown/docs-only change with no source code touched. There is nothing for the tool to react to; a human already wrote the doc change directly.",
+      "label_rationale": "CONTRIBUTING.md only — contributor-facing repo metadata, not user-facing library documentation, and no code changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 511,
+        "sent": 511
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "nodejs/undici",
+      "pr": 5548,
+      "url": "https://github.com/nodejs/undici/pull/5548",
+      "title": "docs: add custom interceptor example",
+      "expected": false,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.9,
+      "model_rationale": "The diff only touches markdown/pages (Dispatcher.md and Interceptors.md) with no source code changed. Per the \"what does NOT count\" rule, a diff that is only markdown/docs with zero source code is not something this tool should react to — a human already wrote the doc directly.",
+      "label_rationale": "Documentation-only diff (Dispatcher.md, Interceptors.md) with zero code changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2640,
+        "sent": 2640
+      },
+      "filtered_files": []
+    }
+  ],
+  "failures": []
+}

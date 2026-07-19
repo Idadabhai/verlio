@@ -1,0 +1,3529 @@
+[
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18552,
+    "url": "https://github.com/sveltejs/svelte/pull/18552",
+    "title": "Version Packages",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/fast-cats-compile.md, .changeset/lucky-dolls-yell.md, packages/svelte/CHANGELOG.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/fast-cats-compile.md",
+      ".changeset/lucky-dolls-yell.md",
+      "packages/svelte/CHANGELOG.md"
+    ],
+    "source_files": [
+      "packages/svelte/package.json",
+      "packages/svelte/src/version.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18551,
+    "url": "https://github.com/sveltejs/svelte/pull/18551",
+    "title": "fix: rerun derived that had an abort controller on reconnection",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/lucky-dolls-yell.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/lucky-dolls-yell.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/runtime.js",
+      "packages/svelte/tests/runtime-runes/samples/abort-signal-derived-rerun-on-reconnect/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/abort-signal-derived-rerun-on-reconnect/main.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18548,
+    "url": "https://github.com/sveltejs/svelte/pull/18548",
+    "title": "perf: skip quadratic blocker analysis when no top-level await",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/fast-cats-compile.md) alongside 1 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/fast-cats-compile.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/2-analyze/index.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18543,
+    "url": "https://github.com/sveltejs/svelte/pull/18543",
+    "title": "chore: bench compare report as HTML",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 4 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      ".gitignore",
+      "benchmarking/compare/generate-report.js",
+      "benchmarking/compare/index.js",
+      "benchmarking/compare/results.template.html"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18542,
+    "url": "https://github.com/sveltejs/svelte/pull/18542",
+    "title": "chore: run every benchmark in its own process",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "benchmarking/compare/generate-report.js",
+      "benchmarking/compare/runner.js",
+      "benchmarking/run.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18541,
+    "url": "https://github.com/sveltejs/svelte/pull/18541",
+    "title": "fix: clear previous_task reference after abort in Tween",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/tween-previous-task-leak.md) alongside 1 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/tween-previous-task-leak.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/motion/tweened.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18530,
+    "url": "https://github.com/sveltejs/svelte/pull/18530",
+    "title": "fix: $state.eager() is sometimes incorrect in SSR",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/long-buttons-hunt.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/long-buttons-hunt.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/3-transform/server/visitors/CallExpression.js",
+      "packages/svelte/tests/server-side-rendering/samples/state-eager/_expected.html",
+      "packages/svelte/tests/server-side-rendering/samples/state-eager/main.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18528,
+    "url": "https://github.com/sveltejs/svelte/pull/18528",
+    "title": "chore: add some failing tests",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 6 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/svelte/tests/runtime-runes/samples/async-derived-log-outside-reactivity/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-log-outside-reactivity/main.svelte",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-not-overfiring/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-not-overfiring/main.svelte",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-not-underfiring/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-not-underfiring/main.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18525,
+    "url": "https://github.com/sveltejs/svelte/pull/18525",
+    "title": "fix: skip unnecessary derived effect in earlier batch",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/curly-wasps-hide.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/curly-wasps-hide.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/reactivity/batch.js",
+      "packages/svelte/tests/runtime-runes/samples/async-batch-derived/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-batch-derived/main.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18523,
+    "url": "https://github.com/sveltejs/svelte/pull/18523",
+    "title": "chore: add benchmarks",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "benchmarking/benchmarks/reactivity/tests/kairo_broad_block.bench.js",
+      "benchmarking/benchmarks/reactivity/tests/kairo_deep_block.bench.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18521,
+    "url": "https://github.com/sveltejs/svelte/pull/18521",
+    "title": "fix: transform computed keys in keyed each block destructuring patterns",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/shiny-keys-dance.md) alongside 4 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/shiny-keys-dance.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/3-transform/client/visitors/EachBlock.js",
+      "packages/svelte/tests/runtime-runes/samples/each-keyed-computed-destructuring-key/Child.svelte",
+      "packages/svelte/tests/runtime-runes/samples/each-keyed-computed-destructuring-key/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/each-keyed-computed-destructuring-key/main.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18518,
+    "url": "https://github.com/sveltejs/svelte/pull/18518",
+    "title": "fix: chain preprocessor sourcemaps with an empty sources[0]",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/tame-donkeys-jump.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/tame-donkeys-jump.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/utils/mapped_code.js",
+      "packages/svelte/tests/sourcemaps/samples/sourcemap-empty-source/_config.js",
+      "packages/svelte/tests/sourcemaps/samples/sourcemap-empty-source/input.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18517,
+    "url": "https://github.com/sveltejs/svelte/pull/18517",
+    "title": "fix: prevent derived connection leak in untracked contexts",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/svelte/src/internal/client/runtime.js",
+      "packages/svelte/tests/signals/test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18507,
+    "url": "https://github.com/sveltejs/svelte/pull/18507",
+    "title": "fix: don't treat declaration tags as parts inside each blocks",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/young-doodles-beam.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/young-doodles-beam.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/3-transform/client/visitors/shared/utils.js",
+      "packages/svelte/tests/runtime-runes/samples/declaration-tags-each/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/declaration-tags-each/main.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18500,
+    "url": "https://github.com/sveltejs/svelte/pull/18500",
+    "title": "fix: avoid declaration tag warning in event handlers",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/dull-oranges-fry.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/dull-oranges-fry.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/function.js",
+      "packages/svelte/tests/validator/samples/declaration-tag-state-referenced-locally/input.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18497,
+    "url": "https://github.com/sveltejs/svelte/pull/18497",
+    "title": "Version Packages",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/big-months-shout.md, .changeset/common-ways-deny.md, .changeset/curly-wasps-hide.md, .changeset/dull-oranges-fry.md, .changeset/early-crabs-rest.md, .changeset/long-buttons-hunt.md, .changeset/rich-jokes-attack.md, .changeset/shiny-keys-dance.md, .changeset/tame-donkeys-jump.md, .changeset/tween-previous-task-leak.md, .changeset/young-doodles-beam.md, packages/svelte/CHANGELOG.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/big-months-shout.md",
+      ".changeset/common-ways-deny.md",
+      ".changeset/curly-wasps-hide.md",
+      ".changeset/dull-oranges-fry.md",
+      ".changeset/early-crabs-rest.md",
+      ".changeset/long-buttons-hunt.md",
+      ".changeset/rich-jokes-attack.md",
+      ".changeset/shiny-keys-dance.md",
+      ".changeset/tame-donkeys-jump.md",
+      ".changeset/tween-previous-task-leak.md",
+      ".changeset/young-doodles-beam.md",
+      "packages/svelte/CHANGELOG.md"
+    ],
+    "source_files": [
+      "packages/svelte/package.json",
+      "packages/svelte/src/version.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18496,
+    "url": "https://github.com/sveltejs/svelte/pull/18496",
+    "title": "chore: drop dead code that make TSGO fail",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/big-months-shout.md) alongside 1 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/big-months-shout.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/reactivity/props.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18492,
+    "url": "https://github.com/sveltejs/svelte/pull/18492",
+    "title": "fix: correctly transform declaration tags during SSR",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/rich-jokes-attack.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/rich-jokes-attack.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/3-transform/server/visitors/shared/utils.js",
+      "packages/svelte/tests/server-side-rendering/samples/declaration-tags-transform/_expected.html",
+      "packages/svelte/tests/server-side-rendering/samples/declaration-tags-transform/main.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18474,
+    "url": "https://github.com/sveltejs/svelte/pull/18474",
+    "title": "chore: provide `indent` option for `print`",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/short-otters-find.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/short-otters-find.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/print/index.js",
+      "packages/svelte/src/compiler/print/types.d.ts",
+      "packages/svelte/types/index.d.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18453,
+    "url": "https://github.com/sveltejs/svelte/pull/18453",
+    "title": "fix: always unset reactivity context after restoring it",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/late-geese-fix.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/late-geese-fix.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/reactivity/async.js",
+      "packages/svelte/tests/runtime-runes/samples/async-parallel-derived-template-mutation/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-parallel-derived-template-mutation/main.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18448,
+    "url": "https://github.com/sveltejs/svelte/pull/18448",
+    "title": "fix: strip `?` from optional parameters in svelte lang ts",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/strip-optional-param-marker.md) alongside 5 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/strip-optional-param-marker.md"
+    ],
+    "source_files": [
+      "packages/svelte/package.json",
+      "packages/svelte/src/compiler/phases/1-parse/remove_typescript_nodes.js",
+      "packages/svelte/tests/snapshot/samples/typescript-optional-parameter/_expected/client/index.svelte.js",
+      "packages/svelte/tests/snapshot/samples/typescript-optional-parameter/_expected/server/index.svelte.js",
+      "packages/svelte/tests/snapshot/samples/typescript-optional-parameter/index.svelte"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18436,
+    "url": "https://github.com/sveltejs/svelte/pull/18436",
+    "title": "fix: include wrapping parentheses in `{@const}` declarator end",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/clean-melons-attack.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/clean-melons-attack.md"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/1-parse/state/tag.js",
+      "packages/svelte/tests/parser-modern/samples/const-tag-parenthesized-init/input.svelte",
+      "packages/svelte/tests/parser-modern/samples/const-tag-parenthesized-init/output.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18435,
+    "url": "https://github.com/sveltejs/svelte/pull/18435",
+    "title": "Version Packages",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/clean-melons-attack.md, .changeset/late-geese-fix.md, .changeset/quick-meals-shout.md, .changeset/strip-optional-param-marker.md, packages/svelte/CHANGELOG.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/clean-melons-attack.md",
+      ".changeset/late-geese-fix.md",
+      ".changeset/quick-meals-shout.md",
+      ".changeset/strip-optional-param-marker.md",
+      "packages/svelte/CHANGELOG.md"
+    ],
+    "source_files": [
+      "packages/svelte/package.json",
+      "packages/svelte/src/version.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15095,
+    "url": "https://github.com/vuejs/core/pull/15095",
+    "title": "Revert \"fix(runtime-vapor): pause tracking when invoking function refs\"",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-vapor/__tests__/dom/templateRef.spec.ts",
+      "packages/runtime-vapor/src/apiTemplateRef.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15094,
+    "url": "https://github.com/vuejs/core/pull/15094",
+    "title": "Revert \"fix(runtime-core): pause tracking when invoking function refs\"",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-core/__tests__/rendererTemplateRef.spec.ts",
+      "packages/runtime-core/src/rendererTemplateRef.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15092,
+    "url": "https://github.com/vuejs/core/pull/15092",
+    "title": "fix(runtime-core): skip lazy hydration for detached roots",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-core/__tests__/hydration.spec.ts",
+      "packages/runtime-core/src/apiAsyncComponent.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15089,
+    "url": "https://github.com/vuejs/core/pull/15089",
+    "title": "fix(runtime-vapor): remove unsafe slot dry runs from vdom interop",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 6 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-vapor/__tests__/hydration.spec.ts",
+      "packages/runtime-vapor/__tests__/vdomInterop.spec.ts",
+      "packages/runtime-vapor/src/component.ts",
+      "packages/runtime-vapor/src/componentSlots.ts",
+      "packages/runtime-vapor/src/vdomInterop.ts",
+      "packages/runtime-vapor/src/vdomInteropState.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15084,
+    "url": "https://github.com/vuejs/core/pull/15084",
+    "title": "fix(reactivity): handle effect removal during scope stop",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/reactivity/__tests__/effectScope.spec.ts",
+      "packages/reactivity/src/effectScope.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15082,
+    "url": "https://github.com/vuejs/core/pull/15082",
+    "title": "fix(hydration): pass namespace when patching dynamic props",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-core/__tests__/hydration.spec.ts",
+      "packages/runtime-core/src/hydration.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15079,
+    "url": "https://github.com/vuejs/core/pull/15079",
+    "title": "chore(deps): update dependency conventional-changelog-angular to v9",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15078,
+    "url": "https://github.com/vuejs/core/pull/15078",
+    "title": "chore(deps): update dependency conventional-changelog to v8",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15075,
+    "url": "https://github.com/vuejs/core/pull/15075",
+    "title": "chore(deps): update lint",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 24 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json",
+      "packages-private/sfc-playground/src/App.vue",
+      "packages-private/template-explorer/src/index.ts",
+      "packages/compiler-core/__tests__/transforms/cacheStatic.spec.ts",
+      "packages/compiler-core/src/ast.ts",
+      "packages/compiler-core/src/transforms/transformElement.ts",
+      "packages/compiler-core/src/transforms/vIf.ts",
+      "packages/compiler-core/src/transforms/vOn.ts",
+      "packages/compiler-sfc/src/compileStyle.ts",
+      "packages/compiler-sfc/src/parse.ts",
+      "packages/compiler-sfc/src/script/resolveType.ts",
+      "packages/compiler-sfc/src/script/utils.ts",
+      "packages/compiler-ssr/src/transforms/ssrTransformElement.ts",
+      "packages/reactivity/src/ref.ts",
+      "packages/runtime-core/src/apiSetupHelpers.ts",
+      "packages/runtime-core/src/compat/renderFn.ts",
+      "packages/runtime-core/src/componentProps.ts",
+      "packages/runtime-core/src/h.ts",
+      "packages/runtime-core/src/helpers/createSlots.ts",
+      "packages/runtime-core/src/vnode.ts",
+      "packages/runtime-dom/src/components/Transition.ts",
+      "packages/runtime-dom/src/jsx.ts",
+      "packages/shared/src/typeUtils.ts",
+      "packages/vue/__tests__/e2e/e2eBrowserUtils.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15074,
+    "url": "https://github.com/vuejs/core/pull/15074",
+    "title": "fix(runtime-vapor): preserve v-show transition on vdom child",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-vapor/__tests__/vdomInterop.spec.ts",
+      "packages/runtime-vapor/src/directives/vShow.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15071,
+    "url": "https://github.com/vuejs/core/pull/15071",
+    "title": "fix(runtime-core): unwind dangling blocks when slot content throws",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 4 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-core/src/componentRenderContext.ts",
+      "packages/runtime-core/src/helpers/renderSlot.ts",
+      "packages/server-renderer/__tests__/ssrRender.spec.ts",
+      "vitest.config.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15069,
+    "url": "https://github.com/vuejs/core/pull/15069",
+    "title": "fix(vapor): handle v-if and v-show on transition roots",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 4 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/compiler-dom/src/transforms/Transition.ts",
+      "packages/compiler-vapor/__tests__/transforms/TransformTransition.spec.ts",
+      "packages/runtime-vapor/__tests__/components/Transition.spec.ts",
+      "packages/runtime-vapor/src/components/Transition.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15065,
+    "url": "https://github.com/vuejs/core/pull/15065",
+    "title": "refactor(compiler-vapor): omit default prepend logical index",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/compiler-vapor/__tests__/transforms/logicalIndex.spec.ts",
+      "packages/compiler-vapor/src/generators/operation.ts",
+      "packages/runtime-vapor/src/insertionState.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15063,
+    "url": "https://github.com/vuejs/core/pull/15063",
+    "title": "fix(server-renderer): remove package dependency cycle",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 12 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-core/__tests__/hydration.spec.ts",
+      "packages/server-renderer/package.json",
+      "packages/server-renderer/src/helpers/ssrCompile.ts",
+      "packages/server-renderer/src/helpers/ssrGetDirectiveProps.ts",
+      "packages/server-renderer/src/helpers/ssrRenderComponent.ts",
+      "packages/server-renderer/src/helpers/ssrRenderList.ts",
+      "packages/server-renderer/src/helpers/ssrRenderSlot.ts",
+      "packages/server-renderer/src/helpers/ssrRenderTeleport.ts",
+      "packages/server-renderer/src/index.ts",
+      "packages/server-renderer/src/render.ts",
+      "packages/server-renderer/src/renderToStream.ts",
+      "packages/server-renderer/src/renderToString.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15051,
+    "url": "https://github.com/vuejs/core/pull/15051",
+    "title": "fix(compiler-core): avoid leaking slot branch keys",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 6 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/compiler-core/__tests__/transforms/vFor.spec.ts",
+      "packages/compiler-core/__tests__/transforms/vIf.spec.ts",
+      "packages/compiler-core/src/ast.ts",
+      "packages/compiler-core/src/utils.ts",
+      "packages/runtime-core/__tests__/helpers/renderSlot.spec.ts",
+      "packages/runtime-core/src/helpers/renderSlot.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15047,
+    "url": "https://github.com/vuejs/core/pull/15047",
+    "title": "fix(deps): update dependency postcss to ^8.5.19",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/compiler-sfc/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15046,
+    "url": "https://github.com/vuejs/core/pull/15046",
+    "title": "chore(deps): update build",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages-private/sfc-playground/src/download/template/package.json",
+      "pnpm-workspace.yaml"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15045,
+    "url": "https://github.com/vuejs/core/pull/15045",
+    "title": "fix(shared): prevent SSR comment escaping from creating closing delimiters",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/server-renderer/__tests__/render.spec.ts",
+      "packages/shared/__tests__/escapeHtml.spec.ts",
+      "packages/shared/src/escapeHtml.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15044,
+    "url": "https://github.com/vuejs/core/pull/15044",
+    "title": "refactor(runtime-vapor): simplify slot content invalidation cleanup",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 10 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-vapor/__tests__/componentSlots.spec.ts",
+      "packages/runtime-vapor/__tests__/vdomInterop.spec.ts",
+      "packages/runtime-vapor/src/apiCreateDynamicComponent.ts",
+      "packages/runtime-vapor/src/apiCreateFor.ts",
+      "packages/runtime-vapor/src/apiCreateIf.ts",
+      "packages/runtime-vapor/src/block.ts",
+      "packages/runtime-vapor/src/fragment.ts",
+      "packages/runtime-vapor/src/slotBoundary.ts",
+      "packages/runtime-vapor/src/slotFragment.ts",
+      "packages/runtime-vapor/src/vdomInterop.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15040,
+    "url": "https://github.com/vuejs/core/pull/15040",
+    "title": "fix(types): don't constrain component $el type to Element",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages-private/dts-test/defineComponent.test-d.tsx",
+      "packages/runtime-core/src/apiDefineComponent.ts",
+      "packages/runtime-core/src/componentPublicInstance.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15035,
+    "url": "https://github.com/vuejs/core/pull/15035",
+    "title": "fix(runtime-vapor): preserve VNode anchors in dynamic component hydration",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 8 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-core/__tests__/hydration.spec.ts",
+      "packages/runtime-core/src/hydration.ts",
+      "packages/runtime-core/src/renderer.ts",
+      "packages/runtime-vapor/__tests__/componentSlots.spec.ts",
+      "packages/runtime-vapor/__tests__/hydration.spec.ts",
+      "packages/runtime-vapor/src/block.ts",
+      "packages/runtime-vapor/src/component.ts",
+      "packages/runtime-vapor/src/vdomInterop.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15031,
+    "url": "https://github.com/vuejs/core/pull/15031",
+    "title": "fix(runtime-vapor): preserve vapor slot owner during interop slot dry run",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-vapor/__tests__/vdomInterop.spec.ts",
+      "packages/runtime-vapor/src/componentSlots.ts",
+      "packages/runtime-vapor/src/vdomInterop.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "vuejs/core",
+    "pr_number": 15027,
+    "url": "https://github.com/vuejs/core/pull/15027",
+    "title": "fix(runtime-vapor): defer slot content anchors during hydration",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 9 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/runtime-vapor/__tests__/componentSlots.spec.ts",
+      "packages/runtime-vapor/__tests__/dom/hydrateFragment.spec.ts",
+      "packages/runtime-vapor/__tests__/hydration.spec.ts",
+      "packages/runtime-vapor/src/apiCreateFor.ts",
+      "packages/runtime-vapor/src/component.ts",
+      "packages/runtime-vapor/src/dom/hydrateFragment.ts",
+      "packages/runtime-vapor/src/dom/template.ts",
+      "packages/runtime-vapor/src/fragment.ts",
+      "packages/runtime-vapor/src/vdomInterop.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2475,
+    "url": "https://github.com/pinojs/pino/pull/2475",
+    "title": "docs: clarify stringification limits",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (SECURITY.md, docs/api.md) alongside 1 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "SECURITY.md",
+      "docs/api.md"
+    ],
+    "source_files": [
+      "pino.d.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2474,
+    "url": "https://github.com/pinojs/pino/pull/2474",
+    "title": "fix(multistream): resolve string level labels in write()",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "lib/multistream.js",
+      "test/multistream.test.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2471,
+    "url": "https://github.com/pinojs/pino/pull/2471",
+    "title": "fix: add setBindings to the browser logger",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "browser.js",
+      "test/browser-set-bindings.test.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2470,
+    "url": "https://github.com/pinojs/pino/pull/2470",
+    "title": "test(transport): keep event loop alive while awaiting async flush",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "test/transport/sync-false.test.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2452,
+    "url": "https://github.com/pinojs/pino/pull/2452",
+    "title": "fix: escape child binding keys",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "lib/tools.js",
+      "test/escaping.test.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2434,
+    "url": "https://github.com/pinojs/pino/pull/2434",
+    "title": "test: fix flaky transport config test",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "test/helper.js",
+      "test/transport/uses-pino-config.test.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2432,
+    "url": "https://github.com/pinojs/pino/pull/2432",
+    "title": "fix: honor per-target level filter on single-element `targets` array",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "lib/transport.js",
+      "lib/worker.js",
+      "test/transport/core.test.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2429,
+    "url": "https://github.com/pinojs/pino/pull/2429",
+    "title": "build(deps-dev): bump tstyche from 6.2.0 to 7.1.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2428,
+    "url": "https://github.com/pinojs/pino/pull/2428",
+    "title": "build(deps-dev): bump eslint-plugin-promise from 6.6.0 to 7.3.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2423,
+    "url": "https://github.com/pinojs/pino/pull/2423",
+    "title": "chore(deps): remove `pre-commit`",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2421,
+    "url": "https://github.com/pinojs/pino/pull/2421",
+    "title": "fix: add named `default` export",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 5 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "eslint.config.js",
+      "pino.d.ts",
+      "test/types/pino-import.tst.cts",
+      "test/types/pino-import.tst.js",
+      "test/types/tsconfig.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2419,
+    "url": "https://github.com/pinojs/pino/pull/2419",
+    "title": "chore: upgrade typescript to v6.0.2",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json",
+      "test/fixtures/ts/transpile.cjs",
+      "tsconfig.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2418,
+    "url": "https://github.com/pinojs/pino/pull/2418",
+    "title": "build(deps-dev): bump neostandard from 0.12.2 to 0.13.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2414,
+    "url": "https://github.com/pinojs/pino/pull/2414",
+    "title": "build(deps): bump real-require from 0.2.0 to 1.0.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2409,
+    "url": "https://github.com/pinojs/pino/pull/2409",
+    "title": "chore: remove TSTyche config file",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 8 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "test/types/pino-import.tst.cts",
+      "test/types/pino-multistream.tst.ts",
+      "test/types/pino-top-export.tst.ts",
+      "test/types/pino-transport.tst.ts",
+      "test/types/pino-type-only.tst.ts",
+      "test/types/pino.tst.ts",
+      "tsconfig.json",
+      "tstyche.config.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2408,
+    "url": "https://github.com/pinojs/pino/pull/2408",
+    "title": "chore: lint the type declaration file",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "eslint.config.js",
+      "pino.d.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7412,
+    "url": "https://github.com/trpc/trpc/pull/7412",
+    "title": "ci(example): fix Playwright e2e ffmpeg failures",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 7 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "examples/.experimental/next-app-dir/playwright.config.ts",
+      "examples/.test/ssg/playwright.config.ts",
+      "examples/minimal-react/playwright.config.ts",
+      "examples/next-prisma-starter/playwright.config.ts",
+      "examples/next-prisma-todomvc/playwright.config.ts",
+      "examples/next-prisma-websockets-starter/playwright.config.ts",
+      "examples/nuxt/playwright.config.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7411,
+    "url": "https://github.com/trpc/trpc/pull/7411",
+    "title": "feat(openapi): Add server url support",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/openapi/README.md, www/docs/client/openapi.md) alongside 5 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/openapi/README.md",
+      "www/docs/client/openapi.md"
+    ],
+    "source_files": [
+      "packages/openapi/src/cli.ts",
+      "packages/openapi/src/generate.ts",
+      "packages/openapi/src/types.ts",
+      "packages/openapi/test/cli.test.ts",
+      "packages/openapi/test/generate.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7393,
+    "url": "https://github.com/trpc/trpc/pull/7393",
+    "title": "fix(ci): restore tests package version and pin Bun",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/tests/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7370,
+    "url": "https://github.com/trpc/trpc/pull/7370",
+    "title": "fix(tanstack-react-query): add prefix support for mutation options",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/tanstack-react-query/src/internals/createOptionsProxy.ts",
+      "packages/tanstack-react-query/src/internals/mutationOptions.ts",
+      "packages/tanstack-react-query/test/mutationOptions.test.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7366,
+    "url": "https://github.com/trpc/trpc/pull/7366",
+    "title": "chore: fix duplicate \"the\" in unstable-core JSDoc comment",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/server/src/unstable-core-do-not-import.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7358,
+    "url": "https://github.com/trpc/trpc/pull/7358",
+    "title": "chore(www): Add Legora to website logos",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "www/static/logos/Legora.svg"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7351,
+    "url": "https://github.com/trpc/trpc/pull/7351",
+    "title": "build: upgrade drizzle in next-sse-chat example",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "examples/next-sse-chat/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7350,
+    "url": "https://github.com/trpc/trpc/pull/7350",
+    "title": "chore: upgrade pnpm to 10.33.1",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 8 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "examples/next-prisma-starter/.github/workflows/main.yml",
+      "examples/next-prisma-websockets-starter/.github/workflows/main.yml",
+      "examples/next-prisma-websockets-starter/package.json",
+      "examples/next-websockets-encoder/package.json",
+      "package.json",
+      "packages/openapi/src/cli.ts",
+      "packages/upgrade/test/transforms.test.ts",
+      "vitest.config.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7336,
+    "url": "https://github.com/trpc/trpc/pull/7336",
+    "title": "fix(server): handle React 19 proxy coercion in createInnerProxy",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/server/src/unstable-core-do-not-import/createProxy.test.ts",
+      "packages/server/src/unstable-core-do-not-import/createProxy.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7316,
+    "url": "https://github.com/trpc/trpc/pull/7316",
+    "title": "fix(deps): update dependency undici to v8",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/client/package.json",
+      "packages/tests/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7314,
+    "url": "https://github.com/trpc/trpc/pull/7314",
+    "title": "fix(deps): update dependency eslint-plugin-unicorn to v64",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7312,
+    "url": "https://github.com/trpc/trpc/pull/7312",
+    "title": "fix(deps): update dependency @clack/prompts to v1.2.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/upgrade/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7311,
+    "url": "https://github.com/trpc/trpc/pull/7311",
+    "title": "chore(deps): update dependency @oxc-project/runtime to v0.123.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/server/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7310,
+    "url": "https://github.com/trpc/trpc/pull/7310",
+    "title": "fix(deps): update dependency srvx to v0.11.14",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/tests/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7309,
+    "url": "https://github.com/trpc/trpc/pull/7309",
+    "title": "fix(deps): update dependency @tanstack/intent to ^0.0.27",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 6 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json",
+      "packages/client/package.json",
+      "packages/next/package.json",
+      "packages/openapi/package.json",
+      "packages/server/package.json",
+      "packages/tanstack-react-query/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7306,
+    "url": "https://github.com/trpc/trpc/pull/7306",
+    "title": "chore(monorepo): remove versions from private workspaces",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 43 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "examples/.experimental/next-app-dir/package.json",
+      "examples/.test/diagnostics-big-router/package.json",
+      "examples/.test/internal-types-export/package.json",
+      "examples/.test/monotest-api-router01/package.json",
+      "examples/.test/monotest-api/package.json",
+      "examples/.test/monotest-app/package.json",
+      "examples/.test/monotest-trpc/package.json",
+      "examples/.test/monotest-tsconfig/package.json",
+      "examples/.test/ssg-infinite-serialization/package.json",
+      "examples/.test/ssg/package.json",
+      "examples/bun/package.json",
+      "examples/cloudflare-workers/package.json",
+      "examples/express-minimal/package.json",
+      "examples/express-server/package.json",
+      "examples/fastify-server/package.json",
+      "examples/lambda-api-gateway-streaming/package.json",
+      "examples/lambda-api-gateway/package.json",
+      "examples/lambda-url/package.json",
+      "examples/lazy-load/package.json",
+      "examples/minimal-content-types/client/package.json",
+      "examples/minimal-content-types/package.json",
+      "examples/minimal-content-types/server/package.json",
+      "examples/minimal-react/client/package.json",
+      "examples/minimal-react/package.json",
+      "examples/minimal-react/server/package.json",
+      "examples/minimal/package.json",
+      "examples/next-big-router/package.json",
+      "examples/next-edge-runtime/package.json",
+      "examples/next-formdata/package.json",
+      "examples/next-minimal-starter/package.json",
+      "examples/next-prisma-starter/package.json",
+      "examples/next-prisma-todomvc/package.json",
+      "examples/next-prisma-websockets-starter/package.json",
+      "examples/next-sse-chat/package.json",
+      "examples/next-websockets-encoder/package.json",
+      "examples/openapi-codegen/package.json",
+      "examples/soa/package.json",
+      "examples/standalone-server/package.json",
+      "examples/vercel-edge-runtime/package.json",
+      "packages/tests/package.json",
+      "scripts/version.ts",
+      "www/og-image/package.json",
+      "www/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7303,
+    "url": "https://github.com/trpc/trpc/pull/7303",
+    "title": "feat: Add subscription inferrence helpers",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (www/docs/client/vanilla/infer-types.md) alongside 4 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "www/docs/client/vanilla/infer-types.md"
+    ],
+    "source_files": [
+      "packages/server/src/@trpc/server/index.ts",
+      "packages/server/src/unstable-core-do-not-import/clientish/inference.ts",
+      "packages/server/src/unstable-core-do-not-import/procedure.ts",
+      "packages/tests/server/inferenceHelpers.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7302,
+    "url": "https://github.com/trpc/trpc/pull/7302",
+    "title": "fix(www): Add accessible text to links without discernible text",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "www/src/components/TwitterWall/index.tsx",
+      "www/src/components/sponsors/SponsorBubbles.jsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7298,
+    "url": "https://github.com/trpc/trpc/pull/7298",
+    "title": "chore: Update Hey API for new type imports",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 30 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "examples/openapi-codegen/package.json",
+      "packages/openapi/package.json",
+      "packages/openapi/src/heyapi/index.ts",
+      "packages/openapi/test/routers/amazonIonRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/amazonIonRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/amazonIonRouter-heyapi/core/utils.gen.ts",
+      "packages/openapi/test/routers/appRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/appRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/appRouter-heyapi/core/utils.gen.ts",
+      "packages/openapi/test/routers/cyclicTypesRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/cyclicTypesRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/cyclicTypesRouter-heyapi/core/utils.gen.ts",
+      "packages/openapi/test/routers/descriptionsRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/descriptionsRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/descriptionsRouter-heyapi/core/utils.gen.ts",
+      "packages/openapi/test/routers/edgeCaseRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/edgeCaseRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/edgeCaseRouter-heyapi/core/utils.gen.ts",
+      "packages/openapi/test/routers/errorFormatterRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/errorFormatterRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/errorFormatterRouter-heyapi/core/utils.gen.ts",
+      "packages/openapi/test/routers/mongoEjsonRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/mongoEjsonRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/mongoEjsonRouter-heyapi/core/utils.gen.ts",
+      "packages/openapi/test/routers/nodeModulesJsDocRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/nodeModulesJsDocRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/nodeModulesJsDocRouter-heyapi/core/utils.gen.ts",
+      "packages/openapi/test/routers/superjsonRouter-heyapi/client/utils.gen.ts",
+      "packages/openapi/test/routers/superjsonRouter-heyapi/core/types.gen.ts",
+      "packages/openapi/test/routers/superjsonRouter-heyapi/core/utils.gen.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "trpc/trpc",
+    "pr_number": 7296,
+    "url": "https://github.com/trpc/trpc/pull/7296",
+    "title": "chore: Add cache checks for openapi router fixtures",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 30 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      ".gitignore",
+      "packages/openapi/src/generate.ts",
+      "packages/openapi/test/amazonIon.test.ts",
+      "packages/openapi/test/cli.test.ts",
+      "packages/openapi/test/cyclicTypes.test.ts",
+      "packages/openapi/test/edgeCases.test.ts",
+      "packages/openapi/test/generate.test.ts",
+      "packages/openapi/test/heyapi.test.ts",
+      "packages/openapi/test/mongoEjson.test.ts",
+      "packages/openapi/test/nodeModulesJsDoc.test.ts",
+      "packages/openapi/test/routers/amazonIonRouter.openapi.json",
+      "packages/openapi/test/routers/amazonIonRouter.router.ts",
+      "packages/openapi/test/routers/appRouter.openapi.json",
+      "packages/openapi/test/routers/appRouter.router.ts",
+      "packages/openapi/test/routers/cyclicTypesRouter.openapi.json",
+      "packages/openapi/test/routers/cyclicTypesRouter.router.ts",
+      "packages/openapi/test/routers/descriptionsRouter.openapi.json",
+      "packages/openapi/test/routers/descriptionsRouter.router.ts",
+      "packages/openapi/test/routers/edgeCaseRouter.openapi.json",
+      "packages/openapi/test/routers/edgeCaseRouter.router.ts",
+      "packages/openapi/test/routers/errorFormatterRouter.openapi.json",
+      "packages/openapi/test/routers/errorFormatterRouter.router.ts",
+      "packages/openapi/test/routers/mongoEjsonRouter.openapi.json",
+      "packages/openapi/test/routers/mongoEjsonRouter.router.ts",
+      "packages/openapi/test/routers/nodeModulesJsDocRouter.openapi.json",
+      "packages/openapi/test/routers/nodeModulesJsDocRouter.router.ts",
+      "packages/openapi/test/routers/superjsonRouter.openapi.json",
+      "packages/openapi/test/routers/superjsonRouter.router.ts",
+      "packages/openapi/test/scripts/codegen.ts",
+      "packages/openapi/vitest.config.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17428,
+    "url": "https://github.com/withastro/astro/pull/17428",
+    "title": "Update pnpm to v11.13.1",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17405,
+    "url": "https://github.com/withastro/astro/pull/17405",
+    "title": "fix(prefetch): swallow fetch-fallback rejection to avoid unhandled 'Load failed' on WebKit",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/prefetch-swallow-fetch-rejection.md) alongside 1 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/prefetch-swallow-fetch-rejection.md"
+    ],
+    "source_files": [
+      "packages/astro/src/prefetch/index.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17403,
+    "url": "https://github.com/withastro/astro/pull/17403",
+    "title": "[ci] release",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/tidy-pathnames-agree.md, packages/astro/CHANGELOG.md) alongside 25 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/tidy-pathnames-agree.md",
+      "packages/astro/CHANGELOG.md"
+    ],
+    "source_files": [
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17402,
+    "url": "https://github.com/withastro/astro/pull/17402",
+    "title": "fix(astro): propagate mutated locals to custom error pages",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/green-squids-stop.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/green-squids-stop.md"
+    ],
+    "source_files": [
+      "packages/astro/src/core/fetch/fetch-state.ts",
+      "packages/astro/test/units/app/locals.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17399,
+    "url": "https://github.com/withastro/astro/pull/17399",
+    "title": "Normalize domain-based i18n request paths consistently",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/tidy-pathnames-agree.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/tidy-pathnames-agree.md"
+    ],
+    "source_files": [
+      "packages/astro/src/core/fetch/fetch-state.ts",
+      "packages/astro/src/core/i18n/domain.ts",
+      "packages/astro/test/units/i18n/i18n-app.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17394,
+    "url": "https://github.com/withastro/astro/pull/17394",
+    "title": "Preserve CSP resource defaults for element directives",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/early-seas-mix.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/early-seas-mix.md"
+    ],
+    "source_files": [
+      "packages/astro/src/runtime/server/render/csp.ts",
+      "packages/astro/test/units/csp/render-csp.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17393,
+    "url": "https://github.com/withastro/astro/pull/17393",
+    "title": "Add more escaping for rendered content",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/tidy-styles-harden.md) alongside 10 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/tidy-styles-harden.md"
+    ],
+    "source_files": [
+      "packages/astro/src/core/app/dev/pipeline.ts",
+      "packages/astro/src/runtime/server/escape.ts",
+      "packages/astro/src/runtime/server/render/server-islands.ts",
+      "packages/astro/src/runtime/server/transition.ts",
+      "packages/astro/src/vite-plugin-app/pipeline.ts",
+      "packages/astro/test/server-islands.test.ts",
+      "packages/astro/test/units/render/escape.test.ts",
+      "packages/astro/test/units/render/transitions.test.ts",
+      "packages/astro/test/units/server-islands/server-islands-render.test.ts",
+      "packages/integrations/cloudflare/test/prerender-node-env.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17391,
+    "url": "https://github.com/withastro/astro/pull/17391",
+    "title": "fix(logger): allows setting in updateConfig()",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/cuddly-horses-learn.md) alongside 5 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/cuddly-horses-learn.md"
+    ],
+    "source_files": [
+      "packages/astro/src/core/base-pipeline.ts",
+      "packages/astro/src/core/logger/load.ts",
+      "packages/astro/src/integrations/hooks.ts",
+      "packages/astro/test/units/integrations/api.test.ts",
+      "packages/astro/test/units/logger/load.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17390,
+    "url": "https://github.com/withastro/astro/pull/17390",
+    "title": "fix(logger): make AstroLoggerDestination not generic",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/little-sites-tie.md) alongside 11 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/little-sites-tie.md"
+    ],
+    "source_files": [
+      "packages/astro/src/core/app/types.ts",
+      "packages/astro/src/core/logger/core.ts",
+      "packages/astro/src/core/logger/impls/console.ts",
+      "packages/astro/src/core/logger/impls/json.ts",
+      "packages/astro/src/core/logger/impls/node.ts",
+      "packages/astro/test/prerender-conflict.test.ts",
+      "packages/astro/test/units/logger/destination.test.ts",
+      "packages/astro/test/units/logger/logger.test.ts",
+      "packages/astro/test/units/routing/manifest.test.ts",
+      "packages/astro/test/units/routing/params-validation.test.ts",
+      "packages/astro/test/units/routing/route-manifest.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17389,
+    "url": "https://github.com/withastro/astro/pull/17389",
+    "title": "feat(logger): allow passing entrypoint as URL",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/tasty-windows-lead.md) alongside 5 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/tasty-windows-lead.md"
+    ],
+    "source_files": [
+      "packages/astro/src/core/config/schemas/base.ts",
+      "packages/astro/src/core/logger/config.ts",
+      "packages/astro/src/core/logger/load.ts",
+      "packages/astro/src/types/public/config.ts",
+      "packages/astro/test/units/logger/load.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17387,
+    "url": "https://github.com/withastro/astro/pull/17387",
+    "title": "[ci] release",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/breezy-corners-push.md, .changeset/cool-rice-exist.md, .changeset/cuddly-horses-learn.md, .changeset/early-seas-mix.md, .changeset/green-clocks-greet.md, .changeset/hip-rats-decide.md, .changeset/little-sites-tie.md, .changeset/lovely-nights-stay.md, .changeset/pink-frogs-poke.md, .changeset/tame-donkeys-relax.md, .changeset/tasty-windows-lead.md, .changeset/tidy-styles-harden.md, packages/astro/CHANGELOG.md) alongside 25 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/breezy-corners-push.md",
+      ".changeset/cool-rice-exist.md",
+      ".changeset/cuddly-horses-learn.md",
+      ".changeset/early-seas-mix.md",
+      ".changeset/green-clocks-greet.md",
+      ".changeset/hip-rats-decide.md",
+      ".changeset/little-sites-tie.md",
+      ".changeset/lovely-nights-stay.md",
+      ".changeset/pink-frogs-poke.md",
+      ".changeset/tame-donkeys-relax.md",
+      ".changeset/tasty-windows-lead.md",
+      ".changeset/tidy-styles-harden.md",
+      "packages/astro/CHANGELOG.md"
+    ],
+    "source_files": [
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17384,
+    "url": "https://github.com/withastro/astro/pull/17384",
+    "title": "Local font file IDs now hash content only, not content + absolute path",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/astro/src/assets/fonts/infra/fs-font-file-content-resolver.ts",
+      "packages/astro/test/units/assets/fonts/infra.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17374,
+    "url": "https://github.com/withastro/astro/pull/17374",
+    "title": "Fix dev server 404 for ?url imported assets on browser navigation",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/green-clocks-greet.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/green-clocks-greet.md"
+    ],
+    "source_files": [
+      "packages/astro/src/vite-plugin-astro-server/route-guard.ts",
+      "packages/astro/test/units/dev/route-guard-middleware.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17373,
+    "url": "https://github.com/withastro/astro/pull/17373",
+    "title": "[ci] release",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/free-friends-lick.md, .changeset/island-retry-query-param.md, .changeset/modern-otters-smoke.md, packages/astro/CHANGELOG.md, packages/integrations/vercel/CHANGELOG.md) alongside 26 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/free-friends-lick.md",
+      ".changeset/island-retry-query-param.md",
+      ".changeset/modern-otters-smoke.md",
+      "packages/astro/CHANGELOG.md",
+      "packages/integrations/vercel/CHANGELOG.md"
+    ],
+    "source_files": [
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/package.json",
+      "packages/integrations/vercel/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17370,
+    "url": "https://github.com/withastro/astro/pull/17370",
+    "title": "fix(@astrojs/vercel): improve internal ISR route handling",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/modern-otters-smoke.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/modern-otters-smoke.md"
+    ],
+    "source_files": [
+      "packages/integrations/vercel/src/index.ts",
+      "packages/integrations/vercel/src/serverless/entrypoint.ts",
+      "packages/integrations/vercel/test/isr.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17369,
+    "url": "https://github.com/withastro/astro/pull/17369",
+    "title": "fix(astro-island): use query param for hydration import retry so recovery works in dev",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/island-retry-query-param.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/island-retry-query-param.md"
+    ],
+    "source_files": [
+      "packages/astro/e2e/astro-island-hydration-error.test.ts",
+      "packages/astro/src/runtime/server/astro-island.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17368,
+    "url": "https://github.com/withastro/astro/pull/17368",
+    "title": "Match remotePatterns and domains metacharacters literally in Netlify Image CDN regex",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/slow-steaks-exist.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/slow-steaks-exist.md"
+    ],
+    "source_files": [
+      "packages/integrations/netlify/src/index.ts",
+      "packages/integrations/netlify/test/functions/image-cdn.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17363,
+    "url": "https://github.com/withastro/astro/pull/17363",
+    "title": "Fix `astro preview --open` not opening a browser with the Cloudflare adapter",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/dark-llamas-matter.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/dark-llamas-matter.md"
+    ],
+    "source_files": [
+      "packages/astro/src/core/preview/index.ts",
+      "packages/astro/src/types/public/preview.ts",
+      "packages/integrations/cloudflare/src/entrypoints/preview.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17360,
+    "url": "https://github.com/withastro/astro/pull/17360",
+    "title": "refactor(test): migrate vite virtual module tests from e2e to integration",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 7 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/astro/e2e/fixtures/vite-virtual-modules/astro.config.mjs",
+      "packages/astro/e2e/vite-virtual-modules.test.ts",
+      "packages/astro/test/fixtures/vite-virtual-modules/astro.config.mjs",
+      "packages/astro/test/fixtures/vite-virtual-modules/package.json",
+      "packages/astro/test/fixtures/vite-virtual-modules/src/pages/index.astro",
+      "packages/astro/test/fixtures/vite-virtual-modules/src/plugins/virtual.ts",
+      "packages/astro/test/vite-virtual-modules.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17353,
+    "url": "https://github.com/withastro/astro/pull/17353",
+    "title": "fix: update the compiler to the latest",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/spicy-wombats-tan.md) alongside 1 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/spicy-wombats-tan.md"
+    ],
+    "source_files": [
+      "packages/astro/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17345,
+    "url": "https://github.com/withastro/astro/pull/17345",
+    "title": "fix(language-server): fail with a clear error when TypeScript 7 native compiler is used",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/tsgo-check-guard.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/tsgo-check-guard.md"
+    ],
+    "source_files": [
+      "packages/language-tools/language-server/src/check.ts",
+      "packages/language-tools/language-server/test/check/check.test.ts",
+      "packages/language-tools/language-server/test/check/ts7-native-stub.cjs"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17344,
+    "url": "https://github.com/withastro/astro/pull/17344",
+    "title": "Improve rendering performance for pages with many components",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/tidy-heads-run.md) alongside 4 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/tidy-heads-run.md"
+    ],
+    "source_files": [
+      "benchmark/bench/rendering-perf.bench.js",
+      "benchmark/make-project/rendering-perf.js",
+      "packages/astro/src/core/head-propagation/buffer.ts",
+      "packages/astro/test/units/render/head-propagation/buffer.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17341,
+    "url": "https://github.com/withastro/astro/pull/17341",
+    "title": "fix(satteri): route highlighted code blocks through MDX pre components",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/satteri-mdx-highlight-pre.md, packages/integrations/mdx/test/fixtures/mdx-satteri-highlight-pre-optimize/src/pages/index.mdx, packages/integrations/mdx/test/fixtures/mdx-satteri-highlight-pre/src/pages/index.mdx) alongside 8 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/satteri-mdx-highlight-pre.md",
+      "packages/integrations/mdx/test/fixtures/mdx-satteri-highlight-pre-optimize/src/pages/index.mdx",
+      "packages/integrations/mdx/test/fixtures/mdx-satteri-highlight-pre/src/pages/index.mdx"
+    ],
+    "source_files": [
+      "packages/integrations/mdx/src/satteri/index.ts",
+      "packages/integrations/mdx/src/satteri/jsx-utils.ts",
+      "packages/integrations/mdx/test/fixtures/mdx-satteri-highlight-pre-optimize/src/components/Preformatted.astro",
+      "packages/integrations/mdx/test/fixtures/mdx-satteri-highlight-pre/src/components/Preformatted.astro",
+      "packages/integrations/mdx/test/mdx-satteri.test.ts",
+      "packages/markdown/satteri/package.json",
+      "packages/markdown/satteri/src/index.ts",
+      "packages/markdown/satteri/src/satteri-processor.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17338,
+    "url": "https://github.com/withastro/astro/pull/17338",
+    "title": "[ci] release",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (.changeset/dark-llamas-matter.md, .changeset/export-logger.md, .changeset/new-lamps-fly.md, .changeset/satteri-mdx-highlight-pre.md, .changeset/slow-steaks-exist.md, .changeset/spicy-wombats-tan.md, .changeset/tidy-heads-run.md, .changeset/tsgo-check-guard.md, packages/astro/CHANGELOG.md, packages/integrations/cloudflare/CHANGELOG.md, packages/integrations/mdx/CHANGELOG.md, packages/integrations/netlify/CHANGELOG.md, packages/language-tools/language-server/CHANGELOG.md, packages/markdown/satteri/CHANGELOG.md) alongside 30 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      ".changeset/dark-llamas-matter.md",
+      ".changeset/export-logger.md",
+      ".changeset/new-lamps-fly.md",
+      ".changeset/satteri-mdx-highlight-pre.md",
+      ".changeset/slow-steaks-exist.md",
+      ".changeset/spicy-wombats-tan.md",
+      ".changeset/tidy-heads-run.md",
+      ".changeset/tsgo-check-guard.md",
+      "packages/astro/CHANGELOG.md",
+      "packages/integrations/cloudflare/CHANGELOG.md",
+      "packages/integrations/mdx/CHANGELOG.md",
+      "packages/integrations/netlify/CHANGELOG.md",
+      "packages/language-tools/language-server/CHANGELOG.md",
+      "packages/markdown/satteri/CHANGELOG.md"
+    ],
+    "source_files": [
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/package.json",
+      "packages/integrations/cloudflare/package.json",
+      "packages/integrations/mdx/package.json",
+      "packages/integrations/netlify/package.json",
+      "packages/language-tools/language-server/package.json",
+      "packages/markdown/satteri/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17333,
+    "url": "https://github.com/withastro/astro/pull/17333",
+    "title": "Fix flakey tests in non-parallel path",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "scripts/cmd/test.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17329,
+    "url": "https://github.com/nestjs/nest/pull/17329",
+    "title": "fix(deps): update dependency @nestjs/swagger to v11.4.6",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/11-swagger/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17328,
+    "url": "https://github.com/nestjs/nest/pull/17328",
+    "title": "chore: update multerExceptions constant",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/platform-express/multer/multer/multer.constants.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17326,
+    "url": "https://github.com/nestjs/nest/pull/17326",
+    "title": "fix(deps): update dependency mysql2 to v3.23.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/05-sql-typeorm/package.json",
+      "sample/07-sequelize/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17325,
+    "url": "https://github.com/nestjs/nest/pull/17325",
+    "title": "fix(deps): update dependency mercurius to v16.10.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/33-graphql-mercurius/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17324,
+    "url": "https://github.com/nestjs/nest/pull/17324",
+    "title": "chore(deps): update dependency @types/supertest to v7.2.1",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 36 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/01-cats-app/package.json",
+      "sample/02-gateways/package.json",
+      "sample/03-microservices/package.json",
+      "sample/04-grpc/package.json",
+      "sample/05-sql-typeorm/package.json",
+      "sample/06-mongoose/package.json",
+      "sample/07-sequelize/package.json",
+      "sample/10-fastify/package.json",
+      "sample/11-swagger/package.json",
+      "sample/12-graphql-schema-first/package.json",
+      "sample/13-mongo-typeorm/package.json",
+      "sample/14-mongoose-base/package.json",
+      "sample/15-mvc/package.json",
+      "sample/16-gateways-ws/package.json",
+      "sample/17-mvc-fastify/package.json",
+      "sample/18-context/package.json",
+      "sample/19-auth-jwt/package.json",
+      "sample/20-cache/package.json",
+      "sample/21-serializer/package.json",
+      "sample/22-graphql-prisma/package.json",
+      "sample/23-graphql-code-first/package.json",
+      "sample/24-serve-static/package.json",
+      "sample/25-dynamic-modules/package.json",
+      "sample/26-queues/package.json",
+      "sample/27-scheduling/package.json",
+      "sample/28-sse/package.json",
+      "sample/29-file-upload/package.json",
+      "sample/30-event-emitter/package.json",
+      "sample/31-graphql-federation-code-first/gateway/package.json",
+      "sample/31-graphql-federation-code-first/posts-application/package.json",
+      "sample/31-graphql-federation-code-first/users-application/package.json",
+      "sample/32-graphql-federation-schema-first/gateway/package.json",
+      "sample/32-graphql-federation-schema-first/posts-application/package.json",
+      "sample/32-graphql-federation-schema-first/users-application/package.json",
+      "sample/33-graphql-mercurius/package.json",
+      "sample/36-hmr-esm/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17323,
+    "url": "https://github.com/nestjs/nest/pull/17323",
+    "title": "chore(deps-dev): bump @types/supertest from 7.2.0 to 7.2.1",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17322,
+    "url": "https://github.com/nestjs/nest/pull/17322",
+    "title": "chore(deps): bump ws from 8.21.0 to 8.21.1",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json",
+      "packages/platform-ws/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17321,
+    "url": "https://github.com/nestjs/nest/pull/17321",
+    "title": "chore(deps-dev): bump mysql2 from 3.22.6 to 3.23.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17316,
+    "url": "https://github.com/nestjs/nest/pull/17316",
+    "title": "fix(deps): update dependency typeorm to v0.3.31",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 3 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json",
+      "sample/05-sql-typeorm/package.json",
+      "sample/13-mongo-typeorm/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17300,
+    "url": "https://github.com/nestjs/nest/pull/17300",
+    "title": "chore(deps): update dependency @nestjs/cli to v11.0.24",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 37 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/01-cats-app/package.json",
+      "sample/02-gateways/package.json",
+      "sample/03-microservices/package.json",
+      "sample/04-grpc/package.json",
+      "sample/05-sql-typeorm/package.json",
+      "sample/06-mongoose/package.json",
+      "sample/07-sequelize/package.json",
+      "sample/08-webpack/package.json",
+      "sample/10-fastify/package.json",
+      "sample/11-swagger/package.json",
+      "sample/12-graphql-schema-first/package.json",
+      "sample/13-mongo-typeorm/package.json",
+      "sample/14-mongoose-base/package.json",
+      "sample/15-mvc/package.json",
+      "sample/16-gateways-ws/package.json",
+      "sample/17-mvc-fastify/package.json",
+      "sample/18-context/package.json",
+      "sample/19-auth-jwt/package.json",
+      "sample/20-cache/package.json",
+      "sample/21-serializer/package.json",
+      "sample/22-graphql-prisma/package.json",
+      "sample/23-graphql-code-first/package.json",
+      "sample/24-serve-static/package.json",
+      "sample/25-dynamic-modules/package.json",
+      "sample/26-queues/package.json",
+      "sample/27-scheduling/package.json",
+      "sample/28-sse/package.json",
+      "sample/29-file-upload/package.json",
+      "sample/30-event-emitter/package.json",
+      "sample/31-graphql-federation-code-first/gateway/package.json",
+      "sample/31-graphql-federation-code-first/posts-application/package.json",
+      "sample/31-graphql-federation-code-first/users-application/package.json",
+      "sample/32-graphql-federation-schema-first/gateway/package.json",
+      "sample/32-graphql-federation-schema-first/posts-application/package.json",
+      "sample/32-graphql-federation-schema-first/users-application/package.json",
+      "sample/33-graphql-mercurius/package.json",
+      "sample/36-hmr-esm/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17298,
+    "url": "https://github.com/nestjs/nest/pull/17298",
+    "title": "fix(deps): update graphql-tools monorepo",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 7 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/12-graphql-schema-first/package.json",
+      "sample/31-graphql-federation-code-first/gateway/package.json",
+      "sample/31-graphql-federation-code-first/posts-application/package.json",
+      "sample/31-graphql-federation-code-first/users-application/package.json",
+      "sample/32-graphql-federation-schema-first/gateway/package.json",
+      "sample/32-graphql-federation-schema-first/posts-application/package.json",
+      "sample/32-graphql-federation-schema-first/users-application/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17297,
+    "url": "https://github.com/nestjs/nest/pull/17297",
+    "title": "fix(deps): update dependency mongodb to v7.5.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/13-mongo-typeorm/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17296,
+    "url": "https://github.com/nestjs/nest/pull/17296",
+    "title": "fix(deps): update dependency @fastify/static to v9.3.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/17-mvc-fastify/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17293,
+    "url": "https://github.com/nestjs/nest/pull/17293",
+    "title": "chore(deps): bump fast-json-stringify from 7.0.0 to 7.0.1",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17291,
+    "url": "https://github.com/nestjs/nest/pull/17291",
+    "title": "chore(deps-dev): bump conventional-changelog from 8.0.1 to 8.1.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17290,
+    "url": "https://github.com/nestjs/nest/pull/17290",
+    "title": "chore(deps): update dependency prettier to v3.9.5",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 37 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/01-cats-app/package.json",
+      "sample/02-gateways/package.json",
+      "sample/03-microservices/package.json",
+      "sample/04-grpc/package.json",
+      "sample/05-sql-typeorm/package.json",
+      "sample/06-mongoose/package.json",
+      "sample/07-sequelize/package.json",
+      "sample/09-babel-example/package.json",
+      "sample/10-fastify/package.json",
+      "sample/11-swagger/package.json",
+      "sample/12-graphql-schema-first/package.json",
+      "sample/13-mongo-typeorm/package.json",
+      "sample/14-mongoose-base/package.json",
+      "sample/15-mvc/package.json",
+      "sample/16-gateways-ws/package.json",
+      "sample/17-mvc-fastify/package.json",
+      "sample/18-context/package.json",
+      "sample/19-auth-jwt/package.json",
+      "sample/20-cache/package.json",
+      "sample/21-serializer/package.json",
+      "sample/22-graphql-prisma/package.json",
+      "sample/23-graphql-code-first/package.json",
+      "sample/24-serve-static/package.json",
+      "sample/25-dynamic-modules/package.json",
+      "sample/26-queues/package.json",
+      "sample/27-scheduling/package.json",
+      "sample/28-sse/package.json",
+      "sample/29-file-upload/package.json",
+      "sample/30-event-emitter/package.json",
+      "sample/31-graphql-federation-code-first/gateway/package.json",
+      "sample/31-graphql-federation-code-first/posts-application/package.json",
+      "sample/31-graphql-federation-code-first/users-application/package.json",
+      "sample/32-graphql-federation-schema-first/gateway/package.json",
+      "sample/32-graphql-federation-schema-first/posts-application/package.json",
+      "sample/32-graphql-federation-schema-first/users-application/package.json",
+      "sample/33-graphql-mercurius/package.json",
+      "sample/36-hmr-esm/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17286,
+    "url": "https://github.com/nestjs/nest/pull/17286",
+    "title": "chore(deps-dev): bump @fastify/static from 9.1.3 to 9.3.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17284,
+    "url": "https://github.com/nestjs/nest/pull/17284",
+    "title": "chore(deps-dev): bump @commitlint/cli from 21.2.0 to 21.2.1",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17283,
+    "url": "https://github.com/nestjs/nest/pull/17283",
+    "title": "chore(deps-dev): bump @types/node from 26.1.0 to 26.1.1",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17282,
+    "url": "https://github.com/nestjs/nest/pull/17282",
+    "title": "chore(deps): bump @fastify/cors from 11.2.0 to 11.3.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json",
+      "packages/platform-fastify/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17280,
+    "url": "https://github.com/nestjs/nest/pull/17280",
+    "title": "chore(deps): update dependency @fastify/multipart to v10.1.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17279,
+    "url": "https://github.com/nestjs/nest/pull/17279",
+    "title": "fix(deps): update nest monorepo to v11.1.28",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 38 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/01-cats-app/package.json",
+      "sample/02-gateways/package.json",
+      "sample/03-microservices/package.json",
+      "sample/04-grpc/package.json",
+      "sample/05-sql-typeorm/package.json",
+      "sample/06-mongoose/package.json",
+      "sample/07-sequelize/package.json",
+      "sample/08-webpack/package.json",
+      "sample/09-babel-example/package.json",
+      "sample/10-fastify/package.json",
+      "sample/11-swagger/package.json",
+      "sample/12-graphql-schema-first/package.json",
+      "sample/13-mongo-typeorm/package.json",
+      "sample/14-mongoose-base/package.json",
+      "sample/15-mvc/package.json",
+      "sample/16-gateways-ws/package.json",
+      "sample/17-mvc-fastify/package.json",
+      "sample/18-context/package.json",
+      "sample/19-auth-jwt/package.json",
+      "sample/20-cache/package.json",
+      "sample/21-serializer/package.json",
+      "sample/22-graphql-prisma/package.json",
+      "sample/23-graphql-code-first/package.json",
+      "sample/24-serve-static/package.json",
+      "sample/25-dynamic-modules/package.json",
+      "sample/26-queues/package.json",
+      "sample/27-scheduling/package.json",
+      "sample/28-sse/package.json",
+      "sample/29-file-upload/package.json",
+      "sample/30-event-emitter/package.json",
+      "sample/31-graphql-federation-code-first/gateway/package.json",
+      "sample/31-graphql-federation-code-first/posts-application/package.json",
+      "sample/31-graphql-federation-code-first/users-application/package.json",
+      "sample/32-graphql-federation-schema-first/gateway/package.json",
+      "sample/32-graphql-federation-schema-first/posts-application/package.json",
+      "sample/32-graphql-federation-schema-first/users-application/package.json",
+      "sample/33-graphql-mercurius/package.json",
+      "sample/36-hmr-esm/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17278,
+    "url": "https://github.com/nestjs/nest/pull/17278",
+    "title": "fix(deps): update dependency mysql2 to v3.22.6",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/05-sql-typeorm/package.json",
+      "sample/07-sequelize/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "nestjs/nest",
+    "pr_number": 17276,
+    "url": "https://github.com/nestjs/nest/pull/17276",
+    "title": "chore(deps): update dependency @types/node to v24.13.3",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 37 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "sample/01-cats-app/package.json",
+      "sample/02-gateways/package.json",
+      "sample/03-microservices/package.json",
+      "sample/04-grpc/package.json",
+      "sample/05-sql-typeorm/package.json",
+      "sample/06-mongoose/package.json",
+      "sample/07-sequelize/package.json",
+      "sample/08-webpack/package.json",
+      "sample/10-fastify/package.json",
+      "sample/11-swagger/package.json",
+      "sample/12-graphql-schema-first/package.json",
+      "sample/13-mongo-typeorm/package.json",
+      "sample/14-mongoose-base/package.json",
+      "sample/15-mvc/package.json",
+      "sample/16-gateways-ws/package.json",
+      "sample/17-mvc-fastify/package.json",
+      "sample/18-context/package.json",
+      "sample/19-auth-jwt/package.json",
+      "sample/20-cache/package.json",
+      "sample/21-serializer/package.json",
+      "sample/22-graphql-prisma/package.json",
+      "sample/23-graphql-code-first/package.json",
+      "sample/24-serve-static/package.json",
+      "sample/25-dynamic-modules/package.json",
+      "sample/26-queues/package.json",
+      "sample/27-scheduling/package.json",
+      "sample/28-sse/package.json",
+      "sample/29-file-upload/package.json",
+      "sample/30-event-emitter/package.json",
+      "sample/31-graphql-federation-code-first/gateway/package.json",
+      "sample/31-graphql-federation-code-first/posts-application/package.json",
+      "sample/31-graphql-federation-code-first/users-application/package.json",
+      "sample/32-graphql-federation-schema-first/gateway/package.json",
+      "sample/32-graphql-federation-schema-first/posts-application/package.json",
+      "sample/32-graphql-federation-schema-first/users-application/package.json",
+      "sample/33-graphql-mercurius/package.json",
+      "sample/36-hmr-esm/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15323,
+    "url": "https://github.com/remix-run/react-router/pull/15323",
+    "title": "fix(rsc): preserve component metadata for client loader revalidation",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router/.changes/patch.rsc-client-loader-revalidation.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router/.changes/patch.rsc-client-loader-revalidation.md"
+    ],
+    "source_files": [
+      "integration/rsc/rsc-test.ts",
+      "packages/react-router/lib/rsc/browser.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15322,
+    "url": "https://github.com/remix-run/react-router/pull/15322",
+    "title": "docs: fix useLinkClickHandler defaultShouldRevalidate default description",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/react-router/lib/dom/lib.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15321,
+    "url": "https://github.com/remix-run/react-router/pull/15321",
+    "title": "feat(rsc): support subResourceIntegrity",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (docs/how-to/react-server-components.md, packages/react-router-dev/.changes/unstable.rsc-subresource-integrity.md) alongside 4 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "docs/how-to/react-server-components.md",
+      "packages/react-router-dev/.changes/unstable.rsc-subresource-integrity.md"
+    ],
+    "source_files": [
+      "integration/sri-test.ts",
+      "packages/react-router-dev/config/default-rsc-entries/entry.ssr.tsx",
+      "packages/react-router-dev/rsc-types.d.ts",
+      "packages/react-router-dev/vite/rsc/plugin.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15320,
+    "url": "https://github.com/remix-run/react-router/pull/15320",
+    "title": "feat(rsc): support CSP nonces in document rendering",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (docs/how-to/react-server-components.md, docs/how-to/security.md, packages/react-router/.changes/unstable.rsc-nonce.md) alongside 5 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "docs/how-to/react-server-components.md",
+      "docs/how-to/security.md",
+      "packages/react-router/.changes/unstable.rsc-nonce.md"
+    ],
+    "source_files": [
+      "integration/rsc-nonce-test.ts",
+      "packages/react-router/__tests__/rsc/html-stream-test.ts",
+      "packages/react-router/lib/rsc/html-stream/server.ts",
+      "packages/react-router/lib/rsc/server.rsc.ts",
+      "packages/react-router/lib/rsc/server.ssr.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15318,
+    "url": "https://github.com/remix-run/react-router/pull/15318",
+    "title": "feat(rsc): reload stale clients after new deployments",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router-dev/.changes/unstable.rsc-client-version.md, packages/react-router/.changes/unstable.rsc-client-version.md) alongside 9 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router-dev/.changes/unstable.rsc-client-version.md",
+      "packages/react-router/.changes/unstable.rsc-client-version.md"
+    ],
+    "source_files": [
+      "integration/rsc-client-version-test.ts",
+      "packages/react-router-dev/config/default-rsc-entries/entry.rsc.tsx",
+      "packages/react-router-dev/rsc-types.d.ts",
+      "packages/react-router-dev/vite/rsc/plugin.ts",
+      "packages/react-router/__tests__/rsc/server-test.ts",
+      "packages/react-router/lib/dom/ssr/fog-of-war.ts",
+      "packages/react-router/lib/rsc/browser.tsx",
+      "packages/react-router/lib/rsc/server.rsc.ts",
+      "playground/rsc-vite-framework/app/entry.rsc.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15316,
+    "url": "https://github.com/remix-run/react-router/pull/15316",
+    "title": "Update docs links to v8 API reference",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (docs/api/data-routers/createStaticRouter.md, docs/api/framework-conventions/react-router.config.ts.md, docs/api/framework-conventions/routes.ts.md, docs/api/hooks/useFetcher.md, docs/api/hooks/useFormAction.md, docs/api/hooks/useHref.md, docs/api/hooks/useLinkClickHandler.md, docs/api/hooks/useResolvedPath.md, docs/api/hooks/useViewTransitionState.md, docs/api/other-api/adapter.md, docs/api/utils/IsCookieFunction.md, docs/api/utils/IsSessionFunction.md, docs/api/utils/createCookie.md, docs/api/utils/createCookieSessionStorage.md, docs/api/utils/createMemorySessionStorage.md, docs/api/utils/createPath.md, docs/api/utils/createRequestHandler.md, docs/api/utils/createRoutesStub.md, docs/api/utils/createSearchParams.md, docs/api/utils/createSession.md, docs/api/utils/createSessionStorage.md, docs/api/utils/generatePath.md, docs/api/utils/isCookie.md, docs/api/utils/isSession.md, docs/api/utils/parsePath.md, docs/explanation/sessions-and-cookies.md, docs/explanation/state-management.md, docs/how-to/presets.md, docs/how-to/server-bundles.md, docs/start/data/route-object.md, docs/start/data/routing.md, docs/start/framework/pending-ui.md, docs/start/framework/route-module.md, docs/start/framework/routing.md, docs/tutorials/address-book.md, docs/tutorials/quickstart.md, packages/react-router/lib/router/history.ts) alongside 8 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "docs/api/data-routers/createStaticRouter.md",
+      "docs/api/framework-conventions/react-router.config.ts.md",
+      "docs/api/framework-conventions/routes.ts.md",
+      "docs/api/hooks/useFetcher.md",
+      "docs/api/hooks/useFormAction.md",
+      "docs/api/hooks/useHref.md",
+      "docs/api/hooks/useLinkClickHandler.md",
+      "docs/api/hooks/useResolvedPath.md",
+      "docs/api/hooks/useViewTransitionState.md",
+      "docs/api/other-api/adapter.md",
+      "docs/api/utils/IsCookieFunction.md",
+      "docs/api/utils/IsSessionFunction.md",
+      "docs/api/utils/createCookie.md",
+      "docs/api/utils/createCookieSessionStorage.md",
+      "docs/api/utils/createMemorySessionStorage.md",
+      "docs/api/utils/createPath.md",
+      "docs/api/utils/createRequestHandler.md",
+      "docs/api/utils/createRoutesStub.md",
+      "docs/api/utils/createSearchParams.md",
+      "docs/api/utils/createSession.md",
+      "docs/api/utils/createSessionStorage.md",
+      "docs/api/utils/generatePath.md",
+      "docs/api/utils/isCookie.md",
+      "docs/api/utils/isSession.md",
+      "docs/api/utils/parsePath.md",
+      "docs/explanation/sessions-and-cookies.md",
+      "docs/explanation/state-management.md",
+      "docs/how-to/presets.md",
+      "docs/how-to/server-bundles.md",
+      "docs/start/data/route-object.md",
+      "docs/start/data/routing.md",
+      "docs/start/framework/pending-ui.md",
+      "docs/start/framework/route-module.md",
+      "docs/start/framework/routing.md",
+      "docs/tutorials/address-book.md",
+      "docs/tutorials/quickstart.md",
+      "packages/react-router/lib/router/history.ts"
+    ],
+    "source_files": [
+      "packages/react-router/lib/dom/dom.ts",
+      "packages/react-router/lib/dom/ssr/routes-test-stub.tsx",
+      "packages/react-router/lib/server-runtime/cookies.ts",
+      "packages/react-router/lib/server-runtime/server.ts",
+      "packages/react-router/lib/server-runtime/sessions.ts",
+      "packages/react-router/lib/server-runtime/sessions/cookieStorage.ts",
+      "packages/react-router/lib/server-runtime/sessions/memoryStorage.ts",
+      "scripts/docs.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15311,
+    "url": "https://github.com/remix-run/react-router/pull/15311",
+    "title": "harden RSC CSRF codepaths",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router/.changes/patch.rsc-csrf.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router/.changes/patch.rsc-csrf.md"
+    ],
+    "source_files": [
+      "integration/rsc-csrf-action-test.ts",
+      "packages/react-router/lib/rsc/server.rsc.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15310,
+    "url": "https://github.com/remix-run/react-router/pull/15310",
+    "title": "fix: encode path params per RFC 3986 path-segment rules in href/generatePath",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router/.changes/patch.encode-path-params-pchar.md) alongside 4 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router/.changes/patch.encode-path-params-pchar.md"
+    ],
+    "source_files": [
+      "packages/react-router/__tests__/generatePath-test.tsx",
+      "packages/react-router/__tests__/href-test.ts",
+      "packages/react-router/lib/href.ts",
+      "packages/react-router/lib/router/utils.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15302,
+    "url": "https://github.com/remix-run/react-router/pull/15302",
+    "title": "Use random UUIDs for memory session ids",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (docs/explanation/sessions-and-cookies.md, packages/react-router/.changes/patch.memory-session-random-uuid.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "docs/explanation/sessions-and-cookies.md",
+      "packages/react-router/.changes/patch.memory-session-random-uuid.md"
+    ],
+    "source_files": [
+      "packages/react-router/__tests__/server-runtime/sessions-test.ts",
+      "packages/react-router/lib/server-runtime/sessions/memoryStorage.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15300,
+    "url": "https://github.com/remix-run/react-router/pull/15300",
+    "title": "fix: apply NavLink pending state when the to prop has a trailing slash",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router/.changes/patch.navlink-pending-trailing-slash.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router/.changes/patch.navlink-pending-trailing-slash.md"
+    ],
+    "source_files": [
+      "packages/react-router/__tests__/dom/nav-link-active-test.tsx",
+      "packages/react-router/lib/dom/lib.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15291,
+    "url": "https://github.com/remix-run/react-router/pull/15291",
+    "title": "feat: restart with development condition",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router-dev/.changes/minor.development-conditions.md) alongside 9 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router-dev/.changes/minor.development-conditions.md"
+    ],
+    "source_files": [
+      "integration/cli-test.ts",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/development-condition-enabled/false.d.mts",
+      "packages/react-router-dev/development-condition-enabled/false.mjs",
+      "packages/react-router-dev/development-condition-enabled/true.d.mts",
+      "packages/react-router-dev/development-condition-enabled/true.mjs",
+      "packages/react-router-dev/package.json",
+      "packages/react-router-dev/restart-with-conditions.ts",
+      "packages/react-router-dev/tsdown.config.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15290,
+    "url": "https://github.com/remix-run/react-router/pull/15290",
+    "title": "Use runtime-specific default server entries",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (docs/upgrading/future.md, packages/react-router-dev/.changes/minor.default-server-entry-runtime.md, packages/react-router-dev/.changes/unstable.node-readable-stream-future-flag.md) alongside 8 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "docs/upgrading/future.md",
+      "packages/react-router-dev/.changes/minor.default-server-entry-runtime.md",
+      "packages/react-router-dev/.changes/unstable.node-readable-stream-future-flag.md"
+    ],
+    "source_files": [
+      "integration/cli-test.ts",
+      "integration/vite-plugin-cloudflare-test.ts",
+      "integration/vite-presets-test.ts",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/config/config.ts",
+      "packages/react-router-dev/config/defaults/entry.server.web.tsx",
+      "packages/react-router-dev/vite/plugin.ts",
+      "playground/vite-plugin-cloudflare/app/entry.server.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15289,
+    "url": "https://github.com/remix-run/react-router/pull/15289",
+    "title": "Revert \"feat: add default web-streams based server entry\"",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (docs/api/framework-conventions/entry.server.tsx.md, packages/react-router-dev/.changes/minor.web-streams-entry.md) alongside 8 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "docs/api/framework-conventions/entry.server.tsx.md",
+      "packages/react-router-dev/.changes/minor.web-streams-entry.md"
+    ],
+    "source_files": [
+      "integration/defer-test.ts",
+      "integration/helpers/vite-plugin-cloudflare-template/app/entry.server.tsx",
+      "integration/link-test.ts",
+      "integration/vite-plugin-cloudflare-test.ts",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/config/config.ts",
+      "packages/react-router-dev/config/defaults/entry.server.node.tsx",
+      "playground/vite-plugin-cloudflare/app/entry.server.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15286,
+    "url": "https://github.com/remix-run/react-router/pull/15286",
+    "title": "fix: handle cancellation in injectRSCPayload to avoid post-abort server crash",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router/.changes/patch.rsc-html-stream-cancel.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router/.changes/patch.rsc-html-stream-cancel.md"
+    ],
+    "source_files": [
+      "contributors.yml",
+      "packages/react-router/__tests__/rsc/html-stream-test.ts",
+      "packages/react-router/lib/rsc/html-stream/server.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15282,
+    "url": "https://github.com/remix-run/react-router/pull/15282",
+    "title": "docs: fix useNavigate example to pass state in the options argument",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/react-router/lib/hooks.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15279,
+    "url": "https://github.com/remix-run/react-router/pull/15279",
+    "title": "Add tsconfigs for test files",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 8 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/create-react-router/__tests__/tsconfig.json",
+      "packages/react-router-architect/__tests__/tsconfig.json",
+      "packages/react-router-dev/__tests__/tsconfig.json",
+      "packages/react-router-express/__tests__/tsconfig.json",
+      "packages/react-router-fs-routes/__tests__/tsconfig.json",
+      "packages/react-router-node/__tests__/tsconfig.json",
+      "packages/react-router-remix-routes-option-adapter/__tests__/tsconfig.json",
+      "packages/react-router/__tests__/tsconfig.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15278,
+    "url": "https://github.com/remix-run/react-router/pull/15278",
+    "title": "fix(dev): read rolldownOptions.input/output from user environments config (Vite v8)",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router-dev/.changes/patch.properly-detect-user-rolldownoptions-config-vite.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router-dev/.changes/patch.properly-detect-user-rolldownoptions-config-vite.md"
+    ],
+    "source_files": [
+      "packages/react-router-dev/vite/plugin.ts",
+      "packages/react-router-dev/vite/vite.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15277,
+    "url": "https://github.com/remix-run/react-router/pull/15277",
+    "title": "fix: href() doesn't URL-encode param values",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router/.changes/patch.encode-href-params.md) alongside 2 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router/.changes/patch.encode-href-params.md"
+    ],
+    "source_files": [
+      "packages/react-router/__tests__/href-test.ts",
+      "packages/react-router/lib/href.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15276,
+    "url": "https://github.com/remix-run/react-router/pull/15276",
+    "title": "feat(create-react-router): detect nub package manager",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/create-react-router/.changes/minor.detect-nub-package-manager.md, packages/react-router-dev/.changes/minor.detect-nub-package-manager.md) alongside 4 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/create-react-router/.changes/minor.detect-nub-package-manager.md",
+      "packages/react-router-dev/.changes/minor.detect-nub-package-manager.md"
+    ],
+    "source_files": [
+      "packages/create-react-router/__tests__/create-react-router-test.ts",
+      "packages/create-react-router/index.ts",
+      "packages/react-router-dev/__tests__/detect-package-manager-test.ts",
+      "packages/react-router-dev/cli/detectPackageManager.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15273,
+    "url": "https://github.com/remix-run/react-router/pull/15273",
+    "title": "fix: rank a static route above a dynamic param with a static suffix",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router/.changes/patch.rank-static-routes-above-suffixed-params.md) alongside 3 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router/.changes/patch.rank-static-routes-above-suffixed-params.md"
+    ],
+    "source_files": [
+      "contributors.yml",
+      "packages/react-router/__tests__/path-matching-test.tsx",
+      "packages/react-router/lib/router/utils.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15271,
+    "url": "https://github.com/remix-run/react-router/pull/15271",
+    "title": "Add CLA check to PR checks workflow",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "scripts/pr.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15268,
+    "url": "https://github.com/remix-run/react-router/pull/15268",
+    "title": "docs: add Hostinger as a hosting provider",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (docs/start/framework/deploying.md) alongside 1 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "docs/start/framework/deploying.md"
+    ],
+    "source_files": [
+      "contributors.yml"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15267,
+    "url": "https://github.com/remix-run/react-router/pull/15267",
+    "title": "docs: improve useMatches conceptual explanation and examples (#15205)",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "contributors.yml",
+      "packages/react-router/lib/hooks.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15264,
+    "url": "https://github.com/remix-run/react-router/pull/15264",
+    "title": "Release v8.2.0",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (CHANGELOG.md, packages/create-react-router/.changes/minor.detect-nub-package-manager.md, packages/create-react-router/CHANGELOG.md, packages/react-router-architect/CHANGELOG.md, packages/react-router-cloudflare/CHANGELOG.md, packages/react-router-dev/.changes/minor.default-server-entry-runtime.md, packages/react-router-dev/.changes/minor.detect-nub-package-manager.md, packages/react-router-dev/.changes/patch.properly-detect-user-rolldownoptions-config-vite.md, packages/react-router-dev/.changes/unstable.node-readable-stream-future-flag.md, packages/react-router-dev/CHANGELOG.md, packages/react-router-express/CHANGELOG.md, packages/react-router-fs-routes/CHANGELOG.md, packages/react-router-node/CHANGELOG.md, packages/react-router-remix-routes-option-adapter/CHANGELOG.md, packages/react-router-serve/CHANGELOG.md, packages/react-router/.changes/patch.encode-href-params.md, packages/react-router/.changes/patch.fix-optional-static-segment-params.md, packages/react-router/.changes/patch.preserve-navigation-blocker-state-through-revalidation.md, packages/react-router/.changes/patch.rank-static-routes-above-suffixed-params.md, packages/react-router/.changes/patch.rsc-form-state.md, packages/react-router/CHANGELOG.md, scripts/changes/whats-changed.md) alongside 10 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "CHANGELOG.md",
+      "packages/create-react-router/.changes/minor.detect-nub-package-manager.md",
+      "packages/create-react-router/CHANGELOG.md",
+      "packages/react-router-architect/CHANGELOG.md",
+      "packages/react-router-cloudflare/CHANGELOG.md",
+      "packages/react-router-dev/.changes/minor.default-server-entry-runtime.md",
+      "packages/react-router-dev/.changes/minor.detect-nub-package-manager.md",
+      "packages/react-router-dev/.changes/patch.properly-detect-user-rolldownoptions-config-vite.md",
+      "packages/react-router-dev/.changes/unstable.node-readable-stream-future-flag.md",
+      "packages/react-router-dev/CHANGELOG.md",
+      "packages/react-router-express/CHANGELOG.md",
+      "packages/react-router-fs-routes/CHANGELOG.md",
+      "packages/react-router-node/CHANGELOG.md",
+      "packages/react-router-remix-routes-option-adapter/CHANGELOG.md",
+      "packages/react-router-serve/CHANGELOG.md",
+      "packages/react-router/.changes/patch.encode-href-params.md",
+      "packages/react-router/.changes/patch.fix-optional-static-segment-params.md",
+      "packages/react-router/.changes/patch.preserve-navigation-blocker-state-through-revalidation.md",
+      "packages/react-router/.changes/patch.rank-static-routes-above-suffixed-params.md",
+      "packages/react-router/.changes/patch.rsc-form-state.md",
+      "packages/react-router/CHANGELOG.md",
+      "scripts/changes/whats-changed.md"
+    ],
+    "source_files": [
+      "packages/create-react-router/package.json",
+      "packages/react-router-architect/package.json",
+      "packages/react-router-cloudflare/package.json",
+      "packages/react-router-dev/package.json",
+      "packages/react-router-express/package.json",
+      "packages/react-router-fs-routes/package.json",
+      "packages/react-router-node/package.json",
+      "packages/react-router-remix-routes-option-adapter/package.json",
+      "packages/react-router-serve/package.json",
+      "packages/react-router/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15263,
+    "url": "https://github.com/remix-run/react-router/pull/15263",
+    "title": "fix: update to use ReactFormState types instead of unknown.",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (packages/react-router/.changes/patch.rsc-form-state.md) alongside 5 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "packages/react-router/.changes/patch.rsc-form-state.md"
+    ],
+    "source_files": [
+      "integration/helpers/rsc-vite/src/entry.browser.tsx",
+      "packages/react-router/lib/rsc/server.rsc.ts",
+      "playground/rsc-vite-framework/app/entry.client.tsx",
+      "playground/rsc-vite-framework/app/entry.ssr.tsx",
+      "playground/rsc-vite/src/entry.browser.tsx"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18250,
+    "url": "https://github.com/sequelize/sequelize/pull/18250",
+    "title": "fix(core): make empty Op.notIn compose correctly under Op.or and Op.not",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/core/src/abstract-dialect/where-sql-builder.ts",
+      "packages/core/test/unit/sql/where.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18247,
+    "url": "https://github.com/sequelize/sequelize/pull/18247",
+    "title": "fix(core): don't schema-qualify table aliases in include JOIN conditions",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 2 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/core/src/abstract-dialect/query-generator.js",
+      "packages/core/test/unit/query-generator/select-query.test.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18237,
+    "url": "https://github.com/sequelize/sequelize/pull/18237",
+    "title": "meta: update dependency esbuild to v0.28.1 [security]",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18213,
+    "url": "https://github.com/sequelize/sequelize/pull/18213",
+    "title": "meta: update dependency @oclif/plugin-help to ^6.2.53",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18208,
+    "url": "https://github.com/sequelize/sequelize/pull/18208",
+    "title": "meta: update sequelize AUTHORS",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "AUTHORS"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18204,
+    "url": "https://github.com/sequelize/sequelize/pull/18204",
+    "title": "feat(core): Drop the ability to specify the dialect as a string",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 20 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/core/src/abstract-dialect/data-types.ts",
+      "packages/core/src/abstract-dialect/dialect.ts",
+      "packages/core/src/abstract-dialect/query-generator.js",
+      "packages/core/src/geo-json.ts",
+      "packages/core/src/index.mjs",
+      "packages/core/src/instance-validator.js",
+      "packages/core/src/sequelize-typescript.ts",
+      "packages/core/src/sequelize.d.ts",
+      "packages/core/src/sequelize.internals.ts",
+      "packages/core/src/sequelize.js",
+      "packages/core/src/utils/validator-extras.d.ts",
+      "packages/core/src/utils/validator-extras.js",
+      "packages/core/src/utils/validator-extras.ts",
+      "packages/core/test/integration/configuration.test.ts",
+      "packages/core/test/integration/pool.test.ts",
+      "packages/core/test/integration/sequelize.test.js",
+      "packages/core/test/support.ts",
+      "packages/core/test/unit/configuration.test.ts",
+      "packages/oracle/src/_internal/data-types-overrides.ts",
+      "packages/oracle/src/query-interface.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18203,
+    "url": "https://github.com/sequelize/sequelize/pull/18203",
+    "title": "feat(core): add `sql.random`, improve `Order` typing",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 32 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/core/src/abstract-dialect/dialect.ts",
+      "packages/core/src/abstract-dialect/query-generator-typescript.ts",
+      "packages/core/src/expression-builders/random.ts",
+      "packages/core/src/expression-builders/sql.ts",
+      "packages/core/src/model.d.ts",
+      "packages/core/src/sequelize.js",
+      "packages/core/src/utils/deprecations.ts",
+      "packages/core/test/integration/sql/random.test.ts",
+      "packages/core/test/support.ts",
+      "packages/core/test/unit/dialects/postgres/enum.test.js",
+      "packages/core/test/unit/query-interface/create-table.test.ts",
+      "packages/core/test/unit/sql/add-column.test.js",
+      "packages/core/test/unit/sql/create-table.test.js",
+      "packages/core/test/unit/sql/generateJoin.test.js",
+      "packages/core/test/unit/sql/group.test.js",
+      "packages/core/test/unit/sql/index.test.js",
+      "packages/core/test/unit/sql/insert.test.js",
+      "packages/core/test/unit/sql/order.test.ts",
+      "packages/core/test/unit/sql/select.test.js",
+      "packages/core/test/unit/sql/update.test.js",
+      "packages/core/test/unit/utils/utils.test.ts",
+      "packages/db2/src/query-generator-typescript.internal.ts",
+      "packages/ibmi/src/dialect.ts",
+      "packages/ibmi/src/query-generator-typescript.internal.ts",
+      "packages/mariadb/src/query-generator-typescript.internal.ts",
+      "packages/mssql/src/query-generator-typescript.internal.ts",
+      "packages/mysql/src/query-generator-typescript.internal.ts",
+      "packages/oracle/src/dialect.ts",
+      "packages/oracle/src/query-generator-typescript.internal.ts",
+      "packages/postgres/src/query-generator-typescript.internal.ts",
+      "packages/snowflake/src/query-generator-typescript.internal.ts",
+      "packages/sqlite3/src/query-generator-typescript.internal.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18198,
+    "url": "https://github.com/sequelize/sequelize/pull/18198",
+    "title": "meta: update dependency @oclif/test to v4.1.18",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18195,
+    "url": "https://github.com/sequelize/sequelize/pull/18195",
+    "title": "meta: update dependency @oclif/plugin-help to ^6.2.43",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18193,
+    "url": "https://github.com/sequelize/sequelize/pull/18193",
+    "title": "feat(cli): add migration generate, run, status & undo",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 32 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      ".eslintrc.js",
+      "dev/sync-exports.mjs",
+      "packages/cli/.gitignore",
+      "packages/cli/package.json",
+      "packages/cli/sequelize.config.mjs",
+      "packages/cli/src/_commands/migration/generate.test.ts",
+      "packages/cli/src/_commands/migration/generate.ts",
+      "packages/cli/src/_commands/migration/run.test.ts",
+      "packages/cli/src/_commands/migration/run.ts",
+      "packages/cli/src/_commands/migration/status.test.ts",
+      "packages/cli/src/_commands/migration/status.ts",
+      "packages/cli/src/_commands/migration/undo.test.ts",
+      "packages/cli/src/_commands/migration/undo.ts",
+      "packages/cli/src/_commands/seed/generate.test.ts",
+      "packages/cli/src/_commands/seed/generate.ts",
+      "packages/cli/src/_internal/config.ts",
+      "packages/cli/src/_internal/sequelize-command.ts",
+      "packages/cli/src/_internal/test-helpers.ts",
+      "packages/cli/src/api/get-migration-status.ts",
+      "packages/cli/src/api/get-umzug.ts",
+      "packages/cli/src/api/run-migrations.ts",
+      "packages/cli/src/api/undo-migrations.ts",
+      "packages/cli/src/config.ts",
+      "packages/cli/src/index.ts",
+      "packages/cli/src/types.ts",
+      "packages/cli/static/skeletons/migration.cjs",
+      "packages/cli/static/skeletons/migration.mjs",
+      "packages/cli/static/skeletons/migration.ts",
+      "packages/cli/static/skeletons/seed.cjs",
+      "packages/cli/static/skeletons/seed.mjs",
+      "packages/cli/static/skeletons/seed.ts",
+      "packages/core/test/support.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18192,
+    "url": "https://github.com/sequelize/sequelize/pull/18192",
+    "title": "meta: update dependency esbuild to v0.28.0",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18191,
+    "url": "https://github.com/sequelize/sequelize/pull/18191",
+    "title": "meta: update dependency @oclif/plugin-help to ^6.2.42",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18190,
+    "url": "https://github.com/sequelize/sequelize/pull/18190",
+    "title": "meta: update sequelize AUTHORS",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "AUTHORS"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18189,
+    "url": "https://github.com/sequelize/sequelize/pull/18189",
+    "title": "feat: update some dialect adapters",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 12 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      ".mocharc.jsonc",
+      ".yarn/patches/@mapbox-node-pre-gyp-npm-2.0.3-4606feb049.patch",
+      "package.json",
+      "packages/core/test/support.ts",
+      "packages/ibmi/package.json",
+      "packages/ibmi/src/connection-manager.ts",
+      "packages/postgres/package.json",
+      "packages/snowflake/package.json",
+      "packages/snowflake/src/connection-manager.ts",
+      "packages/snowflake/src/dialect.ts",
+      "packages/sqlite3/package.json",
+      "tsconfig-preset.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18187,
+    "url": "https://github.com/sequelize/sequelize/pull/18187",
+    "title": "meta: update dependency @oclif/core to ^4.10.5",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18186,
+    "url": "https://github.com/sequelize/sequelize/pull/18186",
+    "title": "feat(core): add support for readonly attribute arrays",
+    "label": "docs-relevant",
+    "rationale": "Maintainers documented this change in the same PR (CHANGELOG.md, packages/core/CHANGELOG.md, packages/utils/CHANGELOG.md, packages/validator-js/CHANGELOG.md) alongside 4 source file(s). Their action is the ground truth.",
+    "doc_files": [
+      "CHANGELOG.md",
+      "packages/core/CHANGELOG.md",
+      "packages/utils/CHANGELOG.md",
+      "packages/validator-js/CHANGELOG.md"
+    ],
+    "source_files": [
+      "packages/core/src/model-hooks.ts",
+      "packages/core/src/model.d.ts",
+      "packages/core/test/types/hooks.ts",
+      "packages/core/test/types/models/user.ts"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18185,
+    "url": "https://github.com/sequelize/sequelize/pull/18185",
+    "title": "feat: add Node 24 support, drop Node 18",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 9 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "build-packages.mjs",
+      "packages/cli/package.json",
+      "packages/core/package.json",
+      "packages/core/src/utils/logger.ts",
+      "packages/core/test/support.ts",
+      "packages/core/test/unit/import-models/import-models.test.ts",
+      "packages/core/test/unit/sql/where.test.ts",
+      "packages/utils/package.json",
+      "test/register-esbuild.js"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18169,
+    "url": "https://github.com/sequelize/sequelize/pull/18169",
+    "title": "meta: update dependency oclif to v4.22.96",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18165,
+    "url": "https://github.com/sequelize/sequelize/pull/18165",
+    "title": "meta: update dependency oclif to v4.22.93",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18160,
+    "url": "https://github.com/sequelize/sequelize/pull/18160",
+    "title": "meta: update dependency @types/oracledb to ^6.10.2",
+    "label": "not-relevant",
+    "rationale": "Maintainers changed 1 source file(s) and wrote no documentation or changelog entry, indicating they did not consider it user-facing.",
+    "doc_files": [],
+    "source_files": [
+      "packages/oracle/package.json"
+    ],
+    "label_source": "maintainer-behaviour",
+    "classify_diff_excludes_docs": true
+  }
+]

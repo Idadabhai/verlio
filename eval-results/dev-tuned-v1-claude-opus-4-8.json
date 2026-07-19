@@ -1,0 +1,952 @@
+{
+  "tag": "dev-tuned-v1",
+  "model": "claude-opus-4-8",
+  "corpus": "corpus/labeled-prs.json",
+  "n": 46,
+  "confusion": {
+    "tp": 17,
+    "fp": 1,
+    "tn": 26,
+    "fn": 2
+  },
+  "precision": {
+    "value": 0.9444444444444444,
+    "ci95": {
+      "low": 0.7424220019799247,
+      "high": 0.9901250641690756
+    },
+    "denominator": 18
+  },
+  "recall": {
+    "value": 0.8947368421052632,
+    "ci95": {
+      "low": 0.6860544950515831,
+      "high": 0.9706420586049034
+    },
+    "denominator": 19
+  },
+  "f1": 0.918918918918919,
+  "accuracy": 0.9347826086956522,
+  "gate": {
+    "bar": 0.8,
+    "metric": "precision",
+    "passed": true,
+    "ci_lower_clears_bar": false
+  },
+  "usage": {
+    "cache_read_input_tokens": 111843,
+    "cache_creation_input_tokens": 7803
+  },
+  "false_positives": [
+    {
+      "repo": "lodash/lodash",
+      "pr": 6178,
+      "url": "https://github.com/lodash/lodash/pull/6178",
+      "title": "`lodash.template` release(template): bump to 4.18.1",
+      "expected": false,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.72,
+      "model_rationale": "This release bump fixes a ReferenceError bug in the documented `_.template` function, meaning a documented feature that was broken for valid usage now works — a real user-facing change (see rule 1). The change swaps `assignInWith`/`keysIn` internals for `assignWith`/`keys` to resolve the crash, though the public `_.template` signature is unchanged.",
+      "label_rationale": "Restores an internal helper (arrayEach) that had been dropped from the lodash.template standalone bundle, fixing packaging/bundling correctness. arrayEach/baseKeysIn are private implementation details, not part of the documented public API.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 6680,
+        "sent": 6680
+      },
+      "filtered_files": []
+    }
+  ],
+  "false_negatives": [
+    {
+      "repo": "colinhacks/zod",
+      "pr": 5929,
+      "url": "https://github.com/colinhacks/zod/pull/5929",
+      "title": "Make z.preprocess defer optionality to inner schema",
+      "expected": true,
+      "outcome": "FN",
+      "label_rationale": "Introduces a new exported ZodPreprocess class and changes how z.preprocess()'s optionality is inferred from the inner schema. The PR itself edits packages/docs/content/packages/core.mdx, confirming it's a documented public API change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 11350,
+        "sent": 11350
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "colinhacks/zod",
+      "pr": 5900,
+      "url": "https://github.com/colinhacks/zod/pull/5900",
+      "title": "fix(v4): reject tuple holes before required defaults",
+      "expected": true,
+      "outcome": "FN",
+      "label_rationale": "Changes z.tuple()'s runtime parse behavior: an absent optional slot before a later required/defaulted output slot now correctly fails instead of silently truncating and materializing the default. This flips success/failure for real inputs against the documented tuple API.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 8331,
+        "sent": 8331
+      },
+      "filtered_files": []
+    }
+  ],
+  "rows": [
+    {
+      "repo": "axios/axios",
+      "pr": 11067,
+      "url": "https://github.com/axios/axios/pull/11067",
+      "title": "feat(HttpStatusCode): add missing 520 status code",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.92,
+      "model_rationale": "Adds a new public enum member `HttpStatusCode.WebServerReturnsAnUnknownError = 520` to the runtime API and TypeScript declarations. The PR itself updates the changelog and requests a docs update for the status code reference, confirming user-facing relevance.",
+      "label_rationale": "Adds a new exported constant (HttpStatusCode.WebServerReturnsAnUnknownError = 520) across ESM/CJS type declarations and the runtime object — a new public API member that any status-code reference docs would need to list.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 4469,
+        "sent": 4469
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "axios/axios",
+      "pr": 11071,
+      "url": "https://github.com/axios/axios/pull/11071",
+      "title": "fix(core): synchronous interceptors swallow errors and proceed with request",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.94,
+      "model_rationale": "This changes the observable behavior of documented synchronous request interceptors: thrown errors no longer dispatch the request unless the paired onRejected resolves, and terminal errors now flow to response rejection interceptors. The in-PR changelog and docs-planning notes explicitly flag the Interceptors section, README, and API reference as needing updates, confirming user-facing relevance.",
+      "label_rationale": "Changes the documented contract for synchronous request interceptor error handling (paired onRejected semantics, when the request dispatches vs. rejects). PRE_RELEASE_DOCS.md is updated in the same diff with the exact behavior to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 8657,
+        "sent": 8657
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "axios/axios",
+      "pr": 11081,
+      "url": "https://github.com/axios/axios/pull/11081",
+      "title": "feat(types): Allow the Params property to be typed, instead of `any`",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.97,
+      "model_rationale": "This adds a new public generic parameter `P` to `AxiosRequestConfig` and propagates typed params across the public TypeScript surface (`AxiosResponse`, `AxiosError`, `CanceledError`, `isCancel`, `mergeConfig`, request aliases, `AxiosPromise`, serializers). The PR itself updates the changelog and pre-release docs plan, confirming it's a user-facing typing change worth documenting.",
+      "label_rationale": "Adds a second generic parameter to AxiosRequestConfig/AxiosPromise/isCancel and propagates it through public type declarations (index.d.ts/index.d.cts). The PR itself edits PRE_RELEASE_DOCS.md with usage examples, confirming the maintainers consider this a documented public API surface change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 39798,
+        "sent": 39798
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "axios/axios",
+      "pr": 11059,
+      "url": "https://github.com/axios/axios/pull/11059",
+      "title": "fix(core): synthesize AxiosError message from AggregateError.errors",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.85,
+      "model_rationale": "AxiosError.from() now synthesizes a message from AggregateError.errors when the outer message is blank, changing the observable message/toJSON output for a documented error type on network failures. The PR also updated the changelog, confirming maintainers view it as user-facing.",
+      "label_rationale": "AxiosError.from() now synthesizes a .message from AggregateError.errors instead of leaving it blank, and toJSON() carries it. The PR updates PRE_RELEASE_CHANGELOG.md in the same diff, confirming the maintainers consider this a user-facing change worth describing.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 4944,
+        "sent": 4944
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "axios/axios",
+      "pr": 11061,
+      "url": "https://github.com/axios/axios/pull/11061",
+      "title": "fix(helpers): correct data: URL base64 size estimate for maxContentLength guard",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.75,
+      "model_rationale": "This is a behavior fix that changes how the documented maxContentLength guard is enforced for data: URLs: bodies that previously bypassed the limit (up to ~2x maxContentLength) are now correctly rejected, and fetch now ignores URL fragments in the size estimate. The PR also adds a changelog entry, confirming maintainer intent to describe it to users. The estimateDataURLDecodedBytes helper appears internal, but the observable maxContentLength behavior is user-facing.",
+      "label_rationale": "Fixes how the documented maxContentLength option is enforced for data: URLs — previously percent-encoded input could bypass the configured limit. This changes observable behavior of a documented config option.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 14315,
+        "sent": 14315
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "axios/axios",
+      "pr": 11062,
+      "url": "https://github.com/axios/axios/pull/11062",
+      "title": "refactor(helpers): extract duplicated setFormDataHeaders into a shared helper",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.85,
+      "model_rationale": "Though framed as a refactor, the extraction adopts the defensive `formHeaders || {}` variant in the http adapter, so Node.js requests with `formDataHeaderPolicy: 'content-only'` now tolerate a FormData implementation whose `getHeaders()` returns undefined instead of throwing. This is a real user-facing behavior fix for a documented option, confirmed by the PR's own changelog entry.",
+      "label_rationale": "Framed as a refactor, but the extracted helper also fixes a real bug: with formDataHeaderPolicy: 'content-only', a custom FormData#getHeaders() that returns undefined used to throw, now it's tolerated. This is a behavior fix for a documented config option, not just a refactor.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 5846,
+        "sent": 5846
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "axios/axios",
+      "pr": 11080,
+      "url": "https://github.com/axios/axios/pull/11080",
+      "title": "chore(deps): bump denoland/setup-deno from 2.0.4 to 2.0.5 in the github-actions group",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This is a CI-only GitHub Actions version pin bump (setup-deno 2.0.4 to 2.0.5) in workflow files, with no source code or public API change and no observable behavior change for users.",
+      "label_rationale": "Pure CI workflow dependency pin bump (GitHub Actions), no library code or public behavior touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 996,
+        "sent": 996
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "axios/axios",
+      "pr": 11079,
+      "url": "https://github.com/axios/axios/pull/11079",
+      "title": "chore(deps-dev): bump the development_dependencies group with 3 updates",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "Dev-dependency version bump touching only package-lock.json; no source or public API changes. Nothing user-facing changed.",
+      "label_rationale": "package-lock.json devDependency version bumps only (vitest tooling), no shipped-library behavior change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 9518,
+        "sent": 0
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "expressjs/express",
+      "pr": 7366,
+      "url": "https://github.com/expressjs/express/pull/7366",
+      "title": "feat: allow conditional revalidation for QUERY requests",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.9,
+      "model_rationale": "The change extends the documented `req.fresh` behavior to include QUERY requests, so QUERY responses now support conditional revalidation (304 Not Modified). This is an observable, user-facing behavior change to a documented API, and the PR itself adds a History.md/changelog entry confirming its relevance.",
+      "label_rationale": "req.fresh previously only validated GET/HEAD; now includes QUERY. The PR's own History.md entry includes a runnable example, confirming this is user-facing documented behavior.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3617,
+        "sent": 3617
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "expressjs/express",
+      "pr": 7345,
+      "url": "https://github.com/expressjs/express/pull/7345",
+      "title": "build(deps): bump actions/checkout from 6.0.2 to 7.0.0",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.99,
+      "model_rationale": "This diff only bumps the actions/checkout version pin across CI workflow files. It is CI/tooling config with no source code or public surface changes, so nothing user-facing needs documenting.",
+      "label_rationale": "CI workflow action version bump only, no library code touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2798,
+        "sent": 2798
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "expressjs/express",
+      "pr": 7353,
+      "url": "https://github.com/expressjs/express/pull/7353",
+      "title": "build(deps-dev): bump morgan from 1.10.1 to 1.11.0",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.95,
+      "model_rationale": "This is a dev-dependency version bump in package.json only, with no source code changes in this repo. morgan is a devDependency and none of its new features/fixes affect this project's public API or documented behavior.",
+      "label_rationale": "devDependency version bump used only in the test/example app, no change to express's own public API or behavior.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 353,
+        "sent": 353
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "expressjs/express",
+      "pr": 7265,
+      "url": "https://github.com/expressjs/express/pull/7265",
+      "title": "fix: replace deprecated trimRight() with trimEnd()",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This is a 1:1 replacement of the deprecated trimRight() with its identical standard equivalent trimEnd(). The observable behavior of the documented host getter is unchanged, so no docs update is warranted.",
+      "label_rationale": "Internal implementation swap between two equivalent string methods (both trim trailing whitespace identically). No observable behavior change to req.host or any documented API.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 485,
+        "sent": 485
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "honojs/hono",
+      "pr": 5135,
+      "url": "https://github.com/honojs/hono/pull/5135",
+      "title": "fix(sse): emit retry field when retry is `0`",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.7,
+      "model_rationale": "The documented SSE helper previously dropped the `retry` field when set to `0` due to a falsy check; now `retry: 0` is correctly emitted. This is a behavior fix for a valid, documented input to the public `writeSSE`/streamSSE API, so it warrants a docs/changelog note.",
+      "label_rationale": "The SSE streaming helper's writeSSE() previously silently dropped retry: 0 because of a falsy check; now it's emitted correctly. This is a documented option (SSEMessage.retry) behaving incorrectly for a valid, commonly-used value (0).",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2040,
+        "sent": 2040
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "expressjs/express",
+      "pr": 7234,
+      "url": "https://github.com/expressjs/express/pull/7234",
+      "title": "Upgrade `content-type` to ^2.0.0",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.9,
+      "model_rationale": "Although framed as a dependency bump, this changes documented behavior of res.send(): Content-Type parameters are now preserved when adding charset, and invalid Content-Type headers no longer throw. The in-PR History.md/changelog edit confirms it's user-facing.",
+      "label_rationale": "Framed as a dependency bump, but it changes res.send()'s observable behavior: existing Content-Type parameters are now preserved when the charset is added, and a malformed Content-Type no longer throws. History.md documents the new behavior with an example in the same PR.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2680,
+        "sent": 2680
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "honojs/hono",
+      "pr": 5133,
+      "url": "https://github.com/honojs/hono/pull/5133",
+      "title": "fix(request): fix multipart boundary mismatch in `cloneRawRequest`",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.82,
+      "model_rationale": "This fixes an internal bug in cloneRawRequest where re-serialized multipart FormData had a mismatched Content-Type boundary. cloneRawRequest is a low-level helper; the fix restores correct, expected behavior without changing any documented API signature, parameter, or contract. There is no user-facing surface change to describe.",
+      "label_rationale": "cloneRawRequest is an internal helper (used by validators/testing utilities to re-read a consumed request), not a documented public API. The fix corrects an internal correctness bug without changing any documented contract.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2134,
+        "sent": 2134
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "honojs/hono",
+      "pr": 5130,
+      "url": "https://github.com/honojs/hono/pull/5130",
+      "title": "refactor(aws-lambada): remove FIXME in `@ts-expect-error`",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.99,
+      "model_rationale": "The diff only changes the text of a `@ts-expect-error` comment; no code, type signature, or observable behavior changed.",
+      "label_rationale": "Reword of an inline TypeScript suppression comment only. No behavior or type-level change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 562,
+        "sent": 562
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "honojs/hono",
+      "pr": 5126,
+      "url": "https://github.com/honojs/hono/pull/5126",
+      "title": "fix: close quote in combine JSDoc example",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "The diff only fixes a missing closing quote inside a JSDoc comment example; no source implementation or public behavior changes.",
+      "label_rationale": "Fixes a syntax typo inside an inline JSDoc code comment (missing closing quote in an import statement shown as an example). No runtime code or documented behavior changed.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 569,
+        "sent": 569
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "honojs/hono",
+      "pr": 5131,
+      "url": "https://github.com/honojs/hono/pull/5131",
+      "title": "fix(utils/body): reuse cached formData in `parseBody()`",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.75,
+      "model_rationale": "This fixes a documented method (parseBody) that was silently broken when formData() was called first — previously the body was already consumed and parseBody would fail, now it reuses the cached FormData. That is a real user-facing behavior fix for a valid usage pattern on a public API.",
+      "label_rationale": "parseBody() is a documented public Hono API. Previously calling formData() before parseBody() produced inconsistent results; the fix makes it consistently reuse the cached FormData, changing observable behavior of a documented function.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1725,
+        "sent": 1725
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "honojs/hono",
+      "pr": 5116,
+      "url": "https://github.com/honojs/hono/pull/5116",
+      "title": "test(context): assert case-insensitive header names in response helpers",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.95,
+      "model_rationale": "The diff only adds test cases asserting existing behavior of response helpers; no source file or public API is changed.",
+      "label_rationale": "Test-only PR adding coverage for existing behavior; no source file was changed, so there is no new behavior to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 895,
+        "sent": 895
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "honojs/hono",
+      "pr": 5117,
+      "url": "https://github.com/honojs/hono/pull/5117",
+      "title": "chore(benchmark): add app.fetch() overhead benchmark",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This PR only adds internal benchmarking scripts under benchmarks/fetch/ with no change to any public API or observable library behavior. The included README is internal tooling documentation for running benchmarks, not user-facing product docs.",
+      "label_rationale": "Adds a new internal benchmarking script under benchmarks/, entirely dev-tooling; no shipped source or public API touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 9270,
+        "sent": 9270
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "colinhacks/zod",
+      "pr": 5945,
+      "url": "https://github.com/colinhacks/zod/pull/5945",
+      "title": "fix(v4): cidrv6 JSON schema pattern matches runtime",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.78,
+      "model_rationale": "This fix changes the JSON Schema `pattern` emitted by `z.toJSONSchema()` for `z.string().cidrv6()`, so a documented feature (JSON Schema generation) now accepts real-world IPv6 CIDRs it previously rejected. That is an observable, user-facing behavior change for consumers relying on the emitted pattern, warranting a changelog/docs note.",
+      "label_rationale": "Fixes the cidrv6 regex used by the documented z.string().cidr({ version: 'v6' }) validator so it accepts valid CIDR v6 addresses it previously rejected (e.g. '2001:db8:1::/48'). Changes what input a documented string-format validator accepts.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2338,
+        "sent": 2338
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "honojs/hono",
+      "pr": 5104,
+      "url": "https://github.com/honojs/hono/pull/5104",
+      "title": "chore: update to ts6 in prep for ts7",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.85,
+      "model_rationale": "This is a tooling/dependency bump to TypeScript 6 with tsconfig and test adjustments. The only source change is a type annotation refinement (Uint8Array to Uint8Array<ArrayBuffer>) on WSContextInit.send, which does not alter observable runtime behavior or the documented API surface for users.",
+      "label_rationale": "Internal build tooling / TypeScript version bump in the monorepo's lockfile and devDependencies, not a change to the shipped library's runtime behavior or public API.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 35895,
+        "sent": 2994
+      },
+      "filtered_files": [
+        {
+          "path": "bun.lock",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "colinhacks/zod",
+      "pr": 5907,
+      "url": "https://github.com/colinhacks/zod/pull/5907",
+      "title": "Tighten discriminated union option typing",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.72,
+      "model_rationale": "This is a compile-time TypeScript typing tightening for discriminatedUnion — options must now include the discriminator key in their input type, enforced via generic constraints. Runtime behavior is unchanged (the invalid case already threw), and the change only adds a stricter type-level error. Zod docs describe discriminatedUnion usage generally without specifying this constraint detail, so it's a niche compile-time refinement unlikely to warrant a public docs update; leaning false but with some uncertainty.",
+      "label_rationale": "Narrows a TypeScript generic constraint so z.discriminatedUnion() rejects, at compile time, an object option that's missing the discriminator key — a rare misuse case. No runtime behavior changes and normal documented usage is unaffected.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3955,
+        "sent": 3955
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "colinhacks/zod",
+      "pr": 5898,
+      "url": "https://github.com/colinhacks/zod/pull/5898",
+      "title": "fix(v4): skip __proto__ key in object catchall",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.92,
+      "model_rationale": "This is a security fix that changes how documented object methods (passthrough, catchall, looseObject) handle input containing a __proto__ key — previously such input polluted the parsed result's prototype, now it is skipped. This matches the worked example of the prior __proto__ catchall fix and warrants a changelog/security note.",
+      "label_rationale": "Security fix closing a prototype-pollution vector in .passthrough()/.catchall()/looseObject() (linked GitHub security advisories). This changes documented-schema parsing behavior for a security-sensitive input and warrants a docs/changelog note.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3488,
+        "sent": 3488
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "colinhacks/zod",
+      "pr": 5941,
+      "url": "https://github.com/colinhacks/zod/pull/5941",
+      "title": "fix(v4): generalize optin/fallback to transform; restore preprocess on absent keys",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.82,
+      "model_rationale": "This changes observable behavior of documented Zod v4 primitives: preprocess now accepts absent object keys again (restoring 4.3 parity), standalone z.transform now accepts absent object keys, and catch()/transform()/optional() chains now clobber recovery values through pipe boundaries (e.g. output changed from \"X!\" to undefined). These are real user-facing behavior changes to documented APIs, warranting a changelog/docs note. The wiki doc is internal-only, but the source-level behavior changes drive relevance.",
+      "label_rationale": "Changes how .optional() interacts with .catch()/.transform()/.preprocess() across pipe boundaries on absent input — a documented schema-composition behavior that previously produced wrong results (e.g. transform output leaking through an outer .optional()).",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 29868,
+        "sent": 29868
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "tj/commander.js",
+      "pr": 2551,
+      "url": "https://github.com/tj/commander.js/pull/2551",
+      "title": "Tune updates for @types/node",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This diff only adjusts dependabot configuration to ignore major version updates for @types/node. It is CI/tooling config with no source or public-facing behavior change.",
+      "label_rationale": "Dependabot configuration change (ignore major @types/node bumps), pure repo/CI config, no library code.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 451,
+        "sent": 451
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "tj/commander.js",
+      "pr": 2550,
+      "url": "https://github.com/tj/commander.js/pull/2550",
+      "title": "Update action dependencies, and remove unecessary autobuild",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This diff only edits a GitHub Actions CI workflow (CodeQL analysis) — bumping action version pins and removing an unnecessary autobuild step. No source code or public API surface changes, so nothing user-facing needs documenting.",
+      "label_rationale": "CI workflow maintenance (CodeQL action version bump, removing an unused Autobuild step). No library behavior touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1772,
+        "sent": 1772
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "tj/commander.js",
+      "pr": 2544,
+      "url": "https://github.com/tj/commander.js/pull/2544",
+      "title": "fix: accept uppercase E exponent in negative number args",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.7,
+      "model_rationale": "A documented feature (Commander accepting negative numbers as option-arguments) was silently broken for valid input written with uppercase E; the fix makes `-1E3` now recognized, changing observable behavior for real users. This warrants at least a changelog note, so it's docs-relevant.",
+      "label_rationale": "Changes which strings commander recognizes as a negative-number CLI argument (now accepts '-1E3' in addition to '-1e3'). This affects documented negative-number-handling behavior that option-parsing docs describe.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1101,
+        "sent": 1101
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "tj/commander.js",
+      "pr": 2538,
+      "url": "https://github.com/tj/commander.js/pull/2538",
+      "title": "Bump actions/checkout from 6.0.3 to 7.0.0",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This diff only bumps the actions/checkout version pin in GitHub Actions workflow files. It is CI/tooling config with no change to any public API or observable behavior of the project.",
+      "label_rationale": "CI workflow action version bump only.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1104,
+        "sent": 1104
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "tj/commander.js",
+      "pr": 2528,
+      "url": "https://github.com/tj/commander.js/pull/2528",
+      "title": "Bump github/codeql-action from 4.36.0 to 4.36.2",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.99,
+      "model_rationale": "This is a CI-only dependency bump of the github/codeql-action GitHub Action version pin in a workflow file. No source code or public-facing behavior changes.",
+      "label_rationale": "CI workflow action version bump only.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1419,
+        "sent": 1419
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sindresorhus/got",
+      "pr": 2454,
+      "url": "https://github.com/sindresorhus/got/pull/2454",
+      "title": "Fix `searchParams` setter dropping the value when a URL is set",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.85,
+      "model_rationale": "The fix restores documented behavior of the `searchParams` setter — assigning it (e.g. in a `beforeRequest` hook, which docs encourage) now correctly overrides the query string as documented, whereas before the value was silently dropped. This is a real user-facing behavior change for a documented feature, so the drafter should assess docs/changelog.",
+      "label_rationale": "Fixes the documented searchParams option: assigning a URLSearchParams instance previously stored it by reference (later caller-side mutation leaked into the request); now it's cloned. Changes observable behavior of a documented option.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2948,
+        "sent": 2948
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sindresorhus/got",
+      "pr": 2466,
+      "url": "https://github.com/sindresorhus/got/pull/2466",
+      "title": "Add support for `QUERY` HTTP method",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.99,
+      "model_rationale": "This PR adds a new public HTTP method/shortcut alias `QUERY` (`got.query`, `got.stream.query`), extends the `Method` and `HTTPAlias` exported types, adds `QUERY` to default retry methods, and changes redirect/caching behavior for it — all user-facing surface changes, confirmed by the accompanying doc edits.",
+      "label_rationale": "Adds a new supported HTTP method end to end (options type, aliases, redirect/body/cache handling). The PR itself updates five documentation files (2-options.md, 3-streams.md, 7-retry.md, cache.md, readme.md), confirming doc-relevance directly.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 24788,
+        "sent": 24788
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sindresorhus/got",
+      "pr": 2465,
+      "url": "https://github.com/sindresorhus/got/pull/2465",
+      "title": "Various tweaks",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.83,
+      "model_rationale": "Despite the modest \"Various tweaks\" title, the diff is a security-relevant behavior change: when a beforeRequest/afterResponse/pagination hook rewrites `prefixUrl` to a cross-origin target, Got now strips sensitive headers (authorization, cookie), inherited credentials, and the request body — mirroring existing cross-origin URL protections. It also changes credential-inheritance behavior for prefixUrl changes. This alters what documented options (prefixUrl, credentials, cross-origin header stripping) do for real users and warrants a docs/changelog note.",
+      "label_rationale": "Changes cross-origin redirect handling: which sensitive headers get stripped and when the request body is discarded/preserved after a beforeRequest hook changes the URL to a different origin. This is documented redirect/security behavior (see the cross-origin stripping notes in 2-options.md) being corrected.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 32842,
+        "sent": 32842
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "colinhacks/zod",
+      "pr": 5929,
+      "url": "https://github.com/colinhacks/zod/pull/5929",
+      "title": "Make z.preprocess defer optionality to inner schema",
+      "expected": true,
+      "outcome": "FN",
+      "label_rationale": "Introduces a new exported ZodPreprocess class and changes how z.preprocess()'s optionality is inferred from the inner schema. The PR itself edits packages/docs/content/packages/core.mdx, confirming it's a documented public API change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 11350,
+        "sent": 11350
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "octokit/octokit.js",
+      "pr": 2913,
+      "url": "https://github.com/octokit/octokit.js/pull/2913",
+      "title": "chore(deps): replace glob with tinyglobby",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.95,
+      "model_rationale": "This is a dev-dependency swap in an internal build script (scripts/build.mjs), replacing glob with tinyglobby. No public API, config option, or observable runtime behavior changes for users of the package.",
+      "label_rationale": "Swaps an internal build-script dependency (scripts/build.mjs) used only for the repo's own bundling; no change to the published package's public API or runtime behavior.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3141,
+        "sent": 886
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "octokit/octokit.js",
+      "pr": 2958,
+      "url": "https://github.com/octokit/octokit.js/pull/2958",
+      "title": "build(deps): lock file maintenance",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.99,
+      "model_rationale": "This PR only refreshes lock files (package-lock.json) with no source-file changes. There is no observable change to any public API surface or documented behavior.",
+      "label_rationale": "Transitive devDependency (obug) patch-version bump in package-lock.json only.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 721,
+        "sent": 0
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "colinhacks/zod",
+      "pr": 5900,
+      "url": "https://github.com/colinhacks/zod/pull/5900",
+      "title": "fix(v4): reject tuple holes before required defaults",
+      "expected": true,
+      "outcome": "FN",
+      "label_rationale": "Changes z.tuple()'s runtime parse behavior: an absent optional slot before a later required/defaulted output slot now correctly fails instead of silently truncating and materializing the default. This flips success/failure for real inputs against the documented tuple API.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 8331,
+        "sent": 8331
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "octokit/octokit.js",
+      "pr": 2960,
+      "url": "https://github.com/octokit/octokit.js/pull/2960",
+      "title": "build(deps): lock file maintenance",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.99,
+      "model_rationale": "This PR only refreshes lock files (package-lock.json) with no source-file changes. Lockfile-only dependency bumps carry no API-surface signal and do not affect documented behavior.",
+      "label_rationale": "Routine transitive-dependency lockfile refresh, no source changes.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 29455,
+        "sent": 0
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "octokit/octokit.js",
+      "pr": 2903,
+      "url": "https://github.com/octokit/octokit.js/pull/2903",
+      "title": "fix(deps): update octokit monorepo (major)",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.7,
+      "model_rationale": "The diff only bumps dependency version ranges in package.json (plus a lockfile). No source code in this repo changed, so there is no observable behavior change to describe. However, these are major octokit bumps with documented BREAKING CHANGES (removed endpoints, changed IDs) that could indirectly affect users of this package's re-exported API surface — but nothing in this repo's diff itself reflects those changes.",
+      "label_rationale": "Bumps internal @octokit/* dependency versions in package-lock.json only; no code in this repo changed and no behavior change is introduced by this PR itself (the underlying packages' own release notes would cover any actual API changes).",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 20079,
+        "sent": 1218
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "lodash/lodash",
+      "pr": 6249,
+      "url": "https://github.com/lodash/lodash/pull/6249",
+      "title": "docs: fix some minor docs inconsistencies",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.95,
+      "model_rationale": "The diff only edits JSDoc comment text — a duplicated-word typo and two corrected example outputs — with no change to any function implementation or observable behavior.",
+      "label_rationale": "Diff only edits JSDoc comment text inside the built lodash.js/dist bundle (typo fix, corrected example outputs) with no change to any function's implementation or behavior — nothing further needs to be documented.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2612,
+        "sent": 2612
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "octokit/octokit.js",
+      "pr": 2956,
+      "url": "https://github.com/octokit/octokit.js/pull/2956",
+      "title": "chore(deps): update dependency esbuild to ^0.28.0 [security]",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This is a devDependency version bump of esbuild in package.json (plus lockfile). esbuild is a build tool, not part of this repo's public API surface, and no source files with observable behavior changed. The security fixes apply to esbuild internals, not to anything this package documents.",
+      "label_rationale": "devDependency (esbuild, build tool only) security patch bump in package-lock.json, no runtime/public API impact.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 19626,
+        "sent": 370
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "lodash/lodash",
+      "pr": 6224,
+      "url": "https://github.com/lodash/lodash/pull/6224",
+      "title": "docs: clarify number-word behavior in startCase examples",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.9,
+      "model_rationale": "The diff only adds a documentation example (in doc/README.md) and a corresponding test case for existing, unchanged startCase behavior. No source code implementing startCase was modified, so no observable behavior changed for users.",
+      "label_rationale": "Adds a clarifying example and matching test for _.startCase's existing (unchanged) number-handling behavior. No source implementation file was touched, so there is no new behavior to sync docs against.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 911,
+        "sent": 911
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "lodash/lodash",
+      "pr": 6203,
+      "url": "https://github.com/lodash/lodash/pull/6203",
+      "title": "docs: add threat model exclusions for common report patterns",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "The diff only edits a markdown documentation file (threat-model.md) with no source code changes. A human already wrote the doc content directly, so there is nothing for the classifier to react to.",
+      "label_rationale": "Pure documentation-only PR (threat-model.md) with zero code diff — nothing for a code-diff classifier to react to; would only ever be flagged docs-relevant by a classifier that ignores its own 'is this a code diff' precondition.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2681,
+        "sent": 2681
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "lodash/lodash",
+      "pr": 6181,
+      "url": "https://github.com/lodash/lodash/pull/6181",
+      "title": "`lodash` release(patch): bump lodash npm package to 4.18.1",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.88,
+      "model_rationale": "The diff only updates the version number in README.md and package.json plus reformats a script field. Although the PR body mentions a ReferenceError fix in lodash/template and lodash/fromPairs, no source code for those modules is present in this diff—it is a version bump artifact with no observable public-surface change included here.",
+      "label_rationale": "Version-number bump in README.md and package.json for a release, not a behavior or API change to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1325,
+        "sent": 1325
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "lodash/lodash",
+      "pr": 6178,
+      "url": "https://github.com/lodash/lodash/pull/6178",
+      "title": "`lodash.template` release(template): bump to 4.18.1",
+      "expected": false,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.72,
+      "model_rationale": "This release bump fixes a ReferenceError bug in the documented `_.template` function, meaning a documented feature that was broken for valid usage now works — a real user-facing change (see rule 1). The change swaps `assignInWith`/`keysIn` internals for `assignWith`/`keys` to resolve the crash, though the public `_.template` signature is unchanged.",
+      "label_rationale": "Restores an internal helper (arrayEach) that had been dropped from the lodash.template standalone bundle, fixing packaging/bundling correctness. arrayEach/baseKeysIn are private implementation details, not part of the documented public API.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 6680,
+        "sent": 6680
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "lodash/lodash",
+      "pr": 6170,
+      "url": "https://github.com/lodash/lodash/pull/6170",
+      "title": "chore: prune stale advisory refs",
+      "expected": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "The diff only edits security-advisory reference URLs inside source comments and test names; no functional code or public behavior changed. This matches the \"prune stale advisory refs\" example that is explicitly not docs-relevant.",
+      "label_rationale": "Updates/removes stale GitHub security-advisory URLs referenced in source comments and test names; no functional code change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2685,
+        "sent": 2685
+      },
+      "filtered_files": []
+    }
+  ],
+  "failures": []
+}

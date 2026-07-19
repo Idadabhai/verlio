@@ -1,0 +1,338 @@
+[
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22951,
+    "url": "https://github.com/vitejs/vite/pull/22951",
+    "title": "fix(optimizer): respect importer module format for dynamic import interop with CJS deps",
+    "label": "docs-relevant",
+    "rationale": "Dynamic import() of a CJS dep previously derived its interop shape from the legacy.inconsistentCjsInterop flag alone; now it derives from whether the importer's own module format is explicit (isFilePathFormatExplicit). Changes the emitted interop code — and therefore the observed default export — for real user code, against a documented legacy config option."
+  },
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22947,
+    "url": "https://github.com/vitejs/vite/pull/22947",
+    "title": "fix(build): map CSS chunks in chunk import maps (fix #22946)",
+    "label": "docs-relevant",
+    "rationale": "build.chunkImportMap is a documented build option. CSS sidecar chunks were absent from the generated import map; this adds them under a stable .css name. Changes what the documented option actually emits."
+  },
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22945,
+    "url": "https://github.com/vitejs/vite/pull/22945",
+    "title": "fix(module-runner): don't crash stack-trace source mapping when globalThis.Buffer is absent",
+    "label": "not-relevant",
+    "rationale": "Captures the Buffer binding at module load instead of dereferencing it lazily, so deleting globalThis.Buffer later doesn't crash source-map decoding. Internal robustness fix inside the module runner; no documented API, option, or output changes."
+  },
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22939,
+    "url": "https://github.com/vitejs/vite/pull/22939",
+    "title": "fix(legacy): don't use newer syntax when minifying polyfill chunks",
+    "label": "not-relevant",
+    "rationale": "Pins the oxc minifier's compress target to es2015 for plugin-legacy's polyfill chunk. Restores the already-documented intent (legacy chunks target old browsers) rather than changing it — no user-facing option or documented behavior is different afterward."
+  },
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22927,
+    "url": "https://github.com/vitejs/vite/pull/22927",
+    "title": "test(css): cover stale manifest after asset deduplication",
+    "label": "not-relevant",
+    "rationale": "Test-only diff (single playground spec file); no source file touched, so there is no new behavior to document."
+  },
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22952,
+    "url": "https://github.com/vitejs/vite/pull/22952",
+    "title": "docs(static-deploy): fix links for Vercel deployment environments",
+    "label": "not-relevant",
+    "rationale": "Documentation-only diff (docs/guide/static-deploy.md) with zero code changed — a human already wrote the doc edit directly; nothing for a code-diff classifier to react to."
+  },
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22940,
+    "url": "https://github.com/vitejs/vite/pull/22940",
+    "title": "docs: clarify which hook is per-environment",
+    "label": "not-relevant",
+    "rationale": "Documentation-only diff across three docs/guide/*.md files, no source changed."
+  },
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22924,
+    "url": "https://github.com/vitejs/vite/pull/22924",
+    "title": "chore(deps): update dependency feed to v6",
+    "label": "not-relevant",
+    "rationale": "Docs-site devDependency bump in docs/package.json and pnpm-lock.yaml only; the shipped vite package is untouched."
+  },
+  {
+    "repo": "vitejs/vite",
+    "pr_number": 22914,
+    "url": "https://github.com/vitejs/vite/pull/22914",
+    "title": "chore: remove outdated pnpm configuration",
+    "label": "not-relevant",
+    "rationale": "Removes a stale key from pnpm-workspace.yaml — repo tooling config only, no library code or public behavior."
+  },
+  {
+    "repo": "fastify/fastify",
+    "pr_number": 6838,
+    "url": "https://github.com/fastify/fastify/pull/6838",
+    "title": "fix: normalize method in findRoute",
+    "label": "docs-relevant",
+    "rationale": "findRoute() is a documented public Fastify instance method. It now uppercases options.method before lookup, so findRoute({ method: 'get' }) resolves where it previously returned null. Changes the accepted input of a documented API."
+  },
+  {
+    "repo": "fastify/fastify",
+    "pr_number": 6832,
+    "url": "https://github.com/fastify/fastify/pull/6832",
+    "title": "feat: rfc10008 http query method",
+    "label": "docs-relevant",
+    "rationale": "Adds QUERY HTTP method support end to end (route shorthand, error codes in lib/errors.js, types/errors.d.ts). The PR itself edits docs/Reference/Server.md and docs/Reference/Errors.md, confirming a documented public surface change."
+  },
+  {
+    "repo": "fastify/fastify",
+    "pr_number": 6830,
+    "url": "https://github.com/fastify/fastify/pull/6830",
+    "title": "fix: use ContentType to detect `json` and `charset` in reply.send",
+    "label": "docs-relevant",
+    "rationale": "reply.send()'s content-type handling now parses the header properly: charset detection is case-insensitive per RFC 9110 and parameter serialization goes through ContentType.toString(). Changes the response header reply.send() produces for real user-supplied content types."
+  },
+  {
+    "repo": "fastify/fastify",
+    "pr_number": 6854,
+    "url": "https://github.com/fastify/fastify/pull/6854",
+    "title": "perf: reuse cached content types for response serialization",
+    "label": "not-relevant",
+    "rationale": "Swaps `new ContentType(...)` for a cached `ContentType.from(...)` in lib/schemas.js serializer lookup. Pure allocation-reduction; the resolved serializer for any given status code and content type is identical."
+  },
+  {
+    "repo": "fastify/fastify",
+    "pr_number": 6831,
+    "url": "https://github.com/fastify/fastify/pull/6831",
+    "title": "perf: reduce per-request overhead in the request lifecycle",
+    "label": "not-relevant",
+    "rationale": "Uses res.end(payload) instead of res.write(payload) when no trailers are registered, to cork the socket into a single write. Internal write-path optimization; the bytes sent and every documented hook/API behave the same."
+  },
+  {
+    "repo": "fastify/fastify",
+    "pr_number": 6839,
+    "url": "https://github.com/fastify/fastify/pull/6839",
+    "title": "chore: Bump markdownlint-cli2 from 0.22.1 to 0.23.0",
+    "label": "not-relevant",
+    "rationale": "package.json devDependency bump for a docs-linting tool; no library code."
+  },
+  {
+    "repo": "fastify/fastify",
+    "pr_number": 6825,
+    "url": "https://github.com/fastify/fastify/pull/6825",
+    "title": "docs: fix incorrect hook count in Hooks.md",
+    "label": "not-relevant",
+    "rationale": "Documentation-only diff (docs/Reference/Hooks.md), zero code changed."
+  },
+  {
+    "repo": "fastify/fastify",
+    "pr_number": 6821,
+    "url": "https://github.com/fastify/fastify/pull/6821",
+    "title": "docs: remove marko from @fastify/view engines (support dropped)",
+    "label": "not-relevant",
+    "rationale": "Documentation-only diff (docs/Guides/Plugins-Guide.md) recording a change that happened in a different repo; no code in this repo changed."
+  },
+  {
+    "repo": "prisma/prisma",
+    "pr_number": 29697,
+    "url": "https://github.com/prisma/prisma/pull/29697",
+    "title": "fix(client): reject invalid raw dates",
+    "label": "docs-relevant",
+    "rationale": "serializeRawParameters now throws an explicit 'Provided Date object is invalid' error for an Invalid Date passed to $queryRaw/$executeRaw, instead of silently serializing garbage; it also narrows the fast/slow fallback to TypeError only. New user-visible error on a documented client API."
+  },
+  {
+    "repo": "prisma/prisma",
+    "pr_number": 29691,
+    "url": "https://github.com/prisma/prisma/pull/29691",
+    "title": "fix(cli): remove the migrate-reset tool from the MCP server",
+    "label": "docs-relevant",
+    "rationale": "Deletes the `migrate-reset` tool registration from the Prisma MCP server. Removing a tool from an MCP server's advertised tool list is a removal of public surface — any docs listing the server's available tools is now wrong."
+  },
+  {
+    "repo": "prisma/prisma",
+    "pr_number": 29723,
+    "url": "https://github.com/prisma/prisma/pull/29723",
+    "title": "fix(client): mask each quoted string in maskQuery independently",
+    "label": "not-relevant",
+    "rationale": "Fixes a greedy regex in maskQuery so each quoted string is masked separately rather than everything between the first and last quote. maskQuery is an internal log-redaction helper, not a documented API; only debug log output shape changes."
+  },
+  {
+    "repo": "prisma/prisma",
+    "pr_number": 29725,
+    "url": "https://github.com/prisma/prisma/pull/29725",
+    "title": "ci: upgrade pnpm to 11 to restore pnpm audit",
+    "label": "not-relevant",
+    "rationale": "GitHub Actions workflow files, .npmrc, and AGENTS.md only — repo CI tooling, no shipped package code."
+  },
+  {
+    "repo": "prisma/prisma",
+    "pr_number": 29686,
+    "url": "https://github.com/prisma/prisma/pull/29686",
+    "title": "chore(deps): update @prisma/dev to 0.24.14",
+    "label": "not-relevant",
+    "rationale": "Dependency version bump in packages/cli/package.json and pnpm-lock.yaml only, no source changes in this repo."
+  },
+  {
+    "repo": "nodejs/undici",
+    "pr_number": 5564,
+    "url": "https://github.com/nodejs/undici/pull/5564",
+    "title": "fix(decompress): skip HEAD responses",
+    "label": "docs-relevant",
+    "rationale": "The decompress interceptor (documented in docs/docs/api/Interceptors.md) now bypasses its handler entirely for HEAD requests, which have no body. A documented interceptor behaving incorrectly for a valid, common method is a documented-behavior fix."
+  },
+  {
+    "repo": "nodejs/undici",
+    "pr_number": 5551,
+    "url": "https://github.com/nodejs/undici/pull/5551",
+    "title": "fix(redirect): remove body headers after POST-to-GET",
+    "label": "docs-relevant",
+    "rationale": "Content-* headers were previously stripped only on a 303 redirect; now they are also stripped on the 301/302 POST-to-GET rewrite. This is documented redirect/header-stripping behavior (the in-file comment describing the rule is updated in the same diff)."
+  },
+  {
+    "repo": "nodejs/undici",
+    "pr_number": 5547,
+    "url": "https://github.com/nodejs/undici/pull/5547",
+    "title": "fix(h1): ignore type of service errors",
+    "label": "docs-relevant",
+    "rationale": "Makes setting the socket ToS non-fatal, and correspondingly removes the now-false 'Default: `0`' claim from the documented typeOfService option in types/dispatcher.d.ts. Both the option's documented default and its failure behavior change."
+  },
+  {
+    "repo": "nodejs/undici",
+    "pr_number": 5540,
+    "url": "https://github.com/nodejs/undici/pull/5540",
+    "title": "fix(fetch): convert null init in Response.json",
+    "label": "not-relevant",
+    "rationale": "Removes an `if (init !== null)` guard so a null init goes through the standard ResponseInit webidl converter. A spec-conformance fix for an edge case no documentation describes; ordinary documented usage of Response.json is unaffected."
+  },
+  {
+    "repo": "nodejs/undici",
+    "pr_number": 5559,
+    "url": "https://github.com/nodejs/undici/pull/5559",
+    "title": "fix(h2): destroy aborted stream synchronously instead of via setImmediate",
+    "label": "not-relevant",
+    "rationale": "Changes when an aborted HTTP/2 stream handle is destroyed to fix a resource leak under abort churn. Internal lifecycle timing; the RST_STREAM frame and every documented dispatcher contract are unchanged."
+  },
+  {
+    "repo": "nodejs/undici",
+    "pr_number": 5548,
+    "url": "https://github.com/nodejs/undici/pull/5548",
+    "title": "docs: add custom interceptor example",
+    "label": "not-relevant",
+    "rationale": "Documentation-only diff (Dispatcher.md, Interceptors.md) with zero code changed."
+  },
+  {
+    "repo": "nodejs/undici",
+    "pr_number": 5556,
+    "url": "https://github.com/nodejs/undici/pull/5556",
+    "title": "build(deps-dev): bump fast-check from 4.8.0 to 4.9.0",
+    "label": "not-relevant",
+    "rationale": "package-lock.json devDependency (property-testing library) bump only."
+  },
+  {
+    "repo": "nodejs/undici",
+    "pr_number": 5550,
+    "url": "https://github.com/nodejs/undici/pull/5550",
+    "title": "test: deflake invalid websocket close status test",
+    "label": "not-relevant",
+    "rationale": "Test-only diff; no source file touched."
+  },
+  {
+    "repo": "yargs/yargs",
+    "pr_number": 2498,
+    "url": "https://github.com/yargs/yargs/pull/2498",
+    "title": "fix: prototype pollution vulnerability in apply-extends",
+    "label": "docs-relevant",
+    "rationale": "Skips the __proto__ key when deep-merging config loaded via the documented `extends` feature, closing a prototype-pollution vector. A security fix changing how a documented feature handles a class of input. NOTE: structurally similar to zod#5898 in the dev corpus, which is quoted as a worked example in the classifier prompt — see corpus/README.md 'Known near-twin'."
+  },
+  {
+    "repo": "yargs/yargs",
+    "pr_number": 2551,
+    "url": "https://github.com/yargs/yargs/pull/2551",
+    "title": "docs: clarify nargs option-like values",
+    "label": "not-relevant",
+    "rationale": "Documentation-only diff (docs/api.md), zero code changed."
+  },
+  {
+    "repo": "yargs/yargs",
+    "pr_number": 2552,
+    "url": "https://github.com/yargs/yargs/pull/2552",
+    "title": "chore: update the easy dependencies",
+    "label": "not-relevant",
+    "rationale": "package.json dependency version bumps only, no source changes."
+  },
+  {
+    "repo": "yargs/yargs",
+    "pr_number": 2507,
+    "url": "https://github.com/yargs/yargs/pull/2507",
+    "title": "Replace EOL node 23 in CI version matrix with node 24",
+    "label": "not-relevant",
+    "rationale": "CI workflow matrix change only. (Note: the supported-Node range in the README would be doc-relevant, but this diff only touches .github/workflows/ci.yaml, not engines or the README.)"
+  },
+  {
+    "repo": "drizzle-team/drizzle-orm",
+    "pr_number": 6000,
+    "url": "https://github.com/drizzle-team/drizzle-orm/pull/6000",
+    "title": "Add PgColumn.toBuilder() for cloning built columns back into builders",
+    "label": "docs-relevant",
+    "rationale": "Adds a new public method PgColumn.toBuilder(overrides?) plus a PgColumnToBuilderOverrides type, with JSDoc describing its intended use for deriving tables. New public API surface."
+  },
+  {
+    "repo": "drizzle-team/drizzle-orm",
+    "pr_number": 6006,
+    "url": "https://github.com/drizzle-team/drizzle-orm/pull/6006",
+    "title": "Bump upload-artifact to v7 and pnpm/action-setup to v6 in the feature workflow",
+    "label": "not-relevant",
+    "rationale": "Single GitHub Actions workflow file; CI action version pins only."
+  },
+  {
+    "repo": "date-fns/date-fns",
+    "pr_number": 4179,
+    "url": "https://github.com/date-fns/date-fns/pull/4179",
+    "title": "fix(de-AT): support parsing \"Jänner\" with de-AT locale",
+    "label": "docs-relevant",
+    "rationale": "Adds 'jänner' to the wide month-match pattern for the German locale, so parse() now accepts the Austrian spelling it previously rejected. Changes which input strings a documented locale-aware parser accepts."
+  },
+  {
+    "repo": "date-fns/date-fns",
+    "pr_number": 4206,
+    "url": "https://github.com/date-fns/date-fns/pull/4206",
+    "title": "docs: fix set example description",
+    "label": "not-relevant",
+    "rationale": "Corrects a wrong expected-output value inside a JSDoc @example comment for set(). The implementation is untouched — the code was always right and the comment was wrong."
+  },
+  {
+    "repo": "date-fns/date-fns",
+    "pr_number": 3832,
+    "url": "https://github.com/date-fns/date-fns/pull/3832",
+    "title": "chore: Fix typos in documentation",
+    "label": "not-relevant",
+    "rationale": "Spelling fixes inside JSDoc comment prose across many src/ files; no implementation line changed in any of them."
+  },
+  {
+    "repo": "TanStack/query",
+    "pr_number": 11080,
+    "url": "https://github.com/TanStack/query/pull/11080",
+    "title": "test({react,preact}-query/usePrefetchQuery): inline the 'generateQueryFn' factory into each call site",
+    "label": "not-relevant",
+    "rationale": "Test-refactor-only diff across two __tests__ files; no source or public behavior touched."
+  },
+  {
+    "repo": "TanStack/query",
+    "pr_number": 11057,
+    "url": "https://github.com/TanStack/query/pull/11057",
+    "title": "test(*): assert exact values instead of loose matchers",
+    "label": "not-relevant",
+    "rationale": "Tightens assertions across five test files; no source file changed."
+  },
+  {
+    "repo": "TanStack/query",
+    "pr_number": 11066,
+    "url": "https://github.com/TanStack/query/pull/11066",
+    "title": "docs(CONTRIBUTING): update pnpm version from 'v10' to 'v11'",
+    "label": "not-relevant",
+    "rationale": "CONTRIBUTING.md only — contributor-facing repo metadata, not user-facing library documentation, and no code changed."
+  }
+]

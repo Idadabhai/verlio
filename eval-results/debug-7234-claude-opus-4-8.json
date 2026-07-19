@@ -1,0 +1,63 @@
+{
+  "tag": "debug-7234",
+  "model": "claude-opus-4-8",
+  "corpus": "corpus/labeled-prs.json",
+  "n": 1,
+  "confusion": {
+    "tp": 1,
+    "fp": 0,
+    "tn": 0,
+    "fn": 0
+  },
+  "precision": {
+    "value": 1,
+    "ci95": {
+      "low": 0.20654329147389294,
+      "high": 1
+    },
+    "denominator": 1
+  },
+  "recall": {
+    "value": 1,
+    "ci95": {
+      "low": 0.20654329147389294,
+      "high": 1
+    },
+    "denominator": 1
+  },
+  "f1": 1,
+  "accuracy": 1,
+  "gate": {
+    "bar": 0.8,
+    "metric": "precision",
+    "passed": true,
+    "ci_lower_clears_bar": false
+  },
+  "usage": {
+    "cache_read_input_tokens": 2601,
+    "cache_creation_input_tokens": 0
+  },
+  "false_positives": [],
+  "false_negatives": [],
+  "rows": [
+    {
+      "repo": "expressjs/express",
+      "pr": 7234,
+      "url": "https://github.com/expressjs/express/pull/7234",
+      "title": "Upgrade `content-type` to ^2.0.0",
+      "expected": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.9,
+      "model_rationale": "Dependency bump that changes documented behavior of `res.send()`: existing Content-Type parameters are now preserved and invalid Content-Type headers no longer throw. The PR itself added a History.md changelog entry, confirming user-facing relevance.",
+      "label_rationale": "Framed as a dependency bump, but it changes res.send()'s observable behavior: existing Content-Type parameters are now preserved when the charset is added, and a malformed Content-Type no longer throws. History.md documents the new behavior with an example in the same PR.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2680,
+        "sent": 2680
+      },
+      "filtered_files": []
+    }
+  ],
+  "failures": []
+}

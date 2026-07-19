@@ -1,0 +1,4490 @@
+[
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18564,
+    "url": "https://github.com/sveltejs/svelte/pull/18564",
+    "title": "docs: update link on hooks page",
+    "files": [
+      "documentation/docs/05-special-elements/01-svelte-boundary.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "documentation/docs/05-special-elements/01-svelte-boundary.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18552,
+    "url": "https://github.com/sveltejs/svelte/pull/18552",
+    "title": "Version Packages",
+    "files": [
+      ".changeset/fast-cats-compile.md",
+      ".changeset/lucky-dolls-yell.md",
+      "packages/svelte/CHANGELOG.md",
+      "packages/svelte/package.json",
+      "packages/svelte/src/version.js"
+    ],
+    "source_files": [
+      "packages/svelte/package.json",
+      "packages/svelte/src/version.js"
+    ],
+    "doc_files": [
+      ".changeset/fast-cats-compile.md",
+      ".changeset/lucky-dolls-yell.md",
+      "packages/svelte/CHANGELOG.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18551,
+    "url": "https://github.com/sveltejs/svelte/pull/18551",
+    "title": "fix: rerun derived that had an abort controller on reconnection",
+    "files": [
+      ".changeset/lucky-dolls-yell.md",
+      "packages/svelte/src/internal/client/runtime.js",
+      "packages/svelte/tests/runtime-runes/samples/abort-signal-derived-rerun-on-reconnect/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/abort-signal-derived-rerun-on-reconnect/main.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/runtime.js"
+    ],
+    "doc_files": [
+      ".changeset/lucky-dolls-yell.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18548,
+    "url": "https://github.com/sveltejs/svelte/pull/18548",
+    "title": "perf: skip quadratic blocker analysis when no top-level await",
+    "files": [
+      ".changeset/fast-cats-compile.md",
+      "packages/svelte/src/compiler/phases/2-analyze/index.js"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/2-analyze/index.js"
+    ],
+    "doc_files": [
+      ".changeset/fast-cats-compile.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18543,
+    "url": "https://github.com/sveltejs/svelte/pull/18543",
+    "title": "chore: bench compare report as HTML",
+    "files": [
+      ".gitignore",
+      "benchmarking/compare/generate-report.js",
+      "benchmarking/compare/index.js",
+      "benchmarking/compare/results.template.html"
+    ],
+    "source_files": [
+      "benchmarking/compare/generate-report.js",
+      "benchmarking/compare/index.js",
+      "benchmarking/compare/results.template.html"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18542,
+    "url": "https://github.com/sveltejs/svelte/pull/18542",
+    "title": "chore: run every benchmark in its own process",
+    "files": [
+      "benchmarking/compare/generate-report.js",
+      "benchmarking/compare/runner.js",
+      "benchmarking/run.js"
+    ],
+    "source_files": [
+      "benchmarking/compare/generate-report.js",
+      "benchmarking/compare/runner.js",
+      "benchmarking/run.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18541,
+    "url": "https://github.com/sveltejs/svelte/pull/18541",
+    "title": "fix: clear previous_task reference after abort in Tween",
+    "files": [
+      ".changeset/tween-previous-task-leak.md",
+      "packages/svelte/src/motion/tweened.js"
+    ],
+    "source_files": [
+      "packages/svelte/src/motion/tweened.js"
+    ],
+    "doc_files": [
+      ".changeset/tween-previous-task-leak.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18530,
+    "url": "https://github.com/sveltejs/svelte/pull/18530",
+    "title": "fix: $state.eager() is sometimes incorrect in SSR",
+    "files": [
+      ".changeset/long-buttons-hunt.md",
+      "packages/svelte/src/compiler/phases/3-transform/server/visitors/CallExpression.js",
+      "packages/svelte/tests/server-side-rendering/samples/state-eager/_expected.html",
+      "packages/svelte/tests/server-side-rendering/samples/state-eager/main.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/3-transform/server/visitors/CallExpression.js"
+    ],
+    "doc_files": [
+      ".changeset/long-buttons-hunt.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18528,
+    "url": "https://github.com/sveltejs/svelte/pull/18528",
+    "title": "chore: add some failing tests",
+    "files": [
+      "packages/svelte/tests/runtime-runes/samples/async-derived-log-outside-reactivity/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-log-outside-reactivity/main.svelte",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-not-overfiring/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-not-overfiring/main.svelte",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-not-underfiring/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-derived-not-underfiring/main.svelte"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18527,
+    "url": "https://github.com/sveltejs/svelte/pull/18527",
+    "title": "chore: changeset",
+    "files": [
+      ".changeset/common-ways-deny.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      ".changeset/common-ways-deny.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18525,
+    "url": "https://github.com/sveltejs/svelte/pull/18525",
+    "title": "fix: skip unnecessary derived effect in earlier batch",
+    "files": [
+      ".changeset/curly-wasps-hide.md",
+      "packages/svelte/src/internal/client/reactivity/batch.js",
+      "packages/svelte/tests/runtime-runes/samples/async-batch-derived/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-batch-derived/main.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/reactivity/batch.js"
+    ],
+    "doc_files": [
+      ".changeset/curly-wasps-hide.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18523,
+    "url": "https://github.com/sveltejs/svelte/pull/18523",
+    "title": "chore: add benchmarks",
+    "files": [
+      "benchmarking/benchmarks/reactivity/tests/kairo_broad_block.bench.js",
+      "benchmarking/benchmarks/reactivity/tests/kairo_deep_block.bench.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18521,
+    "url": "https://github.com/sveltejs/svelte/pull/18521",
+    "title": "fix: transform computed keys in keyed each block destructuring patterns",
+    "files": [
+      ".changeset/shiny-keys-dance.md",
+      "packages/svelte/src/compiler/phases/3-transform/client/visitors/EachBlock.js",
+      "packages/svelte/tests/runtime-runes/samples/each-keyed-computed-destructuring-key/Child.svelte",
+      "packages/svelte/tests/runtime-runes/samples/each-keyed-computed-destructuring-key/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/each-keyed-computed-destructuring-key/main.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/3-transform/client/visitors/EachBlock.js"
+    ],
+    "doc_files": [
+      ".changeset/shiny-keys-dance.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18518,
+    "url": "https://github.com/sveltejs/svelte/pull/18518",
+    "title": "fix: chain preprocessor sourcemaps with an empty sources[0]",
+    "files": [
+      ".changeset/tame-donkeys-jump.md",
+      "packages/svelte/src/compiler/utils/mapped_code.js",
+      "packages/svelte/tests/sourcemaps/samples/sourcemap-empty-source/_config.js",
+      "packages/svelte/tests/sourcemaps/samples/sourcemap-empty-source/input.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/utils/mapped_code.js"
+    ],
+    "doc_files": [
+      ".changeset/tame-donkeys-jump.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18517,
+    "url": "https://github.com/sveltejs/svelte/pull/18517",
+    "title": "fix: prevent derived connection leak in untracked contexts",
+    "files": [
+      "packages/svelte/src/internal/client/runtime.js",
+      "packages/svelte/tests/signals/test.ts"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/runtime.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18507,
+    "url": "https://github.com/sveltejs/svelte/pull/18507",
+    "title": "fix: don't treat declaration tags as parts inside each blocks",
+    "files": [
+      ".changeset/young-doodles-beam.md",
+      "packages/svelte/src/compiler/phases/3-transform/client/visitors/shared/utils.js",
+      "packages/svelte/tests/runtime-runes/samples/declaration-tags-each/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/declaration-tags-each/main.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/3-transform/client/visitors/shared/utils.js"
+    ],
+    "doc_files": [
+      ".changeset/young-doodles-beam.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18500,
+    "url": "https://github.com/sveltejs/svelte/pull/18500",
+    "title": "fix: avoid declaration tag warning in event handlers",
+    "files": [
+      ".changeset/dull-oranges-fry.md",
+      "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/function.js",
+      "packages/svelte/tests/validator/samples/declaration-tag-state-referenced-locally/input.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/function.js"
+    ],
+    "doc_files": [
+      ".changeset/dull-oranges-fry.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18497,
+    "url": "https://github.com/sveltejs/svelte/pull/18497",
+    "title": "Version Packages",
+    "files": [
+      ".changeset/big-months-shout.md",
+      ".changeset/common-ways-deny.md",
+      ".changeset/curly-wasps-hide.md",
+      ".changeset/dull-oranges-fry.md",
+      ".changeset/early-crabs-rest.md",
+      ".changeset/long-buttons-hunt.md",
+      ".changeset/rich-jokes-attack.md",
+      ".changeset/shiny-keys-dance.md",
+      ".changeset/tame-donkeys-jump.md",
+      ".changeset/tween-previous-task-leak.md",
+      ".changeset/young-doodles-beam.md",
+      "packages/svelte/CHANGELOG.md",
+      "packages/svelte/package.json",
+      "packages/svelte/src/version.js"
+    ],
+    "source_files": [
+      "packages/svelte/package.json",
+      "packages/svelte/src/version.js"
+    ],
+    "doc_files": [
+      ".changeset/big-months-shout.md",
+      ".changeset/common-ways-deny.md",
+      ".changeset/curly-wasps-hide.md",
+      ".changeset/dull-oranges-fry.md",
+      ".changeset/early-crabs-rest.md",
+      ".changeset/long-buttons-hunt.md",
+      ".changeset/rich-jokes-attack.md",
+      ".changeset/shiny-keys-dance.md",
+      ".changeset/tame-donkeys-jump.md",
+      ".changeset/tween-previous-task-leak.md",
+      ".changeset/young-doodles-beam.md",
+      "packages/svelte/CHANGELOG.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18496,
+    "url": "https://github.com/sveltejs/svelte/pull/18496",
+    "title": "chore: drop dead code that make TSGO fail",
+    "files": [
+      ".changeset/big-months-shout.md",
+      "packages/svelte/src/internal/client/reactivity/props.js"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/reactivity/props.js"
+    ],
+    "doc_files": [
+      ".changeset/big-months-shout.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18492,
+    "url": "https://github.com/sveltejs/svelte/pull/18492",
+    "title": "fix: correctly transform declaration tags during SSR",
+    "files": [
+      ".changeset/rich-jokes-attack.md",
+      "packages/svelte/src/compiler/phases/3-transform/server/visitors/shared/utils.js",
+      "packages/svelte/tests/server-side-rendering/samples/declaration-tags-transform/_expected.html",
+      "packages/svelte/tests/server-side-rendering/samples/declaration-tags-transform/main.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/phases/3-transform/server/visitors/shared/utils.js"
+    ],
+    "doc_files": [
+      ".changeset/rich-jokes-attack.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18474,
+    "url": "https://github.com/sveltejs/svelte/pull/18474",
+    "title": "chore: provide `indent` option for `print`",
+    "files": [
+      ".changeset/short-otters-find.md",
+      "packages/svelte/src/compiler/print/index.js",
+      "packages/svelte/src/compiler/print/types.d.ts",
+      "packages/svelte/types/index.d.ts"
+    ],
+    "source_files": [
+      "packages/svelte/src/compiler/print/index.js",
+      "packages/svelte/src/compiler/print/types.d.ts",
+      "packages/svelte/types/index.d.ts"
+    ],
+    "doc_files": [
+      ".changeset/short-otters-find.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sveltejs/svelte",
+    "pr_number": 18453,
+    "url": "https://github.com/sveltejs/svelte/pull/18453",
+    "title": "fix: always unset reactivity context after restoring it",
+    "files": [
+      ".changeset/late-geese-fix.md",
+      "packages/svelte/src/internal/client/reactivity/async.js",
+      "packages/svelte/tests/runtime-runes/samples/async-parallel-derived-template-mutation/_config.js",
+      "packages/svelte/tests/runtime-runes/samples/async-parallel-derived-template-mutation/main.svelte"
+    ],
+    "source_files": [
+      "packages/svelte/src/internal/client/reactivity/async.js"
+    ],
+    "doc_files": [
+      ".changeset/late-geese-fix.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17428,
+    "url": "https://github.com/withastro/astro/pull/17428",
+    "title": "Update pnpm to v11.13.1",
+    "files": [
+      "package.json",
+      "pnpm-lock.yaml"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17405,
+    "url": "https://github.com/withastro/astro/pull/17405",
+    "title": "fix(prefetch): swallow fetch-fallback rejection to avoid unhandled 'Load failed' on WebKit",
+    "files": [
+      ".changeset/prefetch-swallow-fetch-rejection.md",
+      "packages/astro/src/prefetch/index.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/prefetch/index.ts"
+    ],
+    "doc_files": [
+      ".changeset/prefetch-swallow-fetch-rejection.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17403,
+    "url": "https://github.com/withastro/astro/pull/17403",
+    "title": "[ci] release",
+    "files": [
+      ".changeset/tidy-pathnames-agree.md",
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/CHANGELOG.md",
+      "packages/astro/package.json",
+      "pnpm-lock.yaml"
+    ],
+    "source_files": [
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/package.json"
+    ],
+    "doc_files": [
+      ".changeset/tidy-pathnames-agree.md",
+      "packages/astro/CHANGELOG.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17402,
+    "url": "https://github.com/withastro/astro/pull/17402",
+    "title": "fix(astro): propagate mutated locals to custom error pages",
+    "files": [
+      ".changeset/green-squids-stop.md",
+      "packages/astro/src/core/fetch/fetch-state.ts",
+      "packages/astro/test/units/app/locals.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/core/fetch/fetch-state.ts"
+    ],
+    "doc_files": [
+      ".changeset/green-squids-stop.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17399,
+    "url": "https://github.com/withastro/astro/pull/17399",
+    "title": "Normalize domain-based i18n request paths consistently",
+    "files": [
+      ".changeset/tidy-pathnames-agree.md",
+      "packages/astro/src/core/fetch/fetch-state.ts",
+      "packages/astro/src/core/i18n/domain.ts",
+      "packages/astro/test/units/i18n/i18n-app.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/core/fetch/fetch-state.ts",
+      "packages/astro/src/core/i18n/domain.ts"
+    ],
+    "doc_files": [
+      ".changeset/tidy-pathnames-agree.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17394,
+    "url": "https://github.com/withastro/astro/pull/17394",
+    "title": "Preserve CSP resource defaults for element directives",
+    "files": [
+      ".changeset/early-seas-mix.md",
+      "packages/astro/src/runtime/server/render/csp.ts",
+      "packages/astro/test/units/csp/render-csp.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/runtime/server/render/csp.ts"
+    ],
+    "doc_files": [
+      ".changeset/early-seas-mix.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17393,
+    "url": "https://github.com/withastro/astro/pull/17393",
+    "title": "Add more escaping for rendered content",
+    "files": [
+      ".changeset/tidy-styles-harden.md",
+      "packages/astro/src/core/app/dev/pipeline.ts",
+      "packages/astro/src/runtime/server/escape.ts",
+      "packages/astro/src/runtime/server/render/server-islands.ts",
+      "packages/astro/src/runtime/server/transition.ts",
+      "packages/astro/src/vite-plugin-app/pipeline.ts",
+      "packages/astro/test/server-islands.test.ts",
+      "packages/astro/test/units/render/escape.test.ts",
+      "packages/astro/test/units/render/transitions.test.ts",
+      "packages/astro/test/units/server-islands/server-islands-render.test.ts",
+      "packages/integrations/cloudflare/test/prerender-node-env.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/core/app/dev/pipeline.ts",
+      "packages/astro/src/runtime/server/escape.ts",
+      "packages/astro/src/runtime/server/render/server-islands.ts",
+      "packages/astro/src/runtime/server/transition.ts",
+      "packages/astro/src/vite-plugin-app/pipeline.ts"
+    ],
+    "doc_files": [
+      ".changeset/tidy-styles-harden.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17391,
+    "url": "https://github.com/withastro/astro/pull/17391",
+    "title": "fix(logger): allows setting in updateConfig()",
+    "files": [
+      ".changeset/cuddly-horses-learn.md",
+      "packages/astro/src/core/base-pipeline.ts",
+      "packages/astro/src/core/logger/load.ts",
+      "packages/astro/src/integrations/hooks.ts",
+      "packages/astro/test/units/integrations/api.test.ts",
+      "packages/astro/test/units/logger/load.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/core/base-pipeline.ts",
+      "packages/astro/src/core/logger/load.ts",
+      "packages/astro/src/integrations/hooks.ts"
+    ],
+    "doc_files": [
+      ".changeset/cuddly-horses-learn.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17390,
+    "url": "https://github.com/withastro/astro/pull/17390",
+    "title": "fix(logger): make AstroLoggerDestination not generic",
+    "files": [
+      ".changeset/little-sites-tie.md",
+      "packages/astro/src/core/app/types.ts",
+      "packages/astro/src/core/logger/core.ts",
+      "packages/astro/src/core/logger/impls/console.ts",
+      "packages/astro/src/core/logger/impls/json.ts",
+      "packages/astro/src/core/logger/impls/node.ts",
+      "packages/astro/test/prerender-conflict.test.ts",
+      "packages/astro/test/units/logger/destination.test.ts",
+      "packages/astro/test/units/logger/logger.test.ts",
+      "packages/astro/test/units/routing/manifest.test.ts",
+      "packages/astro/test/units/routing/params-validation.test.ts",
+      "packages/astro/test/units/routing/route-manifest.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/core/app/types.ts",
+      "packages/astro/src/core/logger/core.ts",
+      "packages/astro/src/core/logger/impls/console.ts",
+      "packages/astro/src/core/logger/impls/json.ts",
+      "packages/astro/src/core/logger/impls/node.ts"
+    ],
+    "doc_files": [
+      ".changeset/little-sites-tie.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17389,
+    "url": "https://github.com/withastro/astro/pull/17389",
+    "title": "feat(logger): allow passing entrypoint as URL",
+    "files": [
+      ".changeset/tasty-windows-lead.md",
+      "packages/astro/src/core/config/schemas/base.ts",
+      "packages/astro/src/core/logger/config.ts",
+      "packages/astro/src/core/logger/load.ts",
+      "packages/astro/src/types/public/config.ts",
+      "packages/astro/test/units/logger/load.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/core/config/schemas/base.ts",
+      "packages/astro/src/core/logger/config.ts",
+      "packages/astro/src/core/logger/load.ts",
+      "packages/astro/src/types/public/config.ts"
+    ],
+    "doc_files": [
+      ".changeset/tasty-windows-lead.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17387,
+    "url": "https://github.com/withastro/astro/pull/17387",
+    "title": "[ci] release",
+    "files": [
+      ".changeset/breezy-corners-push.md",
+      ".changeset/cool-rice-exist.md",
+      ".changeset/cuddly-horses-learn.md",
+      ".changeset/early-seas-mix.md",
+      ".changeset/green-clocks-greet.md",
+      ".changeset/hip-rats-decide.md",
+      ".changeset/little-sites-tie.md",
+      ".changeset/lovely-nights-stay.md",
+      ".changeset/pink-frogs-poke.md",
+      ".changeset/tame-donkeys-relax.md",
+      ".changeset/tasty-windows-lead.md",
+      ".changeset/tidy-styles-harden.md",
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/CHANGELOG.md",
+      "packages/astro/package.json",
+      "pnpm-lock.yaml"
+    ],
+    "source_files": [
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/package.json"
+    ],
+    "doc_files": [
+      ".changeset/breezy-corners-push.md",
+      ".changeset/cool-rice-exist.md",
+      ".changeset/cuddly-horses-learn.md",
+      ".changeset/early-seas-mix.md",
+      ".changeset/green-clocks-greet.md",
+      ".changeset/hip-rats-decide.md",
+      ".changeset/little-sites-tie.md",
+      ".changeset/lovely-nights-stay.md",
+      ".changeset/pink-frogs-poke.md",
+      ".changeset/tame-donkeys-relax.md",
+      ".changeset/tasty-windows-lead.md",
+      ".changeset/tidy-styles-harden.md",
+      "packages/astro/CHANGELOG.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17384,
+    "url": "https://github.com/withastro/astro/pull/17384",
+    "title": "Local font file IDs now hash content only, not content + absolute path",
+    "files": [
+      "packages/astro/src/assets/fonts/infra/fs-font-file-content-resolver.ts",
+      "packages/astro/test/units/assets/fonts/infra.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/assets/fonts/infra/fs-font-file-content-resolver.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17374,
+    "url": "https://github.com/withastro/astro/pull/17374",
+    "title": "Fix dev server 404 for ?url imported assets on browser navigation",
+    "files": [
+      ".changeset/green-clocks-greet.md",
+      "packages/astro/src/vite-plugin-astro-server/route-guard.ts",
+      "packages/astro/test/units/dev/route-guard-middleware.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/vite-plugin-astro-server/route-guard.ts"
+    ],
+    "doc_files": [
+      ".changeset/green-clocks-greet.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17373,
+    "url": "https://github.com/withastro/astro/pull/17373",
+    "title": "[ci] release",
+    "files": [
+      ".changeset/free-friends-lick.md",
+      ".changeset/island-retry-query-param.md",
+      ".changeset/modern-otters-smoke.md",
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/CHANGELOG.md",
+      "packages/astro/package.json",
+      "packages/integrations/vercel/CHANGELOG.md",
+      "packages/integrations/vercel/package.json",
+      "pnpm-lock.yaml"
+    ],
+    "source_files": [
+      "examples/advanced-routing/package.json",
+      "examples/basics/package.json",
+      "examples/blog/package.json",
+      "examples/component/package.json",
+      "examples/container-with-vitest/package.json",
+      "examples/framework-alpine/package.json",
+      "examples/framework-multiple/package.json",
+      "examples/framework-preact/package.json",
+      "examples/framework-react/package.json",
+      "examples/framework-solid/package.json",
+      "examples/framework-svelte/package.json",
+      "examples/framework-vue/package.json",
+      "examples/hackernews/package.json",
+      "examples/integration/package.json",
+      "examples/minimal/package.json",
+      "examples/portfolio/package.json",
+      "examples/ssr/package.json",
+      "examples/starlog/package.json",
+      "examples/toolbar-app/package.json",
+      "examples/with-markdoc/package.json",
+      "examples/with-mdx/package.json",
+      "examples/with-nanostores/package.json",
+      "examples/with-tailwindcss/package.json",
+      "examples/with-vitest/package.json",
+      "packages/astro/package.json",
+      "packages/integrations/vercel/package.json"
+    ],
+    "doc_files": [
+      ".changeset/free-friends-lick.md",
+      ".changeset/island-retry-query-param.md",
+      ".changeset/modern-otters-smoke.md",
+      "packages/astro/CHANGELOG.md",
+      "packages/integrations/vercel/CHANGELOG.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17370,
+    "url": "https://github.com/withastro/astro/pull/17370",
+    "title": "fix(@astrojs/vercel): improve internal ISR route handling",
+    "files": [
+      ".changeset/modern-otters-smoke.md",
+      "packages/integrations/vercel/src/index.ts",
+      "packages/integrations/vercel/src/serverless/entrypoint.ts",
+      "packages/integrations/vercel/test/isr.test.ts"
+    ],
+    "source_files": [
+      "packages/integrations/vercel/src/index.ts",
+      "packages/integrations/vercel/src/serverless/entrypoint.ts"
+    ],
+    "doc_files": [
+      ".changeset/modern-otters-smoke.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17369,
+    "url": "https://github.com/withastro/astro/pull/17369",
+    "title": "fix(astro-island): use query param for hydration import retry so recovery works in dev",
+    "files": [
+      ".changeset/island-retry-query-param.md",
+      "packages/astro/e2e/astro-island-hydration-error.test.ts",
+      "packages/astro/src/runtime/server/astro-island.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/runtime/server/astro-island.ts"
+    ],
+    "doc_files": [
+      ".changeset/island-retry-query-param.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17368,
+    "url": "https://github.com/withastro/astro/pull/17368",
+    "title": "Match remotePatterns and domains metacharacters literally in Netlify Image CDN regex",
+    "files": [
+      ".changeset/slow-steaks-exist.md",
+      "packages/integrations/netlify/src/index.ts",
+      "packages/integrations/netlify/test/functions/image-cdn.test.ts"
+    ],
+    "source_files": [
+      "packages/integrations/netlify/src/index.ts"
+    ],
+    "doc_files": [
+      ".changeset/slow-steaks-exist.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17363,
+    "url": "https://github.com/withastro/astro/pull/17363",
+    "title": "Fix `astro preview --open` not opening a browser with the Cloudflare adapter",
+    "files": [
+      ".changeset/dark-llamas-matter.md",
+      "packages/astro/src/core/preview/index.ts",
+      "packages/astro/src/types/public/preview.ts",
+      "packages/integrations/cloudflare/src/entrypoints/preview.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/core/preview/index.ts",
+      "packages/astro/src/types/public/preview.ts",
+      "packages/integrations/cloudflare/src/entrypoints/preview.ts"
+    ],
+    "doc_files": [
+      ".changeset/dark-llamas-matter.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17360,
+    "url": "https://github.com/withastro/astro/pull/17360",
+    "title": "refactor(test): migrate vite virtual module tests from e2e to integration",
+    "files": [
+      "packages/astro/e2e/fixtures/vite-virtual-modules/astro.config.mjs",
+      "packages/astro/e2e/vite-virtual-modules.test.ts",
+      "packages/astro/test/fixtures/vite-virtual-modules/astro.config.mjs",
+      "packages/astro/test/fixtures/vite-virtual-modules/package.json",
+      "packages/astro/test/fixtures/vite-virtual-modules/src/pages/index.astro",
+      "packages/astro/test/fixtures/vite-virtual-modules/src/plugins/virtual.ts",
+      "packages/astro/test/vite-virtual-modules.test.ts",
+      "pnpm-lock.yaml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17353,
+    "url": "https://github.com/withastro/astro/pull/17353",
+    "title": "fix: update the compiler to the latest",
+    "files": [
+      ".changeset/spicy-wombats-tan.md",
+      "packages/astro/package.json",
+      "pnpm-lock.yaml"
+    ],
+    "source_files": [
+      "packages/astro/package.json"
+    ],
+    "doc_files": [
+      ".changeset/spicy-wombats-tan.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17345,
+    "url": "https://github.com/withastro/astro/pull/17345",
+    "title": "fix(language-server): fail with a clear error when TypeScript 7 native compiler is used",
+    "files": [
+      ".changeset/tsgo-check-guard.md",
+      "packages/language-tools/language-server/src/check.ts",
+      "packages/language-tools/language-server/test/check/check.test.ts",
+      "packages/language-tools/language-server/test/check/ts7-native-stub.cjs"
+    ],
+    "source_files": [
+      "packages/language-tools/language-server/src/check.ts"
+    ],
+    "doc_files": [
+      ".changeset/tsgo-check-guard.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "withastro/astro",
+    "pr_number": 17344,
+    "url": "https://github.com/withastro/astro/pull/17344",
+    "title": "Improve rendering performance for pages with many components",
+    "files": [
+      ".changeset/tidy-heads-run.md",
+      "benchmark/bench/rendering-perf.bench.js",
+      "benchmark/make-project/rendering-perf.js",
+      "packages/astro/src/core/head-propagation/buffer.ts",
+      "packages/astro/test/units/render/head-propagation/buffer.test.ts"
+    ],
+    "source_files": [
+      "packages/astro/src/core/head-propagation/buffer.ts"
+    ],
+    "doc_files": [
+      ".changeset/tidy-heads-run.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15323,
+    "url": "https://github.com/remix-run/react-router/pull/15323",
+    "title": "fix(rsc): preserve component metadata for client loader revalidation",
+    "files": [
+      "integration/rsc/rsc-test.ts",
+      "packages/react-router/.changes/patch.rsc-client-loader-revalidation.md",
+      "packages/react-router/lib/rsc/browser.tsx"
+    ],
+    "source_files": [
+      "integration/rsc/rsc-test.ts",
+      "packages/react-router/lib/rsc/browser.tsx"
+    ],
+    "doc_files": [
+      "packages/react-router/.changes/patch.rsc-client-loader-revalidation.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15322,
+    "url": "https://github.com/remix-run/react-router/pull/15322",
+    "title": "docs: fix useLinkClickHandler defaultShouldRevalidate default description",
+    "files": [
+      "packages/react-router/lib/dom/lib.tsx"
+    ],
+    "source_files": [
+      "packages/react-router/lib/dom/lib.tsx"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15321,
+    "url": "https://github.com/remix-run/react-router/pull/15321",
+    "title": "feat(rsc): support subResourceIntegrity",
+    "files": [
+      "docs/how-to/react-server-components.md",
+      "integration/sri-test.ts",
+      "packages/react-router-dev/.changes/unstable.rsc-subresource-integrity.md",
+      "packages/react-router-dev/config/default-rsc-entries/entry.ssr.tsx",
+      "packages/react-router-dev/rsc-types.d.ts",
+      "packages/react-router-dev/vite/rsc/plugin.ts"
+    ],
+    "source_files": [
+      "integration/sri-test.ts",
+      "packages/react-router-dev/config/default-rsc-entries/entry.ssr.tsx",
+      "packages/react-router-dev/rsc-types.d.ts",
+      "packages/react-router-dev/vite/rsc/plugin.ts"
+    ],
+    "doc_files": [
+      "docs/how-to/react-server-components.md",
+      "packages/react-router-dev/.changes/unstable.rsc-subresource-integrity.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15320,
+    "url": "https://github.com/remix-run/react-router/pull/15320",
+    "title": "feat(rsc): support CSP nonces in document rendering",
+    "files": [
+      "docs/how-to/react-server-components.md",
+      "docs/how-to/security.md",
+      "integration/rsc-nonce-test.ts",
+      "packages/react-router/.changes/unstable.rsc-nonce.md",
+      "packages/react-router/__tests__/rsc/html-stream-test.ts",
+      "packages/react-router/lib/rsc/html-stream/server.ts",
+      "packages/react-router/lib/rsc/server.rsc.ts",
+      "packages/react-router/lib/rsc/server.ssr.tsx"
+    ],
+    "source_files": [
+      "integration/rsc-nonce-test.ts",
+      "packages/react-router/lib/rsc/html-stream/server.ts",
+      "packages/react-router/lib/rsc/server.rsc.ts",
+      "packages/react-router/lib/rsc/server.ssr.tsx"
+    ],
+    "doc_files": [
+      "docs/how-to/react-server-components.md",
+      "docs/how-to/security.md",
+      "packages/react-router/.changes/unstable.rsc-nonce.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15318,
+    "url": "https://github.com/remix-run/react-router/pull/15318",
+    "title": "feat(rsc): reload stale clients after new deployments",
+    "files": [
+      "integration/rsc-client-version-test.ts",
+      "packages/react-router-dev/.changes/unstable.rsc-client-version.md",
+      "packages/react-router-dev/config/default-rsc-entries/entry.rsc.tsx",
+      "packages/react-router-dev/rsc-types.d.ts",
+      "packages/react-router-dev/vite/rsc/plugin.ts",
+      "packages/react-router/.changes/unstable.rsc-client-version.md",
+      "packages/react-router/__tests__/rsc/server-test.ts",
+      "packages/react-router/lib/dom/ssr/fog-of-war.ts",
+      "packages/react-router/lib/rsc/browser.tsx",
+      "packages/react-router/lib/rsc/server.rsc.ts",
+      "playground/rsc-vite-framework/app/entry.rsc.tsx"
+    ],
+    "source_files": [
+      "integration/rsc-client-version-test.ts",
+      "packages/react-router-dev/config/default-rsc-entries/entry.rsc.tsx",
+      "packages/react-router-dev/rsc-types.d.ts",
+      "packages/react-router-dev/vite/rsc/plugin.ts",
+      "packages/react-router/lib/dom/ssr/fog-of-war.ts",
+      "packages/react-router/lib/rsc/browser.tsx",
+      "packages/react-router/lib/rsc/server.rsc.ts"
+    ],
+    "doc_files": [
+      "packages/react-router-dev/.changes/unstable.rsc-client-version.md",
+      "packages/react-router/.changes/unstable.rsc-client-version.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15316,
+    "url": "https://github.com/remix-run/react-router/pull/15316",
+    "title": "Update docs links to v8 API reference",
+    "files": [
+      "docs/api/data-routers/createStaticRouter.md",
+      "docs/api/framework-conventions/react-router.config.ts.md",
+      "docs/api/framework-conventions/routes.ts.md",
+      "docs/api/hooks/useFetcher.md",
+      "docs/api/hooks/useFormAction.md",
+      "docs/api/hooks/useHref.md",
+      "docs/api/hooks/useLinkClickHandler.md",
+      "docs/api/hooks/useResolvedPath.md",
+      "docs/api/hooks/useViewTransitionState.md",
+      "docs/api/other-api/adapter.md",
+      "docs/api/utils/IsCookieFunction.md",
+      "docs/api/utils/IsSessionFunction.md",
+      "docs/api/utils/createCookie.md",
+      "docs/api/utils/createCookieSessionStorage.md",
+      "docs/api/utils/createMemorySessionStorage.md",
+      "docs/api/utils/createPath.md",
+      "docs/api/utils/createRequestHandler.md",
+      "docs/api/utils/createRoutesStub.md",
+      "docs/api/utils/createSearchParams.md",
+      "docs/api/utils/createSession.md",
+      "docs/api/utils/createSessionStorage.md",
+      "docs/api/utils/generatePath.md",
+      "docs/api/utils/isCookie.md",
+      "docs/api/utils/isSession.md",
+      "docs/api/utils/parsePath.md",
+      "docs/explanation/sessions-and-cookies.md",
+      "docs/explanation/state-management.md",
+      "docs/how-to/presets.md",
+      "docs/how-to/server-bundles.md",
+      "docs/start/data/route-object.md",
+      "docs/start/data/routing.md",
+      "docs/start/framework/pending-ui.md",
+      "docs/start/framework/route-module.md",
+      "docs/start/framework/routing.md",
+      "docs/tutorials/address-book.md",
+      "docs/tutorials/quickstart.md",
+      "packages/react-router/lib/dom/dom.ts",
+      "packages/react-router/lib/dom/ssr/routes-test-stub.tsx",
+      "packages/react-router/lib/router/history.ts",
+      "packages/react-router/lib/server-runtime/cookies.ts",
+      "packages/react-router/lib/server-runtime/server.ts",
+      "packages/react-router/lib/server-runtime/sessions.ts",
+      "packages/react-router/lib/server-runtime/sessions/cookieStorage.ts",
+      "packages/react-router/lib/server-runtime/sessions/memoryStorage.ts",
+      "scripts/docs.ts"
+    ],
+    "source_files": [
+      "packages/react-router/lib/dom/dom.ts",
+      "packages/react-router/lib/dom/ssr/routes-test-stub.tsx",
+      "packages/react-router/lib/server-runtime/cookies.ts",
+      "packages/react-router/lib/server-runtime/server.ts",
+      "packages/react-router/lib/server-runtime/sessions.ts",
+      "packages/react-router/lib/server-runtime/sessions/cookieStorage.ts",
+      "packages/react-router/lib/server-runtime/sessions/memoryStorage.ts",
+      "scripts/docs.ts"
+    ],
+    "doc_files": [
+      "docs/api/data-routers/createStaticRouter.md",
+      "docs/api/framework-conventions/react-router.config.ts.md",
+      "docs/api/framework-conventions/routes.ts.md",
+      "docs/api/hooks/useFetcher.md",
+      "docs/api/hooks/useFormAction.md",
+      "docs/api/hooks/useHref.md",
+      "docs/api/hooks/useLinkClickHandler.md",
+      "docs/api/hooks/useResolvedPath.md",
+      "docs/api/hooks/useViewTransitionState.md",
+      "docs/api/other-api/adapter.md",
+      "docs/api/utils/IsCookieFunction.md",
+      "docs/api/utils/IsSessionFunction.md",
+      "docs/api/utils/createCookie.md",
+      "docs/api/utils/createCookieSessionStorage.md",
+      "docs/api/utils/createMemorySessionStorage.md",
+      "docs/api/utils/createPath.md",
+      "docs/api/utils/createRequestHandler.md",
+      "docs/api/utils/createRoutesStub.md",
+      "docs/api/utils/createSearchParams.md",
+      "docs/api/utils/createSession.md",
+      "docs/api/utils/createSessionStorage.md",
+      "docs/api/utils/generatePath.md",
+      "docs/api/utils/isCookie.md",
+      "docs/api/utils/isSession.md",
+      "docs/api/utils/parsePath.md",
+      "docs/explanation/sessions-and-cookies.md",
+      "docs/explanation/state-management.md",
+      "docs/how-to/presets.md",
+      "docs/how-to/server-bundles.md",
+      "docs/start/data/route-object.md",
+      "docs/start/data/routing.md",
+      "docs/start/framework/pending-ui.md",
+      "docs/start/framework/route-module.md",
+      "docs/start/framework/routing.md",
+      "docs/tutorials/address-book.md",
+      "docs/tutorials/quickstart.md",
+      "packages/react-router/lib/router/history.ts"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15311,
+    "url": "https://github.com/remix-run/react-router/pull/15311",
+    "title": "harden RSC CSRF codepaths",
+    "files": [
+      "integration/rsc-csrf-action-test.ts",
+      "packages/react-router/.changes/patch.rsc-csrf.md",
+      "packages/react-router/lib/rsc/server.rsc.ts"
+    ],
+    "source_files": [
+      "integration/rsc-csrf-action-test.ts",
+      "packages/react-router/lib/rsc/server.rsc.ts"
+    ],
+    "doc_files": [
+      "packages/react-router/.changes/patch.rsc-csrf.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15310,
+    "url": "https://github.com/remix-run/react-router/pull/15310",
+    "title": "fix: encode path params per RFC 3986 path-segment rules in href/generatePath",
+    "files": [
+      "packages/react-router/.changes/patch.encode-path-params-pchar.md",
+      "packages/react-router/__tests__/generatePath-test.tsx",
+      "packages/react-router/__tests__/href-test.ts",
+      "packages/react-router/lib/href.ts",
+      "packages/react-router/lib/router/utils.ts"
+    ],
+    "source_files": [
+      "packages/react-router/lib/href.ts",
+      "packages/react-router/lib/router/utils.ts"
+    ],
+    "doc_files": [
+      "packages/react-router/.changes/patch.encode-path-params-pchar.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15302,
+    "url": "https://github.com/remix-run/react-router/pull/15302",
+    "title": "Use random UUIDs for memory session ids",
+    "files": [
+      "docs/explanation/sessions-and-cookies.md",
+      "packages/react-router/.changes/patch.memory-session-random-uuid.md",
+      "packages/react-router/__tests__/server-runtime/sessions-test.ts",
+      "packages/react-router/lib/server-runtime/sessions/memoryStorage.ts"
+    ],
+    "source_files": [
+      "packages/react-router/lib/server-runtime/sessions/memoryStorage.ts"
+    ],
+    "doc_files": [
+      "docs/explanation/sessions-and-cookies.md",
+      "packages/react-router/.changes/patch.memory-session-random-uuid.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15300,
+    "url": "https://github.com/remix-run/react-router/pull/15300",
+    "title": "fix: apply NavLink pending state when the to prop has a trailing slash",
+    "files": [
+      "packages/react-router/.changes/patch.navlink-pending-trailing-slash.md",
+      "packages/react-router/__tests__/dom/nav-link-active-test.tsx",
+      "packages/react-router/lib/dom/lib.tsx"
+    ],
+    "source_files": [
+      "packages/react-router/lib/dom/lib.tsx"
+    ],
+    "doc_files": [
+      "packages/react-router/.changes/patch.navlink-pending-trailing-slash.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15291,
+    "url": "https://github.com/remix-run/react-router/pull/15291",
+    "title": "feat: restart with development condition",
+    "files": [
+      "integration/cli-test.ts",
+      "packages/react-router-dev/.changes/minor.development-conditions.md",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/development-condition-enabled/false.d.mts",
+      "packages/react-router-dev/development-condition-enabled/false.mjs",
+      "packages/react-router-dev/development-condition-enabled/true.d.mts",
+      "packages/react-router-dev/development-condition-enabled/true.mjs",
+      "packages/react-router-dev/package.json",
+      "packages/react-router-dev/restart-with-conditions.ts",
+      "packages/react-router-dev/tsdown.config.ts"
+    ],
+    "source_files": [
+      "integration/cli-test.ts",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/development-condition-enabled/false.d.mts",
+      "packages/react-router-dev/development-condition-enabled/false.mjs",
+      "packages/react-router-dev/development-condition-enabled/true.d.mts",
+      "packages/react-router-dev/development-condition-enabled/true.mjs",
+      "packages/react-router-dev/package.json",
+      "packages/react-router-dev/restart-with-conditions.ts",
+      "packages/react-router-dev/tsdown.config.ts"
+    ],
+    "doc_files": [
+      "packages/react-router-dev/.changes/minor.development-conditions.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15290,
+    "url": "https://github.com/remix-run/react-router/pull/15290",
+    "title": "Use runtime-specific default server entries",
+    "files": [
+      "docs/upgrading/future.md",
+      "integration/cli-test.ts",
+      "integration/vite-plugin-cloudflare-test.ts",
+      "integration/vite-presets-test.ts",
+      "packages/react-router-dev/.changes/minor.default-server-entry-runtime.md",
+      "packages/react-router-dev/.changes/unstable.node-readable-stream-future-flag.md",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/config/config.ts",
+      "packages/react-router-dev/config/defaults/entry.server.web.tsx",
+      "packages/react-router-dev/vite/plugin.ts",
+      "playground/vite-plugin-cloudflare/app/entry.server.tsx"
+    ],
+    "source_files": [
+      "integration/cli-test.ts",
+      "integration/vite-plugin-cloudflare-test.ts",
+      "integration/vite-presets-test.ts",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/config/config.ts",
+      "packages/react-router-dev/config/defaults/entry.server.web.tsx",
+      "packages/react-router-dev/vite/plugin.ts"
+    ],
+    "doc_files": [
+      "docs/upgrading/future.md",
+      "packages/react-router-dev/.changes/minor.default-server-entry-runtime.md",
+      "packages/react-router-dev/.changes/unstable.node-readable-stream-future-flag.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15289,
+    "url": "https://github.com/remix-run/react-router/pull/15289",
+    "title": "Revert \"feat: add default web-streams based server entry\"",
+    "files": [
+      "docs/api/framework-conventions/entry.server.tsx.md",
+      "integration/defer-test.ts",
+      "integration/helpers/vite-plugin-cloudflare-template/app/entry.server.tsx",
+      "integration/link-test.ts",
+      "integration/vite-plugin-cloudflare-test.ts",
+      "packages/react-router-dev/.changes/minor.web-streams-entry.md",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/config/config.ts",
+      "packages/react-router-dev/config/defaults/entry.server.node.tsx",
+      "playground/vite-plugin-cloudflare/app/entry.server.tsx"
+    ],
+    "source_files": [
+      "integration/defer-test.ts",
+      "integration/helpers/vite-plugin-cloudflare-template/app/entry.server.tsx",
+      "integration/link-test.ts",
+      "integration/vite-plugin-cloudflare-test.ts",
+      "packages/react-router-dev/cli/commands.ts",
+      "packages/react-router-dev/config/config.ts",
+      "packages/react-router-dev/config/defaults/entry.server.node.tsx"
+    ],
+    "doc_files": [
+      "docs/api/framework-conventions/entry.server.tsx.md",
+      "packages/react-router-dev/.changes/minor.web-streams-entry.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15286,
+    "url": "https://github.com/remix-run/react-router/pull/15286",
+    "title": "fix: handle cancellation in injectRSCPayload to avoid post-abort server crash",
+    "files": [
+      "contributors.yml",
+      "packages/react-router/.changes/patch.rsc-html-stream-cancel.md",
+      "packages/react-router/__tests__/rsc/html-stream-test.ts",
+      "packages/react-router/lib/rsc/html-stream/server.ts"
+    ],
+    "source_files": [
+      "contributors.yml",
+      "packages/react-router/lib/rsc/html-stream/server.ts"
+    ],
+    "doc_files": [
+      "packages/react-router/.changes/patch.rsc-html-stream-cancel.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15282,
+    "url": "https://github.com/remix-run/react-router/pull/15282",
+    "title": "docs: fix useNavigate example to pass state in the options argument",
+    "files": [
+      "packages/react-router/lib/hooks.tsx"
+    ],
+    "source_files": [
+      "packages/react-router/lib/hooks.tsx"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15279,
+    "url": "https://github.com/remix-run/react-router/pull/15279",
+    "title": "Add tsconfigs for test files",
+    "files": [
+      "packages/create-react-router/__tests__/tsconfig.json",
+      "packages/react-router-architect/__tests__/tsconfig.json",
+      "packages/react-router-dev/__tests__/tsconfig.json",
+      "packages/react-router-express/__tests__/tsconfig.json",
+      "packages/react-router-fs-routes/__tests__/tsconfig.json",
+      "packages/react-router-node/__tests__/tsconfig.json",
+      "packages/react-router-remix-routes-option-adapter/__tests__/tsconfig.json",
+      "packages/react-router/__tests__/tsconfig.json"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15278,
+    "url": "https://github.com/remix-run/react-router/pull/15278",
+    "title": "fix(dev): read rolldownOptions.input/output from user environments config (Vite v8)",
+    "files": [
+      "packages/react-router-dev/.changes/patch.properly-detect-user-rolldownoptions-config-vite.md",
+      "packages/react-router-dev/vite/plugin.ts",
+      "packages/react-router-dev/vite/vite.ts"
+    ],
+    "source_files": [
+      "packages/react-router-dev/vite/plugin.ts",
+      "packages/react-router-dev/vite/vite.ts"
+    ],
+    "doc_files": [
+      "packages/react-router-dev/.changes/patch.properly-detect-user-rolldownoptions-config-vite.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15277,
+    "url": "https://github.com/remix-run/react-router/pull/15277",
+    "title": "fix: href() doesn't URL-encode param values",
+    "files": [
+      "packages/react-router/.changes/patch.encode-href-params.md",
+      "packages/react-router/__tests__/href-test.ts",
+      "packages/react-router/lib/href.ts"
+    ],
+    "source_files": [
+      "packages/react-router/lib/href.ts"
+    ],
+    "doc_files": [
+      "packages/react-router/.changes/patch.encode-href-params.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15276,
+    "url": "https://github.com/remix-run/react-router/pull/15276",
+    "title": "feat(create-react-router): detect nub package manager",
+    "files": [
+      "packages/create-react-router/.changes/minor.detect-nub-package-manager.md",
+      "packages/create-react-router/__tests__/create-react-router-test.ts",
+      "packages/create-react-router/index.ts",
+      "packages/react-router-dev/.changes/minor.detect-nub-package-manager.md",
+      "packages/react-router-dev/__tests__/detect-package-manager-test.ts",
+      "packages/react-router-dev/cli/detectPackageManager.ts"
+    ],
+    "source_files": [
+      "packages/create-react-router/index.ts",
+      "packages/react-router-dev/cli/detectPackageManager.ts"
+    ],
+    "doc_files": [
+      "packages/create-react-router/.changes/minor.detect-nub-package-manager.md",
+      "packages/react-router-dev/.changes/minor.detect-nub-package-manager.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15273,
+    "url": "https://github.com/remix-run/react-router/pull/15273",
+    "title": "fix: rank a static route above a dynamic param with a static suffix",
+    "files": [
+      "contributors.yml",
+      "packages/react-router/.changes/patch.rank-static-routes-above-suffixed-params.md",
+      "packages/react-router/__tests__/path-matching-test.tsx",
+      "packages/react-router/lib/router/utils.ts"
+    ],
+    "source_files": [
+      "contributors.yml",
+      "packages/react-router/lib/router/utils.ts"
+    ],
+    "doc_files": [
+      "packages/react-router/.changes/patch.rank-static-routes-above-suffixed-params.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15271,
+    "url": "https://github.com/remix-run/react-router/pull/15271",
+    "title": "Add CLA check to PR checks workflow",
+    "files": [
+      ".github/workflows/pr-actions.yml",
+      ".github/workflows/pr-checks.yml",
+      "scripts/pr.ts"
+    ],
+    "source_files": [
+      "scripts/pr.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "remix-run/react-router",
+    "pr_number": 15268,
+    "url": "https://github.com/remix-run/react-router/pull/15268",
+    "title": "docs: add Hostinger as a hosting provider",
+    "files": [
+      "contributors.yml",
+      "docs/start/framework/deploying.md"
+    ],
+    "source_files": [
+      "contributors.yml"
+    ],
+    "doc_files": [
+      "docs/start/framework/deploying.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2475,
+    "url": "https://github.com/pinojs/pino/pull/2475",
+    "title": "docs: clarify stringification limits",
+    "files": [
+      "SECURITY.md",
+      "docs/api.md",
+      "pino.d.ts"
+    ],
+    "source_files": [
+      "pino.d.ts"
+    ],
+    "doc_files": [
+      "SECURITY.md",
+      "docs/api.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2474,
+    "url": "https://github.com/pinojs/pino/pull/2474",
+    "title": "fix(multistream): resolve string level labels in write()",
+    "files": [
+      "lib/multistream.js",
+      "test/multistream.test.js"
+    ],
+    "source_files": [
+      "lib/multistream.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2472,
+    "url": "https://github.com/pinojs/pino/pull/2472",
+    "title": "docs: clarify Node.js version support policy in LTS doc",
+    "files": [
+      "docs/lts.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/lts.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2471,
+    "url": "https://github.com/pinojs/pino/pull/2471",
+    "title": "fix: add setBindings to the browser logger",
+    "files": [
+      "browser.js",
+      "test/browser-set-bindings.test.js"
+    ],
+    "source_files": [
+      "browser.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2470,
+    "url": "https://github.com/pinojs/pino/pull/2470",
+    "title": "test(transport): keep event loop alive while awaiting async flush",
+    "files": [
+      "test/transport/sync-false.test.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2452,
+    "url": "https://github.com/pinojs/pino/pull/2452",
+    "title": "fix: escape child binding keys",
+    "files": [
+      "lib/tools.js",
+      "test/escaping.test.js"
+    ],
+    "source_files": [
+      "lib/tools.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2450,
+    "url": "https://github.com/pinojs/pino/pull/2450",
+    "title": "docs: warn against untrusted top-level log keys",
+    "files": [
+      "SECURITY.md",
+      "docs/api.md",
+      "docs/child-loggers.md",
+      "docs/help.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "SECURITY.md",
+      "docs/api.md",
+      "docs/child-loggers.md",
+      "docs/help.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2435,
+    "url": "https://github.com/pinojs/pino/pull/2435",
+    "title": "docs: fix typo \"compatability\" → \"compatibility\" in README",
+    "files": [
+      "README.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "README.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2434,
+    "url": "https://github.com/pinojs/pino/pull/2434",
+    "title": "test: fix flaky transport config test",
+    "files": [
+      "test/helper.js",
+      "test/transport/uses-pino-config.test.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2432,
+    "url": "https://github.com/pinojs/pino/pull/2432",
+    "title": "fix: honor per-target level filter on single-element `targets` array",
+    "files": [
+      "lib/transport.js",
+      "lib/worker.js",
+      "test/transport/core.test.js"
+    ],
+    "source_files": [
+      "lib/transport.js",
+      "lib/worker.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2429,
+    "url": "https://github.com/pinojs/pino/pull/2429",
+    "title": "build(deps-dev): bump tstyche from 6.2.0 to 7.1.0",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2428,
+    "url": "https://github.com/pinojs/pino/pull/2428",
+    "title": "build(deps-dev): bump eslint-plugin-promise from 6.6.0 to 7.3.0",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2427,
+    "url": "https://github.com/pinojs/pino/pull/2427",
+    "title": "build(deps): bump actions/github-script from 8 to 9",
+    "files": [
+      ".github/workflows/target-main.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2425,
+    "url": "https://github.com/pinojs/pino/pull/2425",
+    "title": "docs: use @hono/structured-logger for Pino with Hono",
+    "files": [
+      "docs/web.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/web.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2424,
+    "url": "https://github.com/pinojs/pino/pull/2424",
+    "title": "Update contrib doc",
+    "files": [
+      "CONTRIBUTING.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "CONTRIBUTING.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2423,
+    "url": "https://github.com/pinojs/pino/pull/2423",
+    "title": "chore(deps): remove `pre-commit`",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2421,
+    "url": "https://github.com/pinojs/pino/pull/2421",
+    "title": "fix: add named `default` export",
+    "files": [
+      "eslint.config.js",
+      "pino.d.ts",
+      "test/types/pino-import.tst.cts",
+      "test/types/pino-import.tst.js",
+      "test/types/tsconfig.json"
+    ],
+    "source_files": [
+      "eslint.config.js",
+      "pino.d.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2419,
+    "url": "https://github.com/pinojs/pino/pull/2419",
+    "title": "chore: upgrade typescript to v6.0.2",
+    "files": [
+      "package.json",
+      "test/fixtures/ts/transpile.cjs",
+      "tsconfig.json"
+    ],
+    "source_files": [
+      "package.json",
+      "tsconfig.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2418,
+    "url": "https://github.com/pinojs/pino/pull/2418",
+    "title": "build(deps-dev): bump neostandard from 0.12.2 to 0.13.0",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2414,
+    "url": "https://github.com/pinojs/pino/pull/2414",
+    "title": "build(deps): bump real-require from 0.2.0 to 1.0.0",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2413,
+    "url": "https://github.com/pinojs/pino/pull/2413",
+    "title": "Update AWS Lambda reference in asynchronous docs",
+    "files": [
+      "docs/asynchronous.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/asynchronous.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "pinojs/pino",
+    "pr_number": 2412,
+    "url": "https://github.com/pinojs/pino/pull/2412",
+    "title": "No bots allowed",
+    "files": [
+      "CONTRIBUTING.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "CONTRIBUTING.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18250,
+    "url": "https://github.com/sequelize/sequelize/pull/18250",
+    "title": "fix(core): make empty Op.notIn compose correctly under Op.or and Op.not",
+    "files": [
+      "packages/core/src/abstract-dialect/where-sql-builder.ts",
+      "packages/core/test/unit/sql/where.test.ts"
+    ],
+    "source_files": [
+      "packages/core/src/abstract-dialect/where-sql-builder.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18247,
+    "url": "https://github.com/sequelize/sequelize/pull/18247",
+    "title": "fix(core): don't schema-qualify table aliases in include JOIN conditions",
+    "files": [
+      "packages/core/src/abstract-dialect/query-generator.js",
+      "packages/core/test/unit/query-generator/select-query.test.ts"
+    ],
+    "source_files": [
+      "packages/core/src/abstract-dialect/query-generator.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18237,
+    "url": "https://github.com/sequelize/sequelize/pull/18237",
+    "title": "meta: update dependency esbuild to v0.28.1 [security]",
+    "files": [
+      "package.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18222,
+    "url": "https://github.com/sequelize/sequelize/pull/18222",
+    "title": "meta: update dependency uuid to v11.1.1 [security]",
+    "files": [
+      "yarn.lock"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18213,
+    "url": "https://github.com/sequelize/sequelize/pull/18213",
+    "title": "meta: update dependency @oclif/plugin-help to ^6.2.53",
+    "files": [
+      "packages/cli/package.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18212,
+    "url": "https://github.com/sequelize/sequelize/pull/18212",
+    "title": "meta: update actions/upload-artifact action to v7.0.1",
+    "files": [
+      ".github/workflows/ci.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18208,
+    "url": "https://github.com/sequelize/sequelize/pull/18208",
+    "title": "meta: update sequelize AUTHORS",
+    "files": [
+      "AUTHORS"
+    ],
+    "source_files": [
+      "AUTHORS"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18204,
+    "url": "https://github.com/sequelize/sequelize/pull/18204",
+    "title": "feat(core): Drop the ability to specify the dialect as a string",
+    "files": [
+      "packages/core/src/abstract-dialect/data-types.ts",
+      "packages/core/src/abstract-dialect/dialect.ts",
+      "packages/core/src/abstract-dialect/query-generator.js",
+      "packages/core/src/geo-json.ts",
+      "packages/core/src/index.mjs",
+      "packages/core/src/instance-validator.js",
+      "packages/core/src/sequelize-typescript.ts",
+      "packages/core/src/sequelize.d.ts",
+      "packages/core/src/sequelize.internals.ts",
+      "packages/core/src/sequelize.js",
+      "packages/core/src/utils/validator-extras.d.ts",
+      "packages/core/src/utils/validator-extras.js",
+      "packages/core/src/utils/validator-extras.ts",
+      "packages/core/test/integration/configuration.test.ts",
+      "packages/core/test/integration/pool.test.ts",
+      "packages/core/test/integration/sequelize.test.js",
+      "packages/core/test/support.ts",
+      "packages/core/test/unit/configuration.test.ts",
+      "packages/oracle/src/_internal/data-types-overrides.ts",
+      "packages/oracle/src/query-interface.js"
+    ],
+    "source_files": [
+      "packages/core/src/abstract-dialect/data-types.ts",
+      "packages/core/src/abstract-dialect/dialect.ts",
+      "packages/core/src/abstract-dialect/query-generator.js",
+      "packages/core/src/geo-json.ts",
+      "packages/core/src/index.mjs",
+      "packages/core/src/instance-validator.js",
+      "packages/core/src/sequelize-typescript.ts",
+      "packages/core/src/sequelize.d.ts",
+      "packages/core/src/sequelize.internals.ts",
+      "packages/core/src/sequelize.js",
+      "packages/core/src/utils/validator-extras.d.ts",
+      "packages/core/src/utils/validator-extras.js",
+      "packages/core/src/utils/validator-extras.ts",
+      "packages/oracle/src/_internal/data-types-overrides.ts",
+      "packages/oracle/src/query-interface.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18203,
+    "url": "https://github.com/sequelize/sequelize/pull/18203",
+    "title": "feat(core): add `sql.random`, improve `Order` typing",
+    "files": [
+      "packages/core/src/abstract-dialect/dialect.ts",
+      "packages/core/src/abstract-dialect/query-generator-typescript.ts",
+      "packages/core/src/expression-builders/random.ts",
+      "packages/core/src/expression-builders/sql.ts",
+      "packages/core/src/model.d.ts",
+      "packages/core/src/sequelize.js",
+      "packages/core/src/utils/deprecations.ts",
+      "packages/core/test/integration/sql/random.test.ts",
+      "packages/core/test/support.ts",
+      "packages/core/test/unit/dialects/postgres/enum.test.js",
+      "packages/core/test/unit/query-interface/create-table.test.ts",
+      "packages/core/test/unit/sql/add-column.test.js",
+      "packages/core/test/unit/sql/create-table.test.js",
+      "packages/core/test/unit/sql/generateJoin.test.js",
+      "packages/core/test/unit/sql/group.test.js",
+      "packages/core/test/unit/sql/index.test.js",
+      "packages/core/test/unit/sql/insert.test.js",
+      "packages/core/test/unit/sql/order.test.ts",
+      "packages/core/test/unit/sql/select.test.js",
+      "packages/core/test/unit/sql/update.test.js",
+      "packages/core/test/unit/utils/utils.test.ts",
+      "packages/db2/src/query-generator-typescript.internal.ts",
+      "packages/ibmi/src/dialect.ts",
+      "packages/ibmi/src/query-generator-typescript.internal.ts",
+      "packages/mariadb/src/query-generator-typescript.internal.ts",
+      "packages/mssql/src/query-generator-typescript.internal.ts",
+      "packages/mysql/src/query-generator-typescript.internal.ts",
+      "packages/oracle/src/dialect.ts",
+      "packages/oracle/src/query-generator-typescript.internal.ts",
+      "packages/postgres/src/query-generator-typescript.internal.ts",
+      "packages/snowflake/src/query-generator-typescript.internal.ts",
+      "packages/sqlite3/src/query-generator-typescript.internal.ts"
+    ],
+    "source_files": [
+      "packages/core/src/abstract-dialect/dialect.ts",
+      "packages/core/src/abstract-dialect/query-generator-typescript.ts",
+      "packages/core/src/expression-builders/random.ts",
+      "packages/core/src/expression-builders/sql.ts",
+      "packages/core/src/model.d.ts",
+      "packages/core/src/sequelize.js",
+      "packages/core/src/utils/deprecations.ts",
+      "packages/db2/src/query-generator-typescript.internal.ts",
+      "packages/ibmi/src/dialect.ts",
+      "packages/ibmi/src/query-generator-typescript.internal.ts",
+      "packages/mariadb/src/query-generator-typescript.internal.ts",
+      "packages/mssql/src/query-generator-typescript.internal.ts",
+      "packages/mysql/src/query-generator-typescript.internal.ts",
+      "packages/oracle/src/dialect.ts",
+      "packages/oracle/src/query-generator-typescript.internal.ts",
+      "packages/postgres/src/query-generator-typescript.internal.ts",
+      "packages/snowflake/src/query-generator-typescript.internal.ts",
+      "packages/sqlite3/src/query-generator-typescript.internal.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18201,
+    "url": "https://github.com/sequelize/sequelize/pull/18201",
+    "title": "meta: use Sequelize Bot for drafting PRs",
+    "files": [
+      ".github/workflows/stale.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18198,
+    "url": "https://github.com/sequelize/sequelize/pull/18198",
+    "title": "meta: update dependency @oclif/test to v4.1.18",
+    "files": [
+      "packages/cli/package.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18197,
+    "url": "https://github.com/sequelize/sequelize/pull/18197",
+    "title": "meta: automatically mark unfinished PRs as draft",
+    "files": [
+      ".github/workflows/stale.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18195,
+    "url": "https://github.com/sequelize/sequelize/pull/18195",
+    "title": "meta: update dependency @oclif/plugin-help to ^6.2.43",
+    "files": [
+      "packages/cli/package.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18193,
+    "url": "https://github.com/sequelize/sequelize/pull/18193",
+    "title": "feat(cli): add migration generate, run, status & undo",
+    "files": [
+      ".eslintrc.js",
+      ".github/workflows/ci.yml",
+      "dev/sync-exports.mjs",
+      "packages/cli/.gitignore",
+      "packages/cli/package.json",
+      "packages/cli/sequelize.config.mjs",
+      "packages/cli/src/_commands/migration/generate.test.ts",
+      "packages/cli/src/_commands/migration/generate.ts",
+      "packages/cli/src/_commands/migration/run.test.ts",
+      "packages/cli/src/_commands/migration/run.ts",
+      "packages/cli/src/_commands/migration/status.test.ts",
+      "packages/cli/src/_commands/migration/status.ts",
+      "packages/cli/src/_commands/migration/undo.test.ts",
+      "packages/cli/src/_commands/migration/undo.ts",
+      "packages/cli/src/_commands/seed/generate.test.ts",
+      "packages/cli/src/_commands/seed/generate.ts",
+      "packages/cli/src/_internal/config.ts",
+      "packages/cli/src/_internal/sequelize-command.ts",
+      "packages/cli/src/_internal/test-helpers.ts",
+      "packages/cli/src/api/get-migration-status.ts",
+      "packages/cli/src/api/get-umzug.ts",
+      "packages/cli/src/api/run-migrations.ts",
+      "packages/cli/src/api/undo-migrations.ts",
+      "packages/cli/src/config.ts",
+      "packages/cli/src/index.ts",
+      "packages/cli/src/types.ts",
+      "packages/cli/static/skeletons/migration.cjs",
+      "packages/cli/static/skeletons/migration.mjs",
+      "packages/cli/static/skeletons/migration.ts",
+      "packages/cli/static/skeletons/seed.cjs",
+      "packages/cli/static/skeletons/seed.mjs",
+      "packages/cli/static/skeletons/seed.ts",
+      "packages/core/test/support.ts",
+      "yarn.lock"
+    ],
+    "source_files": [
+      ".eslintrc.js",
+      "dev/sync-exports.mjs",
+      "packages/cli/package.json",
+      "packages/cli/sequelize.config.mjs",
+      "packages/cli/src/_commands/migration/generate.ts",
+      "packages/cli/src/_commands/migration/run.ts",
+      "packages/cli/src/_commands/migration/status.ts",
+      "packages/cli/src/_commands/migration/undo.ts",
+      "packages/cli/src/_commands/seed/generate.ts",
+      "packages/cli/src/_internal/config.ts",
+      "packages/cli/src/_internal/sequelize-command.ts",
+      "packages/cli/src/_internal/test-helpers.ts",
+      "packages/cli/src/api/get-migration-status.ts",
+      "packages/cli/src/api/get-umzug.ts",
+      "packages/cli/src/api/run-migrations.ts",
+      "packages/cli/src/api/undo-migrations.ts",
+      "packages/cli/src/config.ts",
+      "packages/cli/src/index.ts",
+      "packages/cli/src/types.ts",
+      "packages/cli/static/skeletons/migration.cjs",
+      "packages/cli/static/skeletons/migration.mjs",
+      "packages/cli/static/skeletons/migration.ts",
+      "packages/cli/static/skeletons/seed.cjs",
+      "packages/cli/static/skeletons/seed.mjs",
+      "packages/cli/static/skeletons/seed.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18192,
+    "url": "https://github.com/sequelize/sequelize/pull/18192",
+    "title": "meta: update dependency esbuild to v0.28.0",
+    "files": [
+      "package.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18191,
+    "url": "https://github.com/sequelize/sequelize/pull/18191",
+    "title": "meta: update dependency @oclif/plugin-help to ^6.2.42",
+    "files": [
+      "packages/cli/package.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18190,
+    "url": "https://github.com/sequelize/sequelize/pull/18190",
+    "title": "meta: update sequelize AUTHORS",
+    "files": [
+      "AUTHORS"
+    ],
+    "source_files": [
+      "AUTHORS"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18189,
+    "url": "https://github.com/sequelize/sequelize/pull/18189",
+    "title": "feat: update some dialect adapters",
+    "files": [
+      ".mocharc.jsonc",
+      ".yarn/patches/@mapbox-node-pre-gyp-npm-2.0.3-4606feb049.patch",
+      "package.json",
+      "packages/core/test/support.ts",
+      "packages/ibmi/package.json",
+      "packages/ibmi/src/connection-manager.ts",
+      "packages/postgres/package.json",
+      "packages/snowflake/package.json",
+      "packages/snowflake/src/connection-manager.ts",
+      "packages/snowflake/src/dialect.ts",
+      "packages/sqlite3/package.json",
+      "tsconfig-preset.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      ".mocharc.jsonc",
+      ".yarn/patches/@mapbox-node-pre-gyp-npm-2.0.3-4606feb049.patch",
+      "package.json",
+      "packages/ibmi/package.json",
+      "packages/ibmi/src/connection-manager.ts",
+      "packages/postgres/package.json",
+      "packages/snowflake/package.json",
+      "packages/snowflake/src/connection-manager.ts",
+      "packages/snowflake/src/dialect.ts",
+      "packages/sqlite3/package.json",
+      "tsconfig-preset.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18187,
+    "url": "https://github.com/sequelize/sequelize/pull/18187",
+    "title": "meta: update dependency @oclif/core to ^4.10.5",
+    "files": [
+      "packages/cli/package.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18186,
+    "url": "https://github.com/sequelize/sequelize/pull/18186",
+    "title": "feat(core): add support for readonly attribute arrays",
+    "files": [
+      "CHANGELOG.md",
+      "packages/core/CHANGELOG.md",
+      "packages/core/src/model-hooks.ts",
+      "packages/core/src/model.d.ts",
+      "packages/core/test/types/hooks.ts",
+      "packages/core/test/types/models/user.ts",
+      "packages/utils/CHANGELOG.md",
+      "packages/validator-js/CHANGELOG.md"
+    ],
+    "source_files": [
+      "packages/core/src/model-hooks.ts",
+      "packages/core/src/model.d.ts"
+    ],
+    "doc_files": [
+      "CHANGELOG.md",
+      "packages/core/CHANGELOG.md",
+      "packages/utils/CHANGELOG.md",
+      "packages/validator-js/CHANGELOG.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18185,
+    "url": "https://github.com/sequelize/sequelize/pull/18185",
+    "title": "feat: add Node 24 support, drop Node 18",
+    "files": [
+      ".github/workflows/ci.yml",
+      "build-packages.mjs",
+      "packages/cli/package.json",
+      "packages/core/package.json",
+      "packages/core/src/utils/logger.ts",
+      "packages/core/test/support.ts",
+      "packages/core/test/unit/import-models/import-models.test.ts",
+      "packages/core/test/unit/sql/where.test.ts",
+      "packages/utils/package.json",
+      "test/register-esbuild.js"
+    ],
+    "source_files": [
+      "build-packages.mjs",
+      "packages/cli/package.json",
+      "packages/core/package.json",
+      "packages/core/src/utils/logger.ts",
+      "packages/utils/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "sequelize/sequelize",
+    "pr_number": 18169,
+    "url": "https://github.com/sequelize/sequelize/pull/18169",
+    "title": "meta: update dependency oclif to v4.22.96",
+    "files": [
+      "packages/cli/package.json",
+      "yarn.lock"
+    ],
+    "source_files": [
+      "packages/cli/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10784,
+    "url": "https://github.com/vitest-dev/vitest/pull/10784",
+    "title": "fix(browser): inlined awaited import should not trigger syntax error after transform",
+    "files": [
+      "packages/mocker/src/node/dynamicImportPlugin.ts",
+      "test/unit/test/injector-esm.test.ts"
+    ],
+    "source_files": [
+      "packages/mocker/src/node/dynamicImportPlugin.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10777,
+    "url": "https://github.com/vitest-dev/vitest/pull/10777",
+    "title": "chore(deps): bump `ast-v8-to-istanbul` for perf improvements",
+    "files": [
+      "packages/coverage-v8/package.json",
+      "pnpm-lock.yaml"
+    ],
+    "source_files": [
+      "packages/coverage-v8/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10772,
+    "url": "https://github.com/vitest-dev/vitest/pull/10772",
+    "title": "docs: add latitude to sponsors [backport]",
+    "files": [
+      "docs/.vitepress/sponsors.ts",
+      "docs/public/latitude.png"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/.vitepress/sponsors.ts",
+      "docs/public/latitude.png"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10771,
+    "url": "https://github.com/vitest-dev/vitest/pull/10771",
+    "title": "docs: add latitude to sponsors",
+    "files": [
+      "docs/.vitepress/sponsors.ts",
+      "docs/public/latitude.png"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/.vitepress/sponsors.ts",
+      "docs/public/latitude.png"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10767,
+    "url": "https://github.com/vitest-dev/vitest/pull/10767",
+    "title": "fix: prevent node builtins double prefix (fix #10630)",
+    "files": [
+      "packages/vitest/src/node/plugins/runnerTransform.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/node/plugins/runnerTransform.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10765,
+    "url": "https://github.com/vitest-dev/vitest/pull/10765",
+    "title": "chore(deps): update actions/github-script action to v9",
+    "files": [
+      ".github/actions/issues-helper/action.yml",
+      ".github/actions/send-ai-bot-comment/action.yml",
+      ".github/workflows/ecosystem-ci-trigger.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10763,
+    "url": "https://github.com/vitest-dev/vitest/pull/10763",
+    "title": "chore(deps): update actions/checkout action to v7",
+    "files": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/cr.yml",
+      ".github/workflows/issue-close-require.yml",
+      ".github/workflows/issue-labeled.yml",
+      ".github/workflows/pr-labeled-automated.yml",
+      ".github/workflows/prepare-publish.yml",
+      ".github/workflows/publish.yml",
+      ".github/workflows/zizmor.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10762,
+    "url": "https://github.com/vitest-dev/vitest/pull/10762",
+    "title": "chore(deps): update dependency eslint to ^10.7.0",
+    "files": [
+      "package.json",
+      "pnpm-lock.yaml"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10759,
+    "url": "https://github.com/vitest-dev/vitest/pull/10759",
+    "title": "fix: Node.js 20 deprecation warning for `ci.yml`",
+    "files": [
+      ".github/actions/setup-and-cache/action.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10753,
+    "url": "https://github.com/vitest-dev/vitest/pull/10753",
+    "title": "revert: adaptive browser session scaling (#10726)",
+    "files": [
+      "packages/vitest/src/node/pools/browser.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/node/pools/browser.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10748,
+    "url": "https://github.com/vitest-dev/vitest/pull/10748",
+    "title": "fix(browser): preserve pre-transform request defaults",
+    "files": [
+      "packages/vitest/src/node/plugins/runnerTransform.ts",
+      "packages/vitest/src/node/plugins/server.ts",
+      "test/e2e/test/config/browser-configs.test.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/node/plugins/runnerTransform.ts",
+      "packages/vitest/src/node/plugins/server.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10743,
+    "url": "https://github.com/vitest-dev/vitest/pull/10743",
+    "title": "fix: keep per-file isolation in vm pools when maxWorkers is 1",
+    "files": [
+      "packages/vitest/src/node/pool.ts",
+      "test/e2e/test/vm-threads.test.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/node/pool.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10742,
+    "url": "https://github.com/vitest-dev/vitest/pull/10742",
+    "title": "perf: make the Node compile cache opt-in, persist worker caches on teardown",
+    "files": [
+      "docs/guide/improving-performance.md",
+      "packages/vitest/src/runtime/workers/init.ts",
+      "packages/vitest/vitest.mjs",
+      "pnpm-lock.yaml",
+      "test/e2e/fixtures/compile-cache/basic.test.ts",
+      "test/e2e/fixtures/compile-cache/vitest.config.ts",
+      "test/e2e/package.json",
+      "test/e2e/test/compile-cache.test.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/runtime/workers/init.ts",
+      "packages/vitest/vitest.mjs"
+    ],
+    "doc_files": [
+      "docs/guide/improving-performance.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10741,
+    "url": "https://github.com/vitest-dev/vitest/pull/10741",
+    "title": "fix: remove listeners in the typecheck worker's `off`",
+    "files": [
+      "packages/vitest/src/node/pools/workers/typecheckWorker.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/node/pools/workers/typecheckWorker.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10733,
+    "url": "https://github.com/vitest-dev/vitest/pull/10733",
+    "title": "refactor: use a single field for the on-disk transform location",
+    "files": [
+      "packages/vitest/src/node/environments/fetchModule.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/node/environments/fetchModule.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10732,
+    "url": "https://github.com/vitest-dev/vitest/pull/10732",
+    "title": "test: poll for the async wheel event in the user-event fixture",
+    "files": [
+      "test/browser/fixtures/user-event/wheel.test.ts"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10731,
+    "url": "https://github.com/vitest-dev/vitest/pull/10731",
+    "title": "fix: disable server HMR before plugins read it in their config hook",
+    "files": [
+      "packages/vitest/src/node/config/resolveConfig.ts",
+      "packages/vitest/src/node/plugins/server.ts",
+      "packages/vitest/src/node/plugins/workspace.ts",
+      "test/e2e/test/override.test.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/node/config/resolveConfig.ts",
+      "packages/vitest/src/node/plugins/server.ts",
+      "packages/vitest/src/node/plugins/workspace.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10730,
+    "url": "https://github.com/vitest-dev/vitest/pull/10730",
+    "title": "perf(browser): cut per-file round trips",
+    "files": [
+      "packages/browser/src/client/orchestrator.ts",
+      "packages/browser/src/client/tester/runner.ts",
+      "packages/browser/src/node/project.ts",
+      "packages/browser/src/node/serverTester.ts"
+    ],
+    "source_files": [
+      "packages/browser/src/client/orchestrator.ts",
+      "packages/browser/src/client/tester/runner.ts",
+      "packages/browser/src/node/project.ts",
+      "packages/browser/src/node/serverTester.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10728,
+    "url": "https://github.com/vitest-dev/vitest/pull/10728",
+    "title": "perf(browser): stop serving framework sourcemaps in headless runs",
+    "files": [
+      "docs/.vitepress/config.ts",
+      "docs/config/browser/dependencysourcemaps.md",
+      "docs/guide/cli-generated.md",
+      "packages/browser/src/node/index.ts",
+      "packages/browser/src/node/projectParent.ts",
+      "packages/vitest/src/node/cli/cli-config.ts",
+      "packages/vitest/src/node/types/browser.ts"
+    ],
+    "source_files": [
+      "packages/browser/src/node/index.ts",
+      "packages/browser/src/node/projectParent.ts",
+      "packages/vitest/src/node/cli/cli-config.ts",
+      "packages/vitest/src/node/types/browser.ts"
+    ],
+    "doc_files": [
+      "docs/.vitepress/config.ts",
+      "docs/config/browser/dependencysourcemaps.md",
+      "docs/guide/cli-generated.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10726,
+    "url": "https://github.com/vitest-dev/vitest/pull/10726",
+    "title": "perf(browser): open browser sessions adaptively instead of maxWorkers upfront",
+    "files": [
+      "packages/vitest/src/node/pools/browser.ts"
+    ],
+    "source_files": [
+      "packages/vitest/src/node/pools/browser.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10725,
+    "url": "https://github.com/vitest-dev/vitest/pull/10725",
+    "title": "fix: close the pool before the Vite servers, stabilize flaky tests",
+    "files": [
+      "packages/browser/src/client/tester/tester-utils.ts",
+      "packages/vitest/src/node/core.ts",
+      "test/browser/fixtures/user-event/wheel.test.ts",
+      "test/browser/test/commands.test.ts",
+      "test/e2e/test/cancel-run.test.ts",
+      "test/test-utils/index.ts"
+    ],
+    "source_files": [
+      "packages/browser/src/client/tester/tester-utils.ts",
+      "packages/vitest/src/node/core.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "vitest-dev/vitest",
+    "pr_number": 10724,
+    "url": "https://github.com/vitest-dev/vitest/pull/10724",
+    "title": "fix(browser): fix error stacktrace location off-by-one",
+    "files": [
+      "packages/utils/src/source-map.ts",
+      "test/browser/specs/aria-snapshot.test.ts",
+      "test/browser/specs/assertion-helper.test.ts",
+      "test/browser/specs/error-watch.test.ts",
+      "test/browser/specs/errors.test.ts",
+      "test/browser/specs/playwright-trace-mark.test.ts",
+      "test/browser/specs/runner.test.ts",
+      "test/coverage-test/test/source-maps.test.ts",
+      "test/e2e/snapshots/domain-aria-inline.test.ts",
+      "test/e2e/snapshots/domain-aria.test.ts",
+      "test/e2e/test/__snapshots__/stacktraces.test.ts.snap",
+      "test/e2e/test/reporters/merge-reports.test.ts",
+      "test/ui/test/trace.spec.ts"
+    ],
+    "source_files": [
+      "packages/utils/src/source-map.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6451,
+    "url": "https://github.com/rollup/rollup/pull/6451",
+    "title": "chore(deps): lock file maintenance",
+    "files": [
+      ".github/workflows/build-and-tests.yml",
+      "package-lock.json",
+      "rust/Cargo.lock"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6450,
+    "url": "https://github.com/rollup/rollup/pull/6450",
+    "title": "chore(deps): update dependency pinia to v4",
+    "files": [
+      "docs/.vitepress/config.ts",
+      "package-lock.json",
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [
+      "docs/.vitepress/config.ts"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6449,
+    "url": "https://github.com/rollup/rollup/pull/6449",
+    "title": "chore(deps): update dependency eslint-plugin-unicorn to v72",
+    "files": [
+      "package-lock.json",
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6448,
+    "url": "https://github.com/rollup/rollup/pull/6448",
+    "title": "chore(deps): update actions/setup-node action to v7",
+    "files": [
+      ".github/workflows/build-and-tests.yml",
+      ".github/workflows/performance-report.yml",
+      ".github/workflows/repl-artefacts.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6447,
+    "url": "https://github.com/rollup/rollup/pull/6447",
+    "title": "fix(deps): update minor/patch updates",
+    "files": [
+      ".github/workflows/build-and-tests.yml",
+      ".github/workflows/performance-report.yml",
+      ".github/workflows/repl-artefacts.yml",
+      "package-lock.json",
+      "package.json",
+      "rust/Cargo.lock",
+      "rust/bindings_napi/Cargo.toml",
+      "rust/xxhash/Cargo.toml"
+    ],
+    "source_files": [
+      "package.json",
+      "rust/bindings_napi/Cargo.toml",
+      "rust/xxhash/Cargo.toml"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6444,
+    "url": "https://github.com/rollup/rollup/pull/6444",
+    "title": "fix(deps): update rust crate swc_compiler_base to v60",
+    "files": [
+      "rust/Cargo.lock",
+      "rust/parse_ast/Cargo.toml"
+    ],
+    "source_files": [
+      "rust/parse_ast/Cargo.toml"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6443,
+    "url": "https://github.com/rollup/rollup/pull/6443",
+    "title": "chore(deps): update dependency eslint-plugin-unicorn to v71",
+    "files": [
+      "package-lock.json",
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6438,
+    "url": "https://github.com/rollup/rollup/pull/6438",
+    "title": "chore(deps): lock file maintenance",
+    "files": [
+      "docs/command-line-interface/index.md",
+      "docs/configuration-options/index.md",
+      "docs/javascript-api/index.md",
+      "docs/plugin-development/index.md",
+      "docs/repl/stores/options.ts",
+      "package-lock.json",
+      "rust/Cargo.lock",
+      "src/Chunk.ts",
+      "src/ast/NodeInteractions.ts",
+      "src/ast/nodes/ImportExpression.ts",
+      "src/ast/nodes/shared/IdentifierBase.ts",
+      "src/ast/values.ts",
+      "src/rollup/rollup.ts",
+      "src/rollup/types.d.ts",
+      "src/utils/options/normalizeOutputOptions.ts"
+    ],
+    "source_files": [
+      "src/Chunk.ts",
+      "src/ast/NodeInteractions.ts",
+      "src/ast/nodes/ImportExpression.ts",
+      "src/ast/nodes/shared/IdentifierBase.ts",
+      "src/ast/values.ts",
+      "src/rollup/rollup.ts",
+      "src/rollup/types.d.ts",
+      "src/utils/options/normalizeOutputOptions.ts"
+    ],
+    "doc_files": [
+      "docs/command-line-interface/index.md",
+      "docs/configuration-options/index.md",
+      "docs/javascript-api/index.md",
+      "docs/plugin-development/index.md",
+      "docs/repl/stores/options.ts"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6436,
+    "url": "https://github.com/rollup/rollup/pull/6436",
+    "title": "chore(deps): update actions/cache action to v6",
+    "files": [
+      ".github/actions/install-and-cache-node-deps/action.yml",
+      ".github/workflows/build-and-tests.yml",
+      ".github/workflows/performance-report.yml",
+      ".github/workflows/repl-artefacts.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6435,
+    "url": "https://github.com/rollup/rollup/pull/6435",
+    "title": "fix(deps): update minor/patch updates",
+    "files": [
+      ".github/actions/install-and-cache-node-deps/action.yml",
+      ".github/workflows/build-and-tests.yml",
+      ".github/workflows/performance-report.yml",
+      ".github/workflows/repl-artefacts-upload.yml",
+      ".github/workflows/repl-artefacts.yml",
+      "package-lock.json",
+      "package.json",
+      "rust/Cargo.lock",
+      "rust/bindings_napi/Cargo.toml",
+      "rust/bindings_wasm/Cargo.toml",
+      "rust/parse_ast/Cargo.toml",
+      "rust/xxhash/Cargo.toml"
+    ],
+    "source_files": [
+      "package.json",
+      "rust/bindings_napi/Cargo.toml",
+      "rust/bindings_wasm/Cargo.toml",
+      "rust/parse_ast/Cargo.toml",
+      "rust/xxhash/Cargo.toml"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6434,
+    "url": "https://github.com/rollup/rollup/pull/6434",
+    "title": "chore(deps): update dtolnay/rust-toolchain digest to 4be7066",
+    "files": [
+      ".github/workflows/build-and-tests.yml",
+      ".github/workflows/performance-report.yml",
+      ".github/workflows/repl-artefacts.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6433,
+    "url": "https://github.com/rollup/rollup/pull/6433",
+    "title": "docs: clarify sideEffects and moduleSideEffects",
+    "files": [
+      "docs/configuration-options/index.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/configuration-options/index.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6426,
+    "url": "https://github.com/rollup/rollup/pull/6426",
+    "title": "chore(deps): lock file maintenance",
+    "files": [
+      "package-lock.json",
+      "rust/Cargo.lock"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6425,
+    "url": "https://github.com/rollup/rollup/pull/6425",
+    "title": "chore(deps): lock file maintenance",
+    "files": [
+      "audit-resolve.json",
+      "package-lock.json",
+      "rust/Cargo.lock"
+    ],
+    "source_files": [
+      "audit-resolve.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6424,
+    "url": "https://github.com/rollup/rollup/pull/6424",
+    "title": "chore(deps): update dependency eslint-plugin-unicorn to v68",
+    "files": [
+      "build-plugins/get-banner.ts",
+      "eslint.config.mjs",
+      "package-lock.json",
+      "package.json",
+      "scripts/declarations.d.ts",
+      "scripts/helpers.js",
+      "scripts/test-package.js",
+      "src/Chunk.ts",
+      "src/ast/nodes/ImportExpression.ts",
+      "src/ast/nodes/shared/IdentifierBase.ts",
+      "src/browser-entry.ts",
+      "src/finalisers/iife.ts",
+      "src/finalisers/shared/getExportBlock.ts",
+      "src/finalisers/umd.ts",
+      "src/node-entry.ts",
+      "src/rollup/rollup.ts",
+      "src/utils/PluginContext.ts",
+      "src/utils/logger.ts",
+      "src/watch/watch.ts",
+      "test/chunking-form/samples/implicit-dependencies/implicitly-dependent-emitted-entry/_config.js",
+      "test/chunking-form/samples/implicit-dependencies/implicitly-dependent-emitted-entry2/_config.js",
+      "test/chunking-form/samples/implicit-dependencies/implicitly-dependent-entry/_config.js",
+      "test/chunking-form/samples/implicit-dependencies/single-dependency/_config.js",
+      "test/cli/samples/config-json/rollup.config.js",
+      "test/function/samples/plugin-parse/_config.js"
+    ],
+    "source_files": [
+      "build-plugins/get-banner.ts",
+      "eslint.config.mjs",
+      "package.json",
+      "scripts/declarations.d.ts",
+      "scripts/helpers.js",
+      "scripts/test-package.js",
+      "src/Chunk.ts",
+      "src/ast/nodes/ImportExpression.ts",
+      "src/ast/nodes/shared/IdentifierBase.ts",
+      "src/browser-entry.ts",
+      "src/finalisers/iife.ts",
+      "src/finalisers/shared/getExportBlock.ts",
+      "src/finalisers/umd.ts",
+      "src/node-entry.ts",
+      "src/rollup/rollup.ts",
+      "src/utils/PluginContext.ts",
+      "src/utils/logger.ts",
+      "src/watch/watch.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6423,
+    "url": "https://github.com/rollup/rollup/pull/6423",
+    "title": "chore(deps): update actions/checkout action to v7",
+    "files": [
+      ".github/workflows/build-and-tests.yml",
+      ".github/workflows/clean-cache.yml",
+      ".github/workflows/performance-report.yml",
+      ".github/workflows/repl-artefacts.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6422,
+    "url": "https://github.com/rollup/rollup/pull/6422",
+    "title": "fix(deps): update minor/patch updates",
+    "files": [
+      ".github/workflows/build-and-tests.yml",
+      "package-lock.json",
+      "package.json",
+      "renovate.json",
+      "rust/parse_ast/Cargo.toml"
+    ],
+    "source_files": [
+      "package.json",
+      "rust/parse_ast/Cargo.toml"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6421,
+    "url": "https://github.com/rollup/rollup/pull/6421",
+    "title": "docs: update x_google_ignoreList link to canonical URL",
+    "files": [
+      "docs/configuration-options/index.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/configuration-options/index.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6420,
+    "url": "https://github.com/rollup/rollup/pull/6420",
+    "title": "chore(deps): lock file maintenance minor/patch updates",
+    "files": [
+      ".gitignore",
+      "audit-resolve.json",
+      "package-lock.json",
+      "rust/Cargo.lock"
+    ],
+    "source_files": [
+      "audit-resolve.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6419,
+    "url": "https://github.com/rollup/rollup/pull/6419",
+    "title": "chore(deps): update dependency eslint-plugin-unicorn to v66",
+    "files": [
+      "package-lock.json",
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6418,
+    "url": "https://github.com/rollup/rollup/pull/6418",
+    "title": "fix(deps): update minor/patch updates",
+    "files": [
+      ".github/workflows/build-and-tests.yml",
+      "package-lock.json",
+      "package.json",
+      "rust/Cargo.lock",
+      "rust/bindings_napi/Cargo.toml",
+      "rust/bindings_wasm/Cargo.toml",
+      "rust/parse_ast/Cargo.toml"
+    ],
+    "source_files": [
+      "package.json",
+      "rust/bindings_napi/Cargo.toml",
+      "rust/bindings_wasm/Cargo.toml",
+      "rust/parse_ast/Cargo.toml"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "rollup/rollup",
+    "pr_number": 6417,
+    "url": "https://github.com/rollup/rollup/pull/6417",
+    "title": "chore(deps): update msys2/setup-msys2 digest to 66cd2cc",
+    "files": [
+      ".github/workflows/build-and-tests.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21105,
+    "url": "https://github.com/eslint/eslint/pull/21105",
+    "title": "test: Add error location details to `no-delete-var` rule",
+    "files": [
+      "tests/lib/rules/no-delete-var.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21104,
+    "url": "https://github.com/eslint/eslint/pull/21104",
+    "title": "chore: add missing backticks to `languages/js/index.js`",
+    "files": [
+      "lib/languages/js/index.js"
+    ],
+    "source_files": [
+      "lib/languages/js/index.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21103,
+    "url": "https://github.com/eslint/eslint/pull/21103",
+    "title": "docs: fix broken Specify Globals anchor links in rule pages",
+    "files": [
+      "docs/src/rules/no-global-assign.md",
+      "docs/src/rules/no-implicit-globals.md",
+      "docs/src/rules/no-native-reassign.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/src/rules/no-global-assign.md",
+      "docs/src/rules/no-implicit-globals.md",
+      "docs/src/rules/no-native-reassign.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21102,
+    "url": "https://github.com/eslint/eslint/pull/21102",
+    "title": "test: add error locations to `no-ex-assign`",
+    "files": [
+      "tests/lib/rules/no-ex-assign.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21099,
+    "url": "https://github.com/eslint/eslint/pull/21099",
+    "title": "docs: replace Code Climate CLI links with Qlty CLI links",
+    "files": [
+      "docs/src/use/integrations.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/src/use/integrations.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21098,
+    "url": "https://github.com/eslint/eslint/pull/21098",
+    "title": "test: add error locations to `no-label-var`",
+    "files": [
+      "tests/lib/rules/no-label-var.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21097,
+    "url": "https://github.com/eslint/eslint/pull/21097",
+    "title": "chore: add missing backticks to `translate-cli-options.js`",
+    "files": [
+      "lib/shared/translate-cli-options.js"
+    ],
+    "source_files": [
+      "lib/shared/translate-cli-options.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21096,
+    "url": "https://github.com/eslint/eslint/pull/21096",
+    "title": "fix: quadratic-time regex in `prefer-template`",
+    "files": [
+      "lib/rules/prefer-template.js",
+      "tests/lib/rules/prefer-template.js"
+    ],
+    "source_files": [
+      "lib/rules/prefer-template.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21094,
+    "url": "https://github.com/eslint/eslint/pull/21094",
+    "title": "fix: apply ignore configs to computed methods in class-methods-use-this",
+    "files": [
+      "lib/rules/class-methods-use-this.js",
+      "tests/lib/rules/class-methods-use-this.js"
+    ],
+    "source_files": [
+      "lib/rules/class-methods-use-this.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21093,
+    "url": "https://github.com/eslint/eslint/pull/21093",
+    "title": "docs: correct --suppressions-location option description",
+    "files": [
+      "docs/src/use/command-line-interface.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/src/use/command-line-interface.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21091,
+    "url": "https://github.com/eslint/eslint/pull/21091",
+    "title": "chore: add missing backticks to `serialization.js`",
+    "files": [
+      "lib/shared/serialization.js"
+    ],
+    "source_files": [
+      "lib/shared/serialization.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21090,
+    "url": "https://github.com/eslint/eslint/pull/21090",
+    "title": "test: add error locations to `eqeqeq`",
+    "files": [
+      "tests/lib/rules/eqeqeq.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21089,
+    "url": "https://github.com/eslint/eslint/pull/21089",
+    "title": "ci: Add explicit permissions to rebuild-docs-sites workflow",
+    "files": [
+      ".github/workflows/rebuild-docs-sites.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21086,
+    "url": "https://github.com/eslint/eslint/pull/21086",
+    "title": "chore: update dependency prettier to v3.9.5",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21084,
+    "url": "https://github.com/eslint/eslint/pull/21084",
+    "title": "chore: fix failing ecosystem test for `eslint-plugin-unicorn`",
+    "files": [
+      "tools/test-ecosystem/index.mjs",
+      "tools/test-ecosystem/plugins-data.json"
+    ],
+    "source_files": [
+      "tools/test-ecosystem/index.mjs",
+      "tools/test-ecosystem/plugins-data.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21083,
+    "url": "https://github.com/eslint/eslint/pull/21083",
+    "title": "fix: NewExpression with parenthesized callee in `preserve-caught-error`",
+    "files": [
+      "lib/rules/preserve-caught-error.js",
+      "tests/lib/rules/preserve-caught-error.js"
+    ],
+    "source_files": [
+      "lib/rules/preserve-caught-error.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21079,
+    "url": "https://github.com/eslint/eslint/pull/21079",
+    "title": "chore: update ecosystem plugins",
+    "files": [
+      "tools/test-ecosystem/plugins-data.json"
+    ],
+    "source_files": [
+      "tools/test-ecosystem/plugins-data.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21077,
+    "url": "https://github.com/eslint/eslint/pull/21077",
+    "title": "chore: update `@eslint/eslintrc` and `@eslint/js` for v9.39.5",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21076,
+    "url": "https://github.com/eslint/eslint/pull/21076",
+    "title": "chore: update dependency @eslint/eslintrc to ^3.3.6",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21074,
+    "url": "https://github.com/eslint/eslint/pull/21074",
+    "title": "test: disable warning for `vm.constants.USE_MAIN_CONTEXT_DEFAULT_LOADER`",
+    "files": [
+      "tests/lib/config/config-loader.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21071,
+    "url": "https://github.com/eslint/eslint/pull/21071",
+    "title": "chore: enable `$ExpectType` annotations in all TypeScript files",
+    "files": [
+      "eslint.config.js"
+    ],
+    "source_files": [
+      "eslint.config.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "eslint/eslint",
+    "pr_number": 21069,
+    "url": "https://github.com/eslint/eslint/pull/21069",
+    "title": "fix: apply `ignoreClassesWithImplements` to class expressions",
+    "files": [
+      "lib/rules/class-methods-use-this.js",
+      "tests/lib/rules/class-methods-use-this.js"
+    ],
+    "source_files": [
+      "lib/rules/class-methods-use-this.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6492,
+    "url": "https://github.com/knex/knex/pull/6492",
+    "title": "chore: bump tarn@3.1.0",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6486,
+    "url": "https://github.com/knex/knex/pull/6486",
+    "title": "cleanup flake in the cancellation tests",
+    "files": [
+      "test/integration2/query/misc/additional.spec.js"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6471,
+    "url": "https://github.com/knex/knex/pull/6471",
+    "title": "Update docs: timeout section",
+    "files": [
+      "docs/src/guide/query-builder.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/src/guide/query-builder.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6468,
+    "url": "https://github.com/knex/knex/pull/6468",
+    "title": "ci: make npm install resilient to transient network failures",
+    "files": [
+      ".github/workflows/coverage.yml",
+      ".github/workflows/integration-tests.yml",
+      ".github/workflows/linting.yml",
+      ".github/workflows/unit-tests.yml",
+      ".npmrc"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6466,
+    "url": "https://github.com/knex/knex/pull/6466",
+    "title": "chore: add mariadb to docker-compose",
+    "files": [
+      "scripts/docker-compose.yml"
+    ],
+    "source_files": [
+      "scripts/docker-compose.yml"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6465,
+    "url": "https://github.com/knex/knex/pull/6465",
+    "title": "fix: #6451, support token-credential in mssql auth",
+    "files": [
+      "lib/client.js",
+      "lib/dialects/mssql/index.js",
+      "test/unit/dialects/mssql.js",
+      "types/index.d.ts"
+    ],
+    "source_files": [
+      "lib/client.js",
+      "lib/dialects/mssql/index.js",
+      "types/index.d.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6464,
+    "url": "https://github.com/knex/knex/pull/6464",
+    "title": "fix: #6455, correctly state tedious as dependency needed for mssql",
+    "files": [
+      "lib/client.js",
+      "lib/dialects/mssql/index.js"
+    ],
+    "source_files": [
+      "lib/client.js",
+      "lib/dialects/mssql/index.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6463,
+    "url": "https://github.com/knex/knex/pull/6463",
+    "title": "fix(types): #6452 - .where type regression for invalid types",
+    "files": [
+      "test-tsd/tsd-tests3.test-d.ts",
+      "types/index.d.ts"
+    ],
+    "source_files": [
+      "test-tsd/tsd-tests3.test-d.ts",
+      "types/index.d.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6462,
+    "url": "https://github.com/knex/knex/pull/6462",
+    "title": "fix: #6460 unhandled error on connection timeout with stream",
+    "files": [
+      "lib/execution/runner.js",
+      "test/integration2/query/misc/additional.spec.js",
+      "test/knexfile.js"
+    ],
+    "source_files": [
+      "lib/execution/runner.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6456,
+    "url": "https://github.com/knex/knex/pull/6456",
+    "title": "micro-optimization in wrappingFormatter",
+    "files": [
+      ".github/release-drafter.yml",
+      ".github/workflows/ensure-labels.yml",
+      "lib/formatter/wrappingFormatter.js",
+      "test/unit/query/formatter.js"
+    ],
+    "source_files": [
+      "lib/formatter/wrappingFormatter.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6454,
+    "url": "https://github.com/knex/knex/pull/6454",
+    "title": "fix(pg): preserve updateFrom binding order",
+    "files": [
+      "lib/dialects/postgres/query/pg-querycompiler.js",
+      "test/integration2/query/update/updates.spec.js",
+      "test/unit/query/builder.js"
+    ],
+    "source_files": [
+      "lib/dialects/postgres/query/pg-querycompiler.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6450,
+    "url": "https://github.com/knex/knex/pull/6450",
+    "title": "Update homepage urls",
+    "files": [
+      "README.md",
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [
+      "README.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6448,
+    "url": "https://github.com/knex/knex/pull/6448",
+    "title": "chore: set codecov to default coverage provider",
+    "files": [
+      ".github/workflows/coverage.yml",
+      "README.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "README.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6447,
+    "url": "https://github.com/knex/knex/pull/6447",
+    "title": "chore: auto-update the docs' knex version on publish",
+    "files": [
+      ".github/workflows/release.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6446,
+    "url": "https://github.com/knex/knex/pull/6446",
+    "title": "fix: bump lodash to ^4.18.1, close #6433",
+    "files": [
+      "package.json"
+    ],
+    "source_files": [
+      "package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6445,
+    "url": "https://github.com/knex/knex/pull/6445",
+    "title": "chore: sync docker images we use to ghcr",
+    "files": [
+      ".github/workflows/integration-tests.yml",
+      ".github/workflows/mirror-images.yml",
+      "scripts/docker-compose.yml"
+    ],
+    "source_files": [
+      "scripts/docker-compose.yml"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6443,
+    "url": "https://github.com/knex/knex/pull/6443",
+    "title": "chore: skip re-running tests on automated release commit",
+    "files": [
+      ".github/workflows/codeql-analysis.yml",
+      ".github/workflows/coverage.yml",
+      ".github/workflows/integration-tests.yml",
+      ".github/workflows/linting.yml",
+      ".github/workflows/release-drafter.yml",
+      ".github/workflows/unit-tests.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6442,
+    "url": "https://github.com/knex/knex/pull/6442",
+    "title": "chore: fixes for release-drafter workflow",
+    "files": [
+      ".github/workflows/coverage.yml",
+      ".github/workflows/integration-tests.yml",
+      ".github/workflows/release-drafter.yml",
+      ".github/workflows/release.yml",
+      ".github/workflows/unit-tests.yml",
+      "scripts/update-changelog.mjs"
+    ],
+    "source_files": [
+      "scripts/update-changelog.mjs"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6441,
+    "url": "https://github.com/knex/knex/pull/6441",
+    "title": "chore: new publish/release workflow",
+    "files": [
+      ".github/release-drafter.yml",
+      ".github/workflows/docs-deploy.yml",
+      ".github/workflows/ensure-labels.yml",
+      ".github/workflows/publish.yml",
+      ".github/workflows/release-drafter.yml",
+      ".github/workflows/release.yml",
+      "CHANGELOG.md",
+      "scripts/act-testing/act.sh",
+      "scripts/act-testing/merged-no-label.json",
+      "scripts/act-testing/merged-patch-labeled.json",
+      "scripts/act-testing/merged-skip-labeled.json",
+      "scripts/act-testing/not-merged-patch-labeled.json",
+      "scripts/build-for-release.sh",
+      "scripts/format-changelog.js",
+      "scripts/next-release-howto.md",
+      "scripts/release.sh",
+      "scripts/update-changelog.mjs"
+    ],
+    "source_files": [
+      "scripts/act-testing/act.sh",
+      "scripts/act-testing/merged-no-label.json",
+      "scripts/act-testing/merged-patch-labeled.json",
+      "scripts/act-testing/merged-skip-labeled.json",
+      "scripts/act-testing/not-merged-patch-labeled.json",
+      "scripts/build-for-release.sh",
+      "scripts/format-changelog.js",
+      "scripts/release.sh",
+      "scripts/update-changelog.mjs"
+    ],
+    "doc_files": [
+      "CHANGELOG.md",
+      "scripts/next-release-howto.md"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6440,
+    "url": "https://github.com/knex/knex/pull/6440",
+    "title": "docs: Update changelog for version 3.2.9",
+    "files": [
+      "docs/src/changelog.md"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/src/changelog.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call."
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6438,
+    "url": "https://github.com/knex/knex/pull/6438",
+    "title": "fix(pg,mssql): preserve binding order in delete and update queries",
+    "files": [
+      "lib/dialects/mssql/query/mssql-querycompiler.js",
+      "lib/dialects/postgres/query/pg-querycompiler.js",
+      "test/integration/query/deletes.js",
+      "test/unit/query/builder.js"
+    ],
+    "source_files": [
+      "lib/dialects/mssql/query/mssql-querycompiler.js",
+      "lib/dialects/postgres/query/pg-querycompiler.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "knex/knex",
+    "pr_number": 6429,
+    "url": "https://github.com/knex/knex/pull/6429",
+    "title": "fix: support DELETE... LIMIT in dialects that support it (mysql), but continue to disallow ones that don't",
+    "files": [
+      "lib/dialects/mysql/query/mysql-querycompiler.js",
+      "lib/query/querycompiler.js",
+      "test/integration/query/deletes.js",
+      "test/unit/query/builder.js"
+    ],
+    "source_files": [
+      "lib/dialects/mysql/query/mysql-querycompiler.js",
+      "lib/query/querycompiler.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5518,
+    "url": "https://github.com/socketio/socket.io/pull/5518",
+    "title": "fix(parser): honor toJSON() when deconstructing a binary packet",
+    "files": [
+      "packages/socket.io-parser/lib/binary.ts",
+      "packages/socket.io-parser/test/buffer.js"
+    ],
+    "source_files": [
+      "packages/socket.io-parser/lib/binary.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5508,
+    "url": "https://github.com/socketio/socket.io/pull/5508",
+    "title": "docs(engine.io): correct maxHttpBufferSize default in JSDoc (1e6 / 1 MB)",
+    "files": [
+      "packages/engine.io/lib/server.ts"
+    ],
+    "source_files": [
+      "packages/engine.io/lib/server.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5502,
+    "url": "https://github.com/socketio/socket.io/pull/5502",
+    "title": "chore(deps): ws@8.21.0 (fixes DoS vulnerability)",
+    "files": [
+      "docs/engine.io-protocol/v3-test-suite/package-lock.json",
+      "docs/engine.io-protocol/v3-test-suite/package.json",
+      "docs/engine.io-protocol/v4-test-suite/package-lock.json",
+      "docs/engine.io-protocol/v4-test-suite/package.json",
+      "docs/socket.io-protocol/v5-test-suite/package-lock.json",
+      "docs/socket.io-protocol/v5-test-suite/package.json",
+      "examples/basic-websocket-client/package.json",
+      "package-lock.json",
+      "package.json",
+      "packages/engine.io-client/package.json",
+      "packages/engine.io/package.json",
+      "packages/socket.io-adapter/package.json"
+    ],
+    "source_files": [
+      "examples/basic-websocket-client/package.json",
+      "package.json",
+      "packages/engine.io-client/package.json",
+      "packages/engine.io/package.json",
+      "packages/socket.io-adapter/package.json"
+    ],
+    "doc_files": [
+      "docs/engine.io-protocol/v3-test-suite/package-lock.json",
+      "docs/engine.io-protocol/v3-test-suite/package.json",
+      "docs/engine.io-protocol/v4-test-suite/package-lock.json",
+      "docs/engine.io-protocol/v4-test-suite/package.json",
+      "docs/socket.io-protocol/v5-test-suite/package-lock.json",
+      "docs/socket.io-protocol/v5-test-suite/package.json"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5501,
+    "url": "https://github.com/socketio/socket.io/pull/5501",
+    "title": "fix(engine.io-client): preserve caller transport options",
+    "files": [
+      "packages/engine.io-client/lib/socket.ts",
+      "packages/engine.io-client/test/socket.js"
+    ],
+    "source_files": [
+      "packages/engine.io-client/lib/socket.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5481,
+    "url": "https://github.com/socketio/socket.io/pull/5481",
+    "title": "docs: fix various typos in test and documentation",
+    "files": [
+      "docs/engine.io-protocol/v3.md",
+      "packages/engine.io/test/server.js",
+      "packages/socket.io/test/socket.io.test-d.ts"
+    ],
+    "source_files": [],
+    "doc_files": [
+      "docs/engine.io-protocol/v3.md"
+    ],
+    "maintainer_documented": true,
+    "auto_label": "not-relevant",
+    "auto_reason": "Test-only diff: no source file changed, so no new behaviour to document."
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5469,
+    "url": "https://github.com/socketio/socket.io/pull/5469",
+    "title": "fix(types): preserve transport literal suggestions in engine.io-client",
+    "files": [
+      "packages/engine.io-client/lib/socket.ts"
+    ],
+    "source_files": [
+      "packages/engine.io-client/lib/socket.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5460,
+    "url": "https://github.com/socketio/socket.io/pull/5460",
+    "title": "fix(engine.io): emit initial_headers and headers events in uServer",
+    "files": [
+      "packages/engine.io/lib/userver.ts",
+      "packages/engine.io/test/server.js"
+    ],
+    "source_files": [
+      "packages/engine.io/lib/userver.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5457,
+    "url": "https://github.com/socketio/socket.io/pull/5457",
+    "title": "fix(adapter): do not skip local broadcast when publishAndReturnOffset throws",
+    "files": [
+      "packages/socket.io-adapter/lib/cluster-adapter.ts",
+      "packages/socket.io-adapter/test/cluster-adapter.ts"
+    ],
+    "source_files": [
+      "packages/socket.io-adapter/lib/cluster-adapter.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5453,
+    "url": "https://github.com/socketio/socket.io/pull/5453",
+    "title": "fix(types): allow emitWithAck for events with void callbacks",
+    "files": [
+      "packages/socket.io/lib/typed-events.ts",
+      "packages/socket.io/test/socket.io.test-d.ts"
+    ],
+    "source_files": [
+      "packages/socket.io/lib/typed-events.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5449,
+    "url": "https://github.com/socketio/socket.io/pull/5449",
+    "title": "chore: Update outdated GitHub Actions versions",
+    "files": [
+      ".github/workflows/build-examples.yml",
+      ".github/workflows/ci-browser.yml",
+      ".github/workflows/publish.yml"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5439,
+    "url": "https://github.com/socketio/socket.io/pull/5439",
+    "title": "chore(deps): upgrade to ws@8.20.1",
+    "files": [
+      "docs/engine.io-protocol/v3-test-suite/package-lock.json",
+      "docs/engine.io-protocol/v3-test-suite/package.json",
+      "docs/engine.io-protocol/v4-test-suite/package-lock.json",
+      "docs/engine.io-protocol/v4-test-suite/package.json",
+      "docs/socket.io-protocol/v5-test-suite/package-lock.json",
+      "docs/socket.io-protocol/v5-test-suite/package.json",
+      "examples/basic-websocket-client/package.json",
+      "package-lock.json",
+      "package.json",
+      "packages/engine.io-client/package.json",
+      "packages/engine.io/package.json",
+      "packages/socket.io-adapter/package.json",
+      "packages/socket.io-cluster-adapter/package-lock.json"
+    ],
+    "source_files": [
+      "examples/basic-websocket-client/package.json",
+      "package.json",
+      "packages/engine.io-client/package.json",
+      "packages/engine.io/package.json",
+      "packages/socket.io-adapter/package.json"
+    ],
+    "doc_files": [
+      "docs/engine.io-protocol/v3-test-suite/package-lock.json",
+      "docs/engine.io-protocol/v3-test-suite/package.json",
+      "docs/engine.io-protocol/v4-test-suite/package-lock.json",
+      "docs/engine.io-protocol/v4-test-suite/package.json",
+      "docs/socket.io-protocol/v5-test-suite/package-lock.json",
+      "docs/socket.io-protocol/v5-test-suite/package.json"
+    ],
+    "maintainer_documented": true
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5392,
+    "url": "https://github.com/socketio/socket.io/pull/5392",
+    "title": "Export DisconnectDescription type directly from 'socket.io-client'",
+    "files": [
+      "packages/socket.io-client/lib/index.ts"
+    ],
+    "source_files": [
+      "packages/socket.io-client/lib/index.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5341,
+    "url": "https://github.com/socketio/socket.io/pull/5341",
+    "title": "Update messageStore.js to fix Issue:It it duplicating the self messag…",
+    "files": [
+      "examples/private-messaging/server/messageStore.js"
+    ],
+    "source_files": [
+      "examples/private-messaging/server/messageStore.js"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5335,
+    "url": "https://github.com/socketio/socket.io/pull/5335",
+    "title": "chore(deps): ws@8.18.3, debug@4.4.1",
+    "files": [
+      "examples/basic-websocket-client/package.json",
+      "package-lock.json",
+      "package.json",
+      "packages/engine.io-client/package.json",
+      "packages/engine.io/package.json",
+      "packages/socket.io-adapter/package.json",
+      "packages/socket.io-client/package.json",
+      "packages/socket.io-cluster-engine/package.json",
+      "packages/socket.io-parser/package.json",
+      "packages/socket.io-postgres-emitter/package.json",
+      "packages/socket.io/package.json"
+    ],
+    "source_files": [
+      "examples/basic-websocket-client/package.json",
+      "package.json",
+      "packages/engine.io-client/package.json",
+      "packages/engine.io/package.json",
+      "packages/socket.io-adapter/package.json",
+      "packages/socket.io-client/package.json",
+      "packages/socket.io-cluster-engine/package.json",
+      "packages/socket.io-parser/package.json",
+      "packages/socket.io-postgres-emitter/package.json",
+      "packages/socket.io/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5239,
+    "url": "https://github.com/socketio/socket.io/pull/5239",
+    "title": "add package.json entry point in socket.io package.json",
+    "files": [
+      "packages/socket.io/package.json"
+    ],
+    "source_files": [
+      "packages/socket.io/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5220,
+    "url": "https://github.com/socketio/socket.io/pull/5220",
+    "title": "fix: correctly consume `ws` package",
+    "files": [
+      "packages/engine.io-client/lib/transports/websocket.node.ts"
+    ],
+    "source_files": [
+      "packages/engine.io-client/lib/transports/websocket.node.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5205,
+    "url": "https://github.com/socketio/socket.io/pull/5205",
+    "title": "chore(deps): update cookie to 0.7.2",
+    "files": [
+      "package-lock.json",
+      "packages/engine.io/package.json"
+    ],
+    "source_files": [
+      "packages/engine.io/package.json"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5196,
+    "url": "https://github.com/socketio/socket.io/pull/5196",
+    "title": "fix: make Namespace._fns private",
+    "files": [
+      "packages/socket.io/lib/namespace.ts",
+      "packages/socket.io/lib/parent-namespace.ts"
+    ],
+    "source_files": [
+      "packages/socket.io/lib/namespace.ts",
+      "packages/socket.io/lib/parent-namespace.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5188,
+    "url": "https://github.com/socketio/socket.io/pull/5188",
+    "title": "refactor: default transport in type",
+    "files": [
+      "packages/engine.io-client/lib/socket.ts"
+    ],
+    "source_files": [
+      "packages/engine.io-client/lib/socket.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5169,
+    "url": "https://github.com/socketio/socket.io/pull/5169",
+    "title": "remove prettier v2",
+    "files": [
+      "package-lock.json",
+      "package.json",
+      "packages/engine.io-client/lib/globals.node.ts",
+      "packages/engine.io-client/lib/socket.ts",
+      "packages/engine.io-client/lib/transport.ts",
+      "packages/engine.io-client/lib/transports/polling-xhr.node.ts",
+      "packages/engine.io-client/lib/transports/polling-xhr.ts",
+      "packages/engine.io-client/lib/transports/websocket.node.ts",
+      "packages/engine.io-client/lib/transports/websocket.ts",
+      "packages/engine.io-client/lib/transports/webtransport.ts",
+      "packages/engine.io-client/test/connection.js",
+      "packages/engine.io-client/test/socket.js",
+      "packages/engine.io-client/test/support/hooks.js",
+      "packages/engine.io-client/test/transport.js",
+      "packages/engine.io-client/test/webtransport.mjs",
+      "packages/engine.io-parser/package.json",
+      "packages/engine.io/lib/server.ts",
+      "packages/engine.io/lib/socket.ts",
+      "packages/engine.io/lib/transport.ts",
+      "packages/engine.io/lib/transports/websocket.ts",
+      "packages/engine.io/lib/transports/webtransport.ts",
+      "packages/engine.io/lib/userver.ts",
+      "packages/engine.io/test/engine.io.js",
+      "packages/engine.io/test/middlewares.js",
+      "packages/engine.io/test/parser.js",
+      "packages/engine.io/test/server.js",
+      "packages/engine.io/test/webtransport.mjs",
+      "packages/socket.io-adapter/lib/cluster-adapter.ts",
+      "packages/socket.io-adapter/lib/contrib/yeast.ts",
+      "packages/socket.io-adapter/lib/in-memory-adapter.ts",
+      "packages/socket.io-adapter/test/cluster-adapter.ts",
+      "packages/socket.io-adapter/test/index.ts",
+      "packages/socket.io-client/lib/index.ts",
+      "packages/socket.io-client/lib/manager.ts",
+      "packages/socket.io-client/lib/on.ts",
+      "packages/socket.io-client/lib/socket.ts",
+      "packages/socket.io-client/lib/url.ts",
+      "packages/socket.io-client/test/connection.ts",
+      "packages/socket.io-client/test/socket.ts",
+      "packages/socket.io-client/test/typed-events.test-d.ts",
+      "packages/socket.io-client/wdio.conf.js",
+      "packages/socket.io-cluster-engine/lib/engine.ts",
+      "packages/socket.io-cluster-engine/lib/redis.ts",
+      "packages/socket.io-cluster-engine/test/in-memory.ts",
+      "packages/socket.io-parser/test/blob.js",
+      "packages/socket.io-parser/test/index.js",
+      "packages/socket.io-parser/test/parser.js",
+      "packages/socket.io-parser/wdio.conf.js",
+      "packages/socket.io/lib/broadcast-operator.ts",
+      "packages/socket.io/lib/client.ts",
+      "packages/socket.io/lib/index.ts",
+      "packages/socket.io/lib/namespace.ts",
+      "packages/socket.io/lib/parent-namespace.ts",
+      "packages/socket.io/lib/socket.ts",
+      "packages/socket.io/lib/typed-events.ts",
+      "packages/socket.io/lib/uws.ts",
+      "packages/socket.io/test/connection-state-recovery.ts",
+      "packages/socket.io/test/handshake.ts",
+      "packages/socket.io/test/messaging-many.ts",
+      "packages/socket.io/test/middleware.ts",
+      "packages/socket.io/test/namespaces.ts",
+      "packages/socket.io/test/server-attachment.ts",
+      "packages/socket.io/test/socket.io.test-d.ts",
+      "packages/socket.io/test/socket.ts",
+      "packages/socket.io/test/support/util.ts",
+      "packages/socket.io/test/utility-methods.ts",
+      "packages/socket.io/test/uws.ts",
+      "packages/socket.io/test/v2-compatibility.ts"
+    ],
+    "source_files": [
+      "package.json",
+      "packages/engine.io-client/lib/globals.node.ts",
+      "packages/engine.io-client/lib/socket.ts",
+      "packages/engine.io-client/lib/transport.ts",
+      "packages/engine.io-client/lib/transports/polling-xhr.node.ts",
+      "packages/engine.io-client/lib/transports/polling-xhr.ts",
+      "packages/engine.io-client/lib/transports/websocket.node.ts",
+      "packages/engine.io-client/lib/transports/websocket.ts",
+      "packages/engine.io-client/lib/transports/webtransport.ts",
+      "packages/engine.io-parser/package.json",
+      "packages/engine.io/lib/server.ts",
+      "packages/engine.io/lib/socket.ts",
+      "packages/engine.io/lib/transport.ts",
+      "packages/engine.io/lib/transports/websocket.ts",
+      "packages/engine.io/lib/transports/webtransport.ts",
+      "packages/engine.io/lib/userver.ts",
+      "packages/socket.io-adapter/lib/cluster-adapter.ts",
+      "packages/socket.io-adapter/lib/contrib/yeast.ts",
+      "packages/socket.io-adapter/lib/in-memory-adapter.ts",
+      "packages/socket.io-client/lib/index.ts",
+      "packages/socket.io-client/lib/manager.ts",
+      "packages/socket.io-client/lib/on.ts",
+      "packages/socket.io-client/lib/socket.ts",
+      "packages/socket.io-client/lib/url.ts",
+      "packages/socket.io-client/wdio.conf.js",
+      "packages/socket.io-cluster-engine/lib/engine.ts",
+      "packages/socket.io-cluster-engine/lib/redis.ts",
+      "packages/socket.io-parser/wdio.conf.js",
+      "packages/socket.io/lib/broadcast-operator.ts",
+      "packages/socket.io/lib/client.ts",
+      "packages/socket.io/lib/index.ts",
+      "packages/socket.io/lib/namespace.ts",
+      "packages/socket.io/lib/parent-namespace.ts",
+      "packages/socket.io/lib/socket.ts",
+      "packages/socket.io/lib/typed-events.ts",
+      "packages/socket.io/lib/uws.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5052,
+    "url": "https://github.com/socketio/socket.io/pull/5052",
+    "title": "fix: bumps ws to version 8.17.1 to fix CVE-2024-37890",
+    "files": [
+      "package-lock.json"
+    ],
+    "source_files": [],
+    "doc_files": [],
+    "maintainer_documented": false,
+    "auto_label": "not-relevant",
+    "auto_reason": "Only lockfile/CI/config files changed; no library source touched."
+  },
+  {
+    "repo": "socketio/socket.io",
+    "pr_number": 5035,
+    "url": "https://github.com/socketio/socket.io/pull/5035",
+    "title": "Fixes #5034 - change private property io.httpServer to a public property",
+    "files": [
+      "lib/index.ts",
+      "test/support/util.ts"
+    ],
+    "source_files": [
+      "lib/index.ts"
+    ],
+    "doc_files": [],
+    "maintainer_documented": false
+  }
+]

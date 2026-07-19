@@ -1,0 +1,40 @@
+{
+  "name": "verlio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Verlio — watches merged PRs, classifies doc-relevant diffs, drafts and opens doc-fix PRs. Never auto-merges.",
+  "type": "module",
+  "bin": {
+    "verlio": "./dist/cli/run-pipeline.js",
+    "verlio-mcp": "./dist/mcp/server.js"
+  },
+  "files": [
+    "dist",
+    "SKILL.md"
+  ],
+  "scripts": {
+    "pipeline": "tsx cli/run-pipeline.ts",
+    "mcp": "tsx mcp/server.ts",
+    "corpus:label": "tsx corpus/label-candidates.ts",
+    "eval": "tsx scripts/eval-classifier.ts",
+    "test:webhook": "tsx scripts/test-webhook.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.112.3",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@octokit/auth-app": "^8.2.0",
+    "@octokit/rest": "^22.0.0",
+    "dotenv": "^17.2.3",
+    "pg": "^8.22.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/pg": "^8.20.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

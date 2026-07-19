@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+.cache/
+# eval-results/ is deliberately NOT ignored — the M2 exit gate requires the real
+# measured numbers to be documented, so the raw eval output is the evidence.

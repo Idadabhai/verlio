@@ -1,0 +1,1133 @@
+{
+  "tag": "TUNE-v7-sweep",
+  "model": "claude-sonnet-5",
+  "corpus": "corpus/heldout3-TUNE.json",
+  "n": 44,
+  "confusion": {
+    "tp": 12,
+    "fp": 6,
+    "tn": 25,
+    "fn": 1
+  },
+  "precision": {
+    "value": 0.6666666666666666,
+    "ci95": {
+      "low": 0.4374906934425036,
+      "high": 0.8372144563633714
+    },
+    "denominator": 18
+  },
+  "recall": {
+    "value": 0.9230769230769231,
+    "ci95": {
+      "low": 0.6668546607175265,
+      "high": 0.9862899336203037
+    },
+    "denominator": 13
+  },
+  "f1": 0.7741935483870968,
+  "accuracy": 0.8409090909090909,
+  "gate": {
+    "bar": 0.8,
+    "metric": "precision",
+    "passed": false,
+    "ci_lower_clears_bar": false
+  },
+  "usage": {
+    "api_calls": 40,
+    "short_circuited": 4,
+    "input_tokens": 112198,
+    "output_tokens": 9134,
+    "cache_read_input_tokens": 144880,
+    "cache_creation_input_tokens": 0
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.3,
+      "flagged": 18,
+      "precision": 0.6666666666666666,
+      "recall": 0.9230769230769231,
+      "tp": 12,
+      "fp": 6
+    },
+    {
+      "threshold": 0.4,
+      "flagged": 14,
+      "precision": 0.7857142857142857,
+      "recall": 0.8461538461538461,
+      "tp": 11,
+      "fp": 3
+    },
+    {
+      "threshold": 0.5,
+      "flagged": 13,
+      "precision": 0.8461538461538461,
+      "recall": 0.8461538461538461,
+      "tp": 11,
+      "fp": 2
+    },
+    {
+      "threshold": 0.55,
+      "flagged": 10,
+      "precision": 0.8,
+      "recall": 0.6153846153846154,
+      "tp": 8,
+      "fp": 2
+    },
+    {
+      "threshold": 0.6,
+      "flagged": 8,
+      "precision": 0.875,
+      "recall": 0.5384615384615384,
+      "tp": 7,
+      "fp": 1
+    },
+    {
+      "threshold": 0.65,
+      "flagged": 6,
+      "precision": 1,
+      "recall": 0.46153846153846156,
+      "tp": 6,
+      "fp": 0
+    },
+    {
+      "threshold": 0.7,
+      "flagged": 6,
+      "precision": 1,
+      "recall": 0.46153846153846156,
+      "tp": 6,
+      "fp": 0
+    },
+    {
+      "threshold": 0.75,
+      "flagged": 6,
+      "precision": 1,
+      "recall": 0.46153846153846156,
+      "tp": 6,
+      "fp": 0
+    },
+    {
+      "threshold": 0.8,
+      "flagged": 4,
+      "precision": 1,
+      "recall": 0.3076923076923077,
+      "tp": 4,
+      "fp": 0
+    },
+    {
+      "threshold": 0.85,
+      "flagged": 4,
+      "precision": 1,
+      "recall": 0.3076923076923077,
+      "tp": 4,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9,
+      "flagged": 3,
+      "precision": 1,
+      "recall": 0.23076923076923078,
+      "tp": 3,
+      "fp": 0
+    }
+  ],
+  "false_positives": [
+    {
+      "repo": "eslint/eslint",
+      "pr": 21083,
+      "url": "https://github.com/eslint/eslint/pull/21083",
+      "title": "fix: NewExpression with parenthesized callee in `preserve-caught-error`",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.35,
+      "model_rationale": "This fixes a bug in the autofix logic of the documented ESLint rule `preserve-caught-error`, where a suggested fix for parenthesized NewExpression callees (e.g. `new (Error)`) produced invalid/broken code. It's a behavior correction to a documented rule's suggestion output, though it's a fairly internal fixer-logic detail rather than a new documented option or API surface, so confidence is moderate-low.",
+      "label_rationale": "Fixes autofix handling of a NewExpression with a parenthesized callee in preserve-caught-error. Edge-case fixer correctness.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 11308,
+        "sent": 11308
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "knex/knex",
+      "pr": 6464,
+      "url": "https://github.com/knex/knex/pull/6464",
+      "title": "fix: #6455, correctly state tedious as dependency needed for mssql",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.55,
+      "model_rationale": "Changes the error message users see when the mssql dialect driver dependency is missing, now correctly instructing them to install 'tedious' instead of 'mssql'. This affects documented setup/installation instructions for the mssql dialect, which docs likely reference as a required dependency.",
+      "label_rationale": "Adds an internal _packageName so the mssql driver error names tedious. The docs already stated tedious; this aligns code with them.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 933,
+        "sent": 933
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "remix-run/react-router",
+      "pr": 15323,
+      "url": "https://github.com/remix-run/react-router/pull/15323",
+      "title": "fix(rsc): preserve component metadata for client loader revalidation",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.6,
+      "model_rationale": "This fixes a bug in React Router's RSC single-fetch data strategy where component metadata (hasComponent) was dropped, causing unnecessary server revalidation requests for routes with clientLoader after their component rendered. This changes observable behavior of a documented RSC/clientLoader revalidation feature, and the PR itself adds a changeset note describing the behavior fix, confirming it's user-facing.",
+      "label_rationale": "Preserves internal route-manifest metadata across client loader revalidation. Internal RSC bookkeeping.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 7239,
+        "sent": 7239
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitest-dev/vitest",
+      "pr": 10784,
+      "url": "https://github.com/vitest-dev/vitest/pull/10784",
+      "title": "fix(browser): inlined awaited import should not trigger syntax error after transform",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.35,
+      "model_rationale": "This fixes a bug in an internal code-transform helper (injectDynamicImport/wrapDynamicImport) that produced invalid syntax for inlined awaited dynamic imports. While it changes generated output, this is an internal mocker transform detail rather than a documented public API option, so it's unclear if any user-facing docs describe this specific transform output.",
+      "label_rationale": "Makes the injected dynamic-import wrapper async in the mocker's codegen to avoid a syntax error. Internal instrumentation.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1790,
+        "sent": 1790
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitest-dev/vitest",
+      "pr": 10748,
+      "url": "https://github.com/vitest-dev/vitest/pull/10748",
+      "title": "fix(browser): preserve pre-transform request defaults",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.4,
+      "model_rationale": "This fixes internal server/environment config behavior so that `preTransformRequests` is no longer force-disabled for browser-mode projects, preserving Vite defaults. While this touches an internally-set config value rather than a directly user-facing documented option, it changes observable dev-server behavior for browser test projects, so it's worth flagging even though confidence is moderate since preTransformRequests isn't a commonly documented Vitest-facing option.",
+      "label_rationale": "Stops overriding Vite's preTransformRequests default. Internal dev-server configuration.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3584,
+        "sent": 3584
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "withastro/astro",
+      "pr": 17405,
+      "url": "https://github.com/withastro/astro/pull/17405",
+      "title": "fix(prefetch): swallow fetch-fallback rejection to avoid unhandled 'Load failed' on WebKit",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.35,
+      "model_rationale": "This is an internal bug fix to the public `prefetch()` function that prevents an unhandled promise rejection on WebKit; the fix doesn't change the documented behavior/signature of `prefetch()`, but it does fix an observable side effect (spurious unhandled rejection errors) that some docs/troubleshooting guides could mention. The change is minor and mostly an implementation detail, so confidence is low-moderate.",
+      "label_rationale": "Adds .catch(() => {}) to the WebKit prefetch fallback. Prefetch is documented as best-effort; this restores that intent rather than changing it.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1626,
+        "sent": 1626
+      },
+      "filtered_files": []
+    }
+  ],
+  "false_negatives": [
+    {
+      "repo": "socketio/socket.io",
+      "pr": 5501,
+      "url": "https://github.com/socketio/socket.io/pull/5501",
+      "title": "fix(engine.io-client): preserve caller transport options",
+      "expected": true,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "FN",
+      "confidence": 0.15,
+      "model_rationale": "This fixes an internal bug where the Socket constructor mutated the caller's options object (transports array) instead of cloning it before mapping transport names to constructors. The public constructor signature and documented behavior (transports option) are unchanged; only an internal side-effect (mutation) is fixed, which is not a documented surface.",
+      "label_rationale": "Copies the caller's options object instead of using it by reference, so caller-side transport options are preserved. Mirrors got#2454 in the dev corpus.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1896,
+        "sent": 1896
+      },
+      "filtered_files": []
+    }
+  ],
+  "rows": [
+    {
+      "repo": "eslint/eslint",
+      "pr": 21091,
+      "url": "https://github.com/eslint/eslint/pull/21091",
+      "title": "chore: add missing backticks to `serialization.js`",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This diff only changes a JSDoc comment (adding backticks around 'true') in a private helper function, with no behavioral or public API change.",
+      "label_rationale": "Adds backticks inside JSDoc comments in serialization.js. Comment formatting only.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 469,
+        "sent": 469
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "eslint/eslint",
+      "pr": 21094,
+      "url": "https://github.com/eslint/eslint/pull/21094",
+      "title": "fix: apply ignore configs to computed methods in class-methods-use-this",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.6,
+      "model_rationale": "This fixes a bug in the documented `class-methods-use-this` rule where the `ignoreOverrideMethods` and `ignoreClassesWithImplements` options were not applied to computed method names, causing incorrect reports. This changes observable behavior of a documented rule option, so rule docs/examples may need clarification.",
+      "label_rationale": "Computed instance methods short-circuited before ignore options were consulted; exceptMethods/ignoreOverrideMethods now apply to them.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2144,
+        "sent": 2144
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "eslint/eslint",
+      "pr": 21093,
+      "url": "https://github.com/eslint/eslint/pull/21093",
+      "title": "docs: correct --suppressions-location option description",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 1,
+      "model_rationale": "Every file changed in this PR is documentation; there is no source-code change for Verlio to react to.",
+      "label_rationale": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1088,
+        "sent": 1088
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "eslint/eslint",
+      "pr": 21102,
+      "url": "https://github.com/eslint/eslint/pull/21102",
+      "title": "test: add error locations to `no-ex-assign`",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This diff only adds line/column location assertions to existing test cases for the no-ex-assign rule. No source/rule behavior or public API changed, so there is nothing new for docs to describe.",
+      "label_rationale": "Test-only diff: no source file changed, so no new behaviour to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1210,
+        "sent": 1210
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "eslint/eslint",
+      "pr": 21074,
+      "url": "https://github.com/eslint/eslint/pull/21074",
+      "title": "test: disable warning for `vm.constants.USE_MAIN_CONTEXT_DEFAULT_LOADER`",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.03,
+      "model_rationale": "This PR only modifies a test file to stub process.emit and suppress an experimental warning during test runs; it does not change any public API, config option, or documented behavior.",
+      "label_rationale": "Test-only diff: no source file changed, so no new behaviour to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 733,
+        "sent": 733
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "eslint/eslint",
+      "pr": 21083,
+      "url": "https://github.com/eslint/eslint/pull/21083",
+      "title": "fix: NewExpression with parenthesized callee in `preserve-caught-error`",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.35,
+      "model_rationale": "This fixes a bug in the autofix logic of the documented ESLint rule `preserve-caught-error`, where a suggested fix for parenthesized NewExpression callees (e.g. `new (Error)`) produced invalid/broken code. It's a behavior correction to a documented rule's suggestion output, though it's a fairly internal fixer-logic detail rather than a new documented option or API surface, so confidence is moderate-low.",
+      "label_rationale": "Fixes autofix handling of a NewExpression with a parenthesized callee in preserve-caught-error. Edge-case fixer correctness.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 11308,
+        "sent": 11308
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "knex/knex",
+      "pr": 6464,
+      "url": "https://github.com/knex/knex/pull/6464",
+      "title": "fix: #6455, correctly state tedious as dependency needed for mssql",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.55,
+      "model_rationale": "Changes the error message users see when the mssql dialect driver dependency is missing, now correctly instructing them to install 'tedious' instead of 'mssql'. This affects documented setup/installation instructions for the mssql dialect, which docs likely reference as a required dependency.",
+      "label_rationale": "Adds an internal _packageName so the mssql driver error names tedious. The docs already stated tedious; this aligns code with them.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 933,
+        "sent": 933
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "knex/knex",
+      "pr": 6465,
+      "url": "https://github.com/knex/knex/pull/6465",
+      "title": "fix: #6451, support token-credential in mssql auth",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.9,
+      "model_rationale": "Adds a new documented MSSQL authentication type 'token-credential' (with new MsSqlTokenCredentialAuthenticationConfig type and credential option), and fixes cloning behavior so class instances like credentials aren't deep-cloned. This is a new public config option/auth type that users would need to know about in connection config docs.",
+      "label_rationale": "Adds 'token-credential' to the public MsSql authentication type union plus client support — a new accepted value for a documented connection option.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 5038,
+        "sent": 5038
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "knex/knex",
+      "pr": 6440,
+      "url": "https://github.com/knex/knex/pull/6440",
+      "title": "docs: Update changelog for version 3.2.9",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 1,
+      "model_rationale": "Every file changed in this PR is documentation; there is no source-code change for Verlio to react to.",
+      "label_rationale": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 773,
+        "sent": 773
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "knex/knex",
+      "pr": 6486,
+      "url": "https://github.com/knex/knex/pull/6486",
+      "title": "cleanup flake in the cancellation tests",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This diff only modifies a test file to fix a flaky race condition in cancellation tests; no source/library code or public API behavior changed.",
+      "label_rationale": "Test-only diff: no source file changed, so no new behaviour to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1001,
+        "sent": 1001
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "knex/knex",
+      "pr": 6448,
+      "url": "https://github.com/knex/knex/pull/6448",
+      "title": "chore: set codecov to default coverage provider",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This is a CI workflow change (switching coverage provider from Coveralls to Codecov) plus a corresponding README badge update. It doesn't change any public API, config option, or documented behavior of the library itself.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1352,
+        "sent": 1352
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "pinojs/pino",
+      "pr": 2474,
+      "url": "https://github.com/pinojs/pino/pull/2474",
+      "title": "fix(multistream): resolve string level labels in write()",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.75,
+      "model_rationale": "This fixes a documented behavior of multistream's write() where a string-based lastLevel (e.g. from level label formatters relayed via the metadata protocol) was silently dropped instead of being routed correctly. Since multistream level-based routing is a documented feature, this bug fix changing observable behavior warrants a note in docs/changelog.",
+      "label_rationale": "multistream write() now resolves string level labels to numbers; such records were previously dropped silently by the level comparison.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2592,
+        "sent": 2592
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "pinojs/pino",
+      "pr": 2450,
+      "url": "https://github.com/pinojs/pino/pull/2450",
+      "title": "docs: warn against untrusted top-level log keys",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 1,
+      "model_rationale": "Every file changed in this PR is documentation; there is no source-code change for Verlio to react to.",
+      "label_rationale": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 7398,
+        "sent": 7398
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "pinojs/pino",
+      "pr": 2432,
+      "url": "https://github.com/pinojs/pino/pull/2432",
+      "title": "fix: honor per-target level filter on single-element `targets` array",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.85,
+      "model_rationale": "This fixes a documented feature (`pino.transport({ targets: [...] })` per-target `level` filtering) that was silently broken for the single-target case. Users following docs for `targets[i].level` would have hit this bug, so a changelog/docs note about the fix is warranted.",
+      "label_rationale": "A per-target `level` filter was ignored when targets had a single element; the documented targets[].level option previously did nothing there.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3570,
+        "sent": 3570
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "pinojs/pino",
+      "pr": 2413,
+      "url": "https://github.com/pinojs/pino/pull/2413",
+      "title": "Update AWS Lambda reference in asynchronous docs",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 1,
+      "model_rationale": "Every file changed in this PR is documentation; there is no source-code change for Verlio to react to.",
+      "label_rationale": "Documentation-only diff: no source file changed. Decided deterministically by isDocsOnlyDiff() before any API call.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 781,
+        "sent": 781
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "pinojs/pino",
+      "pr": 2475,
+      "url": "https://github.com/pinojs/pino/pull/2475",
+      "title": "docs: clarify stringification limits",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "All changed files are documentation or comment-only: SECURITY.md, docs/api.md (both docs), and pino.d.ts where only JSDoc comments are edited with no type signature changes. No source code behavior was modified.",
+      "label_rationale": "Touches SECURITY.md, docs/api.md and pino.d.ts, but the .d.ts edit is JSDoc prose only, rewording what depthLimit/edgeLimit mean. No implementation change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3440,
+        "sent": 3440
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "pinojs/pino",
+      "pr": 2427,
+      "url": "https://github.com/pinojs/pino/pull/2427",
+      "title": "build(deps): bump actions/github-script from 8 to 9",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This is a CI workflow dependency bump (actions/github-script v8 to v9) affecting only .github/workflows/target-main.yml; it doesn't touch any public API, config option, or documented behavior of the project itself.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 469,
+        "sent": 469
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "remix-run/react-router",
+      "pr": 15320,
+      "url": "https://github.com/remix-run/react-router/pull/15320",
+      "title": "feat(rsc): support CSP nonces in document rendering",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.98,
+      "model_rationale": "This PR adds a new public `nonce` option to `unstable_routeRSCServerRequest` and `unstable_RSCStaticRouter`, changes the `injectRSCPayload` function signature, and removes `nonce` from `RSCRenderPayload` in favor of the new options-based approach. These are documented public APIs with new parameters/behavior, and the diff already includes doc and changelog updates confirming the maintainers view this as user-facing.",
+      "label_rationale": "Adds CSP nonce support through document rendering and removes nonce from the RSCRenderPayload type — a new public capability plus a public type change.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 26830,
+        "sent": 26830
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "remix-run/react-router",
+      "pr": 15322,
+      "url": "https://github.com/remix-run/react-router/pull/15322",
+      "title": "docs: fix useLinkClickHandler defaultShouldRevalidate default description",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This diff only edits a JSDoc comment string within lib.tsx to correct the documented default behavior description; no actual code logic or public API behavior changed. It is a comment-only fix, which falls under the never-relevant rule for comment/docstring-only edits.",
+      "label_rationale": "Corrects a JSDoc sentence describing defaultShouldRevalidate's default. Comment prose only.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 880,
+        "sent": 880
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "remix-run/react-router",
+      "pr": 15311,
+      "url": "https://github.com/remix-run/react-router/pull/15311",
+      "title": "harden RSC CSRF codepaths",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.5,
+      "model_rationale": "This changes the security-relevant behavior of RSC CSRF protection: cross-origin mutation POST requests now return 400 and are converted to a GET request rather than skipping revalidation, affecting `throwIfPotentialCSRFAttack` / `allowedActionOrigins` codepaths in generateRenderResponse. It's a security hardening fix to documented CSRF protection behavior, though the exact end-user-facing surface (error status/response format for cross-origin actions) is somewhat internal, so confidence is moderate.",
+      "label_rationale": "On a suspected CSRF request the handler now downgrades to GET and reports via onError instead of throwing, changing observable behaviour on a security path.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 6751,
+        "sent": 6751
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "rollup/rollup",
+      "pr": 6438,
+      "url": "https://github.com/rollup/rollup/pull/6438",
+      "title": "chore(deps): lock file maintenance",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This is a lockfile-maintenance PR; the only non-lockfile changes are pure reformatting (prettier reformatting of multi-line union types and if-conditions into single lines) with zero behavioral change. No public API, option, or documented behavior is altered.",
+      "label_rationale": "Lockfile maintenance; the only source hunk reformats a TypeScript union onto one line. Formatting only.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 129946,
+        "sent": 10308
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        },
+        {
+          "path": "rust/Cargo.lock",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "rollup/rollup",
+      "pr": 6436,
+      "url": "https://github.com/rollup/rollup/pull/6436",
+      "title": "chore(deps): update actions/cache action to v6",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This is purely a CI workflow dependency bump (actions/cache v5.1.0 -> v6.1.0) with no changes to any public API, library behavior, or documented surface. It only affects internal CI/build tooling, so no docs update is needed.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 4433,
+        "sent": 4433
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "remix-run/react-router",
+      "pr": 15323,
+      "url": "https://github.com/remix-run/react-router/pull/15323",
+      "title": "fix(rsc): preserve component metadata for client loader revalidation",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.6,
+      "model_rationale": "This fixes a bug in React Router's RSC single-fetch data strategy where component metadata (hasComponent) was dropped, causing unnecessary server revalidation requests for routes with clientLoader after their component rendered. This changes observable behavior of a documented RSC/clientLoader revalidation feature, and the PR itself adds a changeset note describing the behavior fix, confirming it's user-facing.",
+      "label_rationale": "Preserves internal route-manifest metadata across client loader revalidation. Internal RSC bookkeeping.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 7239,
+        "sent": 7239
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "rollup/rollup",
+      "pr": 6417,
+      "url": "https://github.com/rollup/rollup/pull/6417",
+      "title": "chore(deps): update msys2/setup-msys2 digest to 66cd2cc",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This is a CI workflow-only change bumping a GitHub Action digest pin (msys2/setup-msys2) with no source code or public API changes; nothing here affects documented behavior.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 655,
+        "sent": 655
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "rollup/rollup",
+      "pr": 6426,
+      "url": "https://github.com/rollup/rollup/pull/6426",
+      "title": "chore(deps): lock file maintenance",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This PR only touches lock files (package-lock.json, Cargo.lock) for routine dependency maintenance, with no source code or behavior changes.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1359,
+        "sent": 0
+      },
+      "filtered_files": [
+        {
+          "path": "package-lock.json",
+          "kind": "lockfile"
+        },
+        {
+          "path": "rust/Cargo.lock",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "sequelize/sequelize",
+      "pr": 18186,
+      "url": "https://github.com/sequelize/sequelize/pull/18186",
+      "title": "feat(core): add support for readonly attribute arrays",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.75,
+      "model_rationale": "This changes public TypeScript typings: FindAttributeOptions now accepts ReadonlyArray for attributes/include/exclude, and hook parameter types for beforeFind/beforeCount/beforeFindAfterExpandIncludeAll/beforeFindAfterOptions change from mutable to WritableDeep-wrapped types, which is an explicitly listed breaking change. These are documented public API surfaces (model hooks, attribute selection options) whose accepted input/type signature changed.",
+      "label_rationale": "FindAttributeOptions changes Array to ReadonlyArray across public declarations, so readonly arrays are now accepted for the documented attributes option.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 10008,
+        "sent": 10008
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sequelize/sequelize",
+      "pr": 18197,
+      "url": "https://github.com/sequelize/sequelize/pull/18197",
+      "title": "meta: automatically mark unfinished PRs as draft",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This change only modifies an internal GitHub Actions workflow file (.github/workflows/stale.yml) to add a repo-maintenance automation step. It doesn't touch any public API, library behavior, or documented feature that users of Sequelize would consume.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1872,
+        "sent": 1872
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sequelize/sequelize",
+      "pr": 18204,
+      "url": "https://github.com/sequelize/sequelize/pull/18204",
+      "title": "feat(core): Drop the ability to specify the dialect as a string",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.97,
+      "model_rationale": "This is a breaking change to the public `Sequelize` constructor's `dialect` option: it can no longer be a string (e.g. 'postgres', 'mysql') and must now be a Dialect class imported directly from the dialect package. The `importDialect` helper and `SUPPORTED_DIALECTS`/`DialectName` export were removed, and the constructor now throws a new error message when a non-function dialect is passed. This directly changes documented configuration/setup instructions for Sequelize.",
+      "label_rationale": "Removes the ability to specify the dialect as a string — a deliberate breaking change to a documented constructor option.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 36265,
+        "sent": 36265
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sequelize/sequelize",
+      "pr": 18222,
+      "url": "https://github.com/sequelize/sequelize/pull/18222",
+      "title": "meta: update dependency uuid to v11.1.1 [security]",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.03,
+      "model_rationale": "This is a lockfile-only dependency version bump (uuid v11.1.0 -> v11.1.1) fixing an upstream security issue in the uuid package itself; no source files in this repo are changed, so there is no observable API or behavior change to document.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 50389,
+        "sent": 0
+      },
+      "filtered_files": [
+        {
+          "path": "yarn.lock",
+          "kind": "lockfile"
+        }
+      ]
+    },
+    {
+      "repo": "socketio/socket.io",
+      "pr": 5508,
+      "url": "https://github.com/socketio/socket.io/pull/5508",
+      "title": "docs(engine.io): correct maxHttpBufferSize default in JSDoc (1e6 / 1 MB)",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This is a comment-only JSDoc fix correcting the documented @default value to match existing behavior; no source code behavior changed.",
+      "label_rationale": "Corrects an @default JSDoc value for maxHttpBufferSize (1e5 to 1e6). Comment only; the implementation already used the larger value.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 474,
+        "sent": 474
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "socketio/socket.io",
+      "pr": 5449,
+      "url": "https://github.com/socketio/socket.io/pull/5449",
+      "title": "chore: Update outdated GitHub Actions versions",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.98,
+      "model_rationale": "This PR only updates GitHub Actions workflow version pins (actions/checkout, actions/setup-node) in CI configuration files. There is no change to any public API, source code behavior, or documented surface.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1529,
+        "sent": 1529
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sveltejs/svelte",
+      "pr": 18530,
+      "url": "https://github.com/sveltejs/svelte/pull/18530",
+      "title": "fix: $state.eager() is sometimes incorrect in SSR",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.5,
+      "model_rationale": "This fixes a bug in the documented `$state.eager()` rune where SSR output could be incorrect because its argument wasn't visited/transformed. This is a behavior fix to a documented public API (`$state.eager()`), though the fix is internal to the compiler's SSR transform, so a docs update may or may not be warranted depending on whether existing docs describe this edge case.",
+      "label_rationale": "$state.eager() is a documented rune whose SSR transform returned its raw argument instead of visiting it, producing incorrect server-rendered output.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1815,
+        "sent": 1815
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sveltejs/svelte",
+      "pr": 18541,
+      "url": "https://github.com/sveltejs/svelte/pull/18541",
+      "title": "fix: clear previous_task reference after abort in Tween",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.05,
+      "model_rationale": "This is an internal memory-leak fix in Tween's rAF closure that nulls an internal reference after abort; it does not change any documented API, method signature, option, or observable behavior of Tween.set(). No public-facing surface is affected, so no docs update is warranted beyond the changeset already included.",
+      "label_rationale": "Sets previous_task = null after abort in Tween to release a reference. Internal bookkeeping.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 719,
+        "sent": 719
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "socketio/socket.io",
+      "pr": 5501,
+      "url": "https://github.com/socketio/socket.io/pull/5501",
+      "title": "fix(engine.io-client): preserve caller transport options",
+      "expected": true,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "FN",
+      "confidence": 0.15,
+      "model_rationale": "This fixes an internal bug where the Socket constructor mutated the caller's options object (transports array) instead of cloning it before mapping transport names to constructors. The public constructor signature and documented behavior (transports option) are unchanged; only an internal side-effect (mutation) is fixed, which is not a documented surface.",
+      "label_rationale": "Copies the caller's options object instead of using it by reference, so caller-side transport options are preserved. Mirrors got#2454 in the dev corpus.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1896,
+        "sent": 1896
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sveltejs/svelte",
+      "pr": 18528,
+      "url": "https://github.com/sveltejs/svelte/pull/18528",
+      "title": "chore: add some failing tests",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.03,
+      "model_rationale": "This PR only adds new test fixtures (marked skip: true, TODO fix) that document currently-known-failing behavior around async $derived. No source/runtime code is changed, and the tests themselves are not asserting fixed/expected public behavior yet, so there is nothing user-facing to document.",
+      "label_rationale": "Test-only diff: no source file changed, so no new behaviour to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 6386,
+        "sent": 6386
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "sveltejs/svelte",
+      "pr": 18517,
+      "url": "https://github.com/sveltejs/svelte/pull/18517",
+      "title": "fix: prevent derived connection leak in untracked contexts",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.08,
+      "model_rationale": "This is an internal fix to Svelte's reactivity runtime (an internal flag `is_updating_effect` used for connecting derived signals to their dependencies), fixing a memory leak in internal bookkeeping. There's no public API, option, or documented behavior surface affected—only an internal implementation detail of the reactivity system's teardown logic.",
+      "label_rationale": "Prevents a derived connection leak in untracked contexts. Internal signal-graph lifecycle.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1854,
+        "sent": 1854
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitest-dev/vitest",
+      "pr": 10743,
+      "url": "https://github.com/vitest-dev/vitest/pull/10743",
+      "title": "fix: keep per-file isolation in vm pools when maxWorkers is 1",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.55,
+      "model_rationale": "This fixes a real bug where vmThreads/vmForks pools with maxWorkers:1 shared global state across test files, contradicting documented per-file isolation behavior for these pools. It's a behavior fix affecting documented pool options (vmThreads, vmForks, maxWorkers, isolate), though the fix itself is an internal batching heuristic rather than a new public API surface.",
+      "label_rationale": "vm pools keep per-file isolation when maxWorkers is 1, changing whether tests share a context — observable through the documented isolate/pool options.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2845,
+        "sent": 2845
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitest-dev/vitest",
+      "pr": 10765,
+      "url": "https://github.com/vitest-dev/vitest/pull/10765",
+      "title": "chore(deps): update actions/github-script action to v9",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This is a CI/build tooling change bumping the actions/github-script GitHub Action version pin in workflow YAML files. It has no effect on any public API, exported function, or documented behavior of the project itself.",
+      "label_rationale": "Only lockfile/CI/config files changed; no library source touched.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3315,
+        "sent": 3315
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitest-dev/vitest",
+      "pr": 10784,
+      "url": "https://github.com/vitest-dev/vitest/pull/10784",
+      "title": "fix(browser): inlined awaited import should not trigger syntax error after transform",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.35,
+      "model_rationale": "This fixes a bug in an internal code-transform helper (injectDynamicImport/wrapDynamicImport) that produced invalid syntax for inlined awaited dynamic imports. While it changes generated output, this is an internal mocker transform detail rather than a documented public API option, so it's unclear if any user-facing docs describe this specific transform output.",
+      "label_rationale": "Makes the injected dynamic-import wrapper async in the mocker's codegen to avoid a syntax error. Internal instrumentation.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1790,
+        "sent": 1790
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitest-dev/vitest",
+      "pr": 10732,
+      "url": "https://github.com/vitest-dev/vitest/pull/10732",
+      "title": "test: poll for the async wheel event in the user-event fixture",
+      "expected": false,
+      "model_relevant": false,
+      "predicted": false,
+      "outcome": "TN",
+      "confidence": 0.97,
+      "model_rationale": "This diff only modifies a test file to poll for an async wheel event assertion, with no change to any public API, config option, or documented behavior.",
+      "label_rationale": "Test-only diff: no source file changed, so no new behaviour to document.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 778,
+        "sent": 778
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "vitest-dev/vitest",
+      "pr": 10748,
+      "url": "https://github.com/vitest-dev/vitest/pull/10748",
+      "title": "fix(browser): preserve pre-transform request defaults",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.4,
+      "model_rationale": "This fixes internal server/environment config behavior so that `preTransformRequests` is no longer force-disabled for browser-mode projects, preserving Vite defaults. While this touches an internally-set config value rather than a directly user-facing documented option, it changes observable dev-server behavior for browser test projects, so it's worth flagging even though confidence is moderate since preTransformRequests isn't a commonly documented Vitest-facing option.",
+      "label_rationale": "Stops overriding Vite's preTransformRequests default. Internal dev-server configuration.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 3584,
+        "sent": 3584
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "withastro/astro",
+      "pr": 17399,
+      "url": "https://github.com/withastro/astro/pull/17399",
+      "title": "Normalize domain-based i18n request paths consistently",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.5,
+      "model_rationale": "This fixes a bug where domain-based i18n routing could incorrectly decode/route encoded request paths, and now consistently returns 400 for over-encoded paths. This changes observable behavior for a documented feature (domain-based i18n, Astro.url.pathname), though it's mostly an internal consistency fix with a subtle public-facing effect (correct handling of encoded paths and new 400 responses).",
+      "label_rationale": "Normalises domain-based i18n request paths, changing which route a request resolves to under the documented i18n.domains option.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 7979,
+        "sent": 7979
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "withastro/astro",
+      "pr": 17402,
+      "url": "https://github.com/withastro/astro/pull/17402",
+      "title": "fix(astro): propagate mutated locals to custom error pages",
+      "expected": true,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "TP",
+      "confidence": 0.35,
+      "model_rationale": "This fixes a bug where mutated Astro.locals were lost when rendering custom error pages (404.astro/500.astro), a documented behavior around Astro.locals propagation. Though it's an internal implementation fix (getter vs static copy), it changes observable behavior for a documented feature (locals persistence in error pages), so it's worth flagging even though the confidence is moderate since it's a subtle internal correctness fix rather than a new API surface.",
+      "label_rationale": "Mutations to Astro.locals now propagate to custom error pages. A documented API that previously lost data on that path.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 2803,
+        "sent": 2803
+      },
+      "filtered_files": []
+    },
+    {
+      "repo": "withastro/astro",
+      "pr": 17405,
+      "url": "https://github.com/withastro/astro/pull/17405",
+      "title": "fix(prefetch): swallow fetch-fallback rejection to avoid unhandled 'Load failed' on WebKit",
+      "expected": false,
+      "model_relevant": true,
+      "predicted": true,
+      "outcome": "FP",
+      "confidence": 0.35,
+      "model_rationale": "This is an internal bug fix to the public `prefetch()` function that prevents an unhandled promise rejection on WebKit; the fix doesn't change the documented behavior/signature of `prefetch()`, but it does fix an observable side effect (spurious unhandled rejection errors) that some docs/troubleshooting guides could mention. The change is minor and mostly an implementation detail, so confidence is low-moderate.",
+      "label_rationale": "Adds .catch(() => {}) to the WebKit prefetch fallback. Prefetch is documented as best-effort; this restores that intent rather than changing it.",
+      "diff_truncated": false,
+      "diff_chars": {
+        "original": 1626,
+        "sent": 1626
+      },
+      "filtered_files": []
+    }
+  ],
+  "failures": []
+}
