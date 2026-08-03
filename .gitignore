@@ -10,3 +10,15 @@ web/
 .claude/
 # eval-results/ is deliberately NOT ignored — the M2 exit gate requires the real
 # measured numbers to be documented, so the raw eval output is the evidence.
+# m5/ contains real outreach targets' personal email addresses and cold-outreach drafts —
+# never publish this to the public repo.
+m5/
+# Internal strategy/planning docs — not product surface, shouldn't be in the public repo.
+# Kept locally; untracked from git 2026-08-03. README.md/SKILL.md/LICENSE are the public docs.
+COUNCIL_LOG.md
+PROJECT_BRIEF.md
+PRD.md
+session_prompts.md
+verlio_CHANGELOG.md
+MODEL_EVALUATION_NOTES.md
+CLAUDE.md
